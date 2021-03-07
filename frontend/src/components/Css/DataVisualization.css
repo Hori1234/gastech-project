@@ -1,0 +1,14 @@
+/* Add some padding inside the card container */
+  .flex-container {
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-item {
+    flex-shrink:0;
+    white-space: nowrap;
+  }
+  
+  ul {
+    list-style-type: none;
+   }

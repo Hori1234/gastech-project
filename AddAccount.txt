@@ -1,0 +1,6 @@
+from backend.app import db
+from backend.models.users import User
+user = User(username = 'xx', password = 'xx')
+user.password
+db.session.add(user)
+db.session.commit()

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationLayout component shall shallow the login page correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "state": Object {
+        "user": Object {
+          "id": 1,
+          "role": "administrator",
+          "username": "test",
+        },
+      },
+    }
+  }
+>
+  <NavigationLayout />
+</ContextProvider>
+`;

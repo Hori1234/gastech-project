@@ -1,0 +1,14 @@
+.table-row-regional {
+    background-color:#e3e9fa;
+}
+.table-row-terminal {
+    background-color:#f7f2ff;
+}
+.table-row-port {
+    background-color:#f2fffe;
+}
+.editable-row .ant-form-item-explain {
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
+  }

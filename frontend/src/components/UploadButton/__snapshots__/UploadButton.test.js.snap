@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UploadButton component should render the upload page correctly 1`] = `
+<Layout
+  style={
+    Object {
+      "backgroundColor": "white",
+    }
+  }
+>
+  <Card>
+    <Layout
+      style={
+        Object {
+          "backgroundColor": "white",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Image
+        preview={false}
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "upload-file.svg",
+          }
+        }
+        style={
+          Object {
+            "marginRight": 20,
+          }
+        }
+        width={100}
+      />
+      <Layout
+        style={
+          Object {
+            "backgroundColor": "white",
+            "flexDirection": "column",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": "18",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Upload Documents
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontSize": " 14",
+            }
+          }
+        >
+          Upload the documents for the creation of the plannings
+        </Text>
+      </Layout>
+    </Layout>
+  </Card>
+  <Layout
+    style={
+      Object {
+        "backgroundColor": "white",
+      }
+    }
+  >
+    <Row
+      gutter={16}
+    >
+      <Col
+        span={12}
+      >
+        <Card
+          bordered={false}
+          title="Upload Order List"
+        >
+          <Row
+            gutter={
+              Array [
+                16,
+                24,
+              ]
+            }
+          >
+            <Col
+              className="gutter-row"
+            >
+              <Dragger
+                action="/api/sheets/"
+                id="dragger"
+                multiple={false}
+                name="file_1"
+                onChange={[Function]}
+              >
+                <p
+                  className="ant-upload-drag-icon"
+                >
+                  <ForwardRef(InboxOutlined) />
+                </p>
+                <p
+                  className="ant-upload-text"
+                >
+                  Click or drag file to this area to upload
+                </p>
+                <p
+                  className="ant-upload-hint"
+                >
+                  Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+                </p>
+              </Dragger>
+            </Col>
+          </Row>
+        </Card>
+      </Col>
+      <Col
+        span={12}
+      >
+        <Card
+          bordered={false}
+          title="Upload Truck Availibility"
+        >
+          <Row
+            gutter={
+              Array [
+                16,
+                24,
+              ]
+            }
+          >
+            <Col
+              className="gutter-row"
+            >
+              <Dragger
+                action="/api/sheets/"
+                multiple={false}
+                name="file_1"
+                onChange={[Function]}
+              >
+                <p
+                  className="ant-upload-drag-icon"
+                >
+                  <ForwardRef(InboxOutlined) />
+                </p>
+                <p
+                  className="ant-upload-text"
+                >
+                  Click or drag file to this area to upload
+                </p>
+                <p
+                  className="ant-upload-hint"
+                >
+                  Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+                </p>
+              </Dragger>
+            </Col>
+          </Row>
+        </Card>
+      </Col>
+    </Row>
+  </Layout>
+</Layout>
+`;

@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInComponent shall render the login page correctly 1`] = `
+<Layout
+  style={
+    Object {
+      "backgroundColor": "white",
+      "display": "flex",
+      "height": "95vh",
+      "margin": 30,
+    }
+  }
+>
+  <Layout
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "marginTop": 15,
+      }
+    }
+  >
+    <Avatar
+      icon={<ForwardRef(UserOutlined) />}
+      shape="square"
+      size={64}
+      style={
+        Object {
+          "marginTop": 100,
+        }
+      }
+    />
+    <Divider
+      style={
+        Object {
+          "marginTop": 10,
+        }
+      }
+    >
+      Welcome
+    </Divider>
+  </Layout>
+  <Layout
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "display": "flex",
+        "marginBottom": -120,
+        "marginTop": -70,
+      }
+    }
+  >
+    <Title
+      level={5.2}
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      Sign In
+    </Title>
+    <Title
+      level={5}
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      Fill the form to log in
+    </Title>
+  </Layout>
+  <Layout
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "display": "flex",
+        "marginTop": -50,
+      }
+    }
+  >
+    <ForwardRef(InternalForm)
+      initialValues={
+        Object {
+          "remember": true,
+        }
+      }
+      labelCol={
+        Object {
+          "span": 8,
+        }
+      }
+      name="basic"
+      wrapperCol={
+        Object {
+          "span": 16,
+        }
+      }
+    >
+      <FormItem
+        label="Username"
+        name="username"
+        rules={
+          Array [
+            Object {
+              "message": "Please input your username!",
+              "required": true,
+            },
+          ]
+        }
+        style={
+          Object {
+            "marginLeft": -50,
+            "marginRight": 180,
+            "width": "100%",
+          }
+        }
+      >
+        <Input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </FormItem>
+      <FormItem
+        label="Password"
+        name="password"
+        rules={
+          Array [
+            Object {
+              "message": "Please input your password!",
+              "required": true,
+            },
+          ]
+        }
+        style={
+          Object {
+            "marginLeft": -50,
+            "marginRight": 180,
+            "width": "100%",
+          }
+        }
+      >
+        <Password
+          action="click"
+          iconRender={[Function]}
+          onChange={[Function]}
+          value=""
+          visibilityToggle={true}
+        />
+      </FormItem>
+      <FormItem
+        name="remember"
+        style={
+          Object {
+            "marginLeft": -50,
+            "marginRight": 180,
+            "width": "100%",
+          }
+        }
+        wrapperCol={
+          Object {
+            "offset": 8,
+            "span": 16,
+          }
+        }
+      >
+        <Checkbox
+          checked={false}
+          indeterminate={false}
+          onChange={[Function]}
+        >
+          Remember me
+        </Checkbox>
+      </FormItem>
+      <FormItem
+        wrapperCol={
+          Object {
+            "offset": 8,
+            "span": 16,
+          }
+        }
+      >
+        <Button
+          block={false}
+          ghost={false}
+          htmlType="submit"
+          loading={false}
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": 10,
+              "marginTop": 60,
+              "width": "60%",
+            }
+          }
+          type="primary"
+        >
+          Login
+        </Button>
+      </FormItem>
+    </ForwardRef(InternalForm)>
+  </Layout>
+</Layout>
+`;
