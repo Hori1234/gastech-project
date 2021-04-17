@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyApp should render correctly in "debug" mode 1`] = `
+<AuthProvider>
+  <AppLayout />
+</AuthProvider>
+`;

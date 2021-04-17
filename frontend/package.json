@@ -1,0 +1,89 @@
+{
+  "name": "truck",
+  "version": "0.1.0",
+  "homepage": "https://otmdservices.com",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "antd": "^4.6.2",
+    "axios": "^0.20.0",
+    "gantt": "^3.1.0",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.3.1",
+    "puppeteer-core": "^5.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-google-charts": "^3.0.15",
+    "react-infinite-scroller": "^1.2.4",
+    "react-json-to-csv": "^1.0.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "woocommerce-api": "^1.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test src/components",
+    "test:e2e": "react-scripts test src/test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.+(js)",
+    "lint": "eslint src",
+    "precommit": "npx lint-staged && npx eslint src"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "setupFiles": [
+    "./src/setupTests.js"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.tue.nl/sroubtso/sep-2021_q1-group-2.git"
+  },
+  "keywords": [
+    "sgn"
+  ],
+  "author": "Horea Breazu",
+  "license": "MIT",
+  "proxy": "http://localhost:5000/",
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "enzyme-to-json": "^3.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
+  }
+}

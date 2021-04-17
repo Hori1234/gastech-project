@@ -1,0 +1,45 @@
+# Get the latest node docker container
+image: node:latest
+
+# Cache node_modules for future jobs
+cache:
+  untracked: true
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - frontend/node_modules/
+
+variables:
+  CI: 'true'
+
+before_script:
+  - cd frontend
+
+stages:
+  - Build
+  - Linter
+  - Tests
+
+# Installs the packages needed for the React app
+frontend-build:
+  stage: Build
+  script:
+    - npm ci
+
+# Check style of the code
+frontend-lint:
+  stage: Linter
+  needs: [frontend-build]
+  dependencies:
+    - frontend-build
+  script:
+    - npm run lint
+
+# Run tests
+frontend-test:
+  stage: Tests
+  needs: [frontend-build, frontend-lint]
+  dependencies:
+    - frontend-build
+  script:
+    - npm test -- --coverage --watchAll=false
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
