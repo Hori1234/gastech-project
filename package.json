@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "json-2-csv": "^3.10.2",
+    "write-file-p": "^1.0.8"
+  }
+}

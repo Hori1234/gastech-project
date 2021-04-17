@@ -8,24 +8,32 @@ import {
   Input,
   Col,
   Row,
+  Progress,
 } from "antd";
 import { UserOutlined, UserSwitchOutlined } from "@ant-design/icons";
 import CsvDownload from "react-json-to-csv";
 import { getColumnOrder } from "./columnDataOrderOTMD";
 import EditableTableOrder from "../ManualPlanning/EditableTableOrder";
+import csvDownload from "json-to-csv-export";
+
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 const { Text } = Typography;
+const converter = require("json-2-csv");
+const writeFileP = require("write-file-p");
 
+var currentpage = 1;
+var perpage = 100;
 var jsondata = [];
+
 const WooCommerce = new WooCommerceRestApi({
-  url: "https://otmd.ro/", // Your store URL
-  consumerKey: "ck_fcfaa3cc125f86d2ee468f969adad3fd9066c509", // Your consumer key
-  consumerSecret: "cs_b007e92159551cf6bf495b03e4f09c1b28419df7", // Your consumer secret
+  url: "https://sycc.ro/", // Your store URL
+  consumerKey: "ck_f88a5f6d25685c27e87e20eb27bbd7a8fdfe4dde", // Your consumer key
+  consumerSecret: "cs_68522f58d467aaf5413266ca94d063fb0f20f14a", // Your consumer secret
   version: "wc/v3", // WooCommerce WP REST API version
   queryStringAuth: true,
 });
 
-export default class WoocomerceComponent extends Component {
+export default class WoocomerceComponentSycc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,6 +47,7 @@ export default class WoocomerceComponent extends Component {
         currency: null,
         total: null,
         number_of_items: null,
+        name_of_item: null,
         date_created: null,
         billing_first_name: null,
         billing_last_name: null,
@@ -71,15 +80,89 @@ export default class WoocomerceComponent extends Component {
         shipping_state: null,
       },
       result: [],
+      downloadabledata: [],
+      number_of_pages: null,
+      number_of_orders: null,
+      progress_status: 0,
     };
   }
 
   componentDidMount() {
     this.setState({ startingColumns: this.state.columns });
-    this.getOrderList(1, 100);
+    this.getOrderList(currentpage, perpage);
   }
 
-  getOrderList = (vpage, vperpage) => {
+  getAllOrdersToExcel = async (vpage, vperpage, nrpages) => {
+    var current_status = 100 / nrpages;
+    var status = 0;
+    this.setState((state) => ({
+      progress_status: status,
+    }));
+    while (vpage <= nrpages) {
+      await WooCommerce.get("orders", {
+        page: vpage,
+        per_page: vperpage, // 20 products per page
+      }).then((response) => {
+        // Successful request
+        jsondata = [];
+
+        response.data.forEach((element) => {
+          this.setState((prevState) => {
+            let mockData = Object.assign({}, prevState.mockData); // creating copy of state variable Metadata
+            mockData.id = element["id"];
+            mockData.status = element["status"];
+            mockData.currency = element["currency"];
+            mockData.total = element["total"];
+            mockData.number_of_items = element["line_items"][0]["quantity"];
+            mockData.name_of_item = element["line_items"][0]["name"];
+            mockData.date_created = element["date_created"];
+            mockData.billing_first_name = element["billing"]["first_name"];
+            mockData.billing_last_name = element["billing"]["last_name"];
+            mockData.billing_company_name = element["billing"]["company_name"];
+            mockData.billing_company = element["billing"]["company"];
+            mockData.billing_addr_1 = element["billing"]["address_1"];
+            mockData.billing_addr_2 = element["billing"]["address_2"];
+            mockData.billing_city = element["billing"]["city"];
+            mockData.billing_country = element["billing"]["country"];
+            mockData.billing_email = element["billing"]["email"];
+            mockData.billing_phone = element["billing"]["phone"];
+            mockData.billing_postcode = element["billing"]["postcode"];
+            mockData.billing_state = element["billing"]["state"];
+            mockData.customer_note = element["customer_note"];
+            mockData.shipping_first_name = element["shipping"]["first_name"];
+            mockData.shipping_last_name = element["shipping"]["last_name"];
+            mockData.shipping_company_name =
+              element["shipping"]["company_name"];
+            mockData.shipping_company = element["shipping"]["company"];
+            mockData.shipping_addr_1 = element["shipping"]["address_1"];
+            mockData.shipping_addr_2 = element["shipping"]["address_2"];
+            mockData.shipping_city = element["shipping"]["city"];
+            mockData.shipping_country = element["shipping"]["country"];
+            mockData.shipping_email = element["shipping"]["email"];
+            mockData.shipping_phone = element["shipping"]["phone"];
+            mockData.shipping_postcode = element["shipping"]["postcode"];
+            mockData.shipping_state = element["shipping"]["state"];
+
+            return { mockData }; // return new object Metadata object
+          });
+          //console.log(this.state.mockData);
+          //console.log("push data in jsondata");
+          jsondata.push(this.state.mockData);
+        });
+        const newData = this.state.downloadabledata.concat(jsondata);
+        status = this.state.progress_status + current_status;
+        this.setState((state) => ({
+          downloadabledata: newData,
+          progress_status: status,
+        }));
+      });
+      vpage = vpage + 1;
+    }
+
+    csvDownload(this.state.downloadabledata);
+  };
+
+  getOrderList = async (vpage, vperpage) => {
     WooCommerce.get("orders", {
       page: vpage,
       per_page: vperpage, // 20 products per page
@@ -102,6 +185,7 @@ export default class WoocomerceComponent extends Component {
             mockData.currency = element["currency"];
             mockData.total = element["total"];
             mockData.number_of_items = element["line_items"][0]["quantity"];
+            mockData.name_of_item = element["line_items"][0]["name"];
             mockData.date_created = element["date_created"];
             mockData.billing_first_name = element["billing"]["first_name"];
             mockData.billing_last_name = element["billing"]["last_name"];
@@ -115,14 +199,6 @@ export default class WoocomerceComponent extends Component {
             mockData.billing_phone = element["billing"]["phone"];
             mockData.billing_postcode = element["billing"]["postcode"];
             mockData.billing_state = element["billing"]["state"];
-            mockData.billing_first_name_and_last_name =
-              element["meta_data"][0]["value"];
-            mockData.billing_domeniu_pentru_medii =
-              element["meta_data"][1]["value"];
-            mockData.billing_statutul_profesional_m =
-              element["meta_data"][2]["value"];
-            mockData.billing_cod_de_identificare =
-              element["meta_data"][3]["value"];
             mockData.customer_note = element["customer_note"];
             mockData.shipping_first_name = element["shipping"]["first_name"];
             mockData.shipping_last_name = element["shipping"]["last_name"];
@@ -148,6 +224,10 @@ export default class WoocomerceComponent extends Component {
         //console.log(jsondata);
         this.setState({
           result: jsondata,
+          number_of_orders: response.headers["x-wp-total"],
+          number_of_pages: response.headers["x-wp-totalpages"],
+          vpage: vpage,
+          vperpage: vperpage,
         });
       })
       .catch((error) => {
@@ -158,7 +238,7 @@ export default class WoocomerceComponent extends Component {
       });
   };
 
-  getOrder = (id) => {
+  getOrder = async (id) => {
     WooCommerce.get(`orders/${id}`)
       .then((response) => {
         // Successful request
@@ -190,14 +270,6 @@ export default class WoocomerceComponent extends Component {
           mockData.billing_phone = element["billing"]["phone"];
           mockData.billing_postcode = element["billing"]["postcode"];
           mockData.billing_state = element["billing"]["state"];
-          mockData.billing_first_name_and_last_name =
-            element["meta_data"][0]["value"];
-          mockData.billing_domeniu_pentru_medii =
-            element["meta_data"][1]["value"];
-          mockData.billing_statutul_profesional_m =
-            element["meta_data"][2]["value"];
-          mockData.billing_cod_de_identificare =
-            element["meta_data"][3]["value"];
           mockData.customer_note = element["customer_note"];
           mockData.shipping_first_name = element["shipping"]["first_name"];
           mockData.shipping_last_name = element["shipping"]["last_name"];
@@ -289,37 +361,89 @@ export default class WoocomerceComponent extends Component {
                 flexDirection: "row",
               }}
             >
-              <Input
+              <Layout
                 style={{
-                  marginRight: 30,
+                  backgroundColor: "white",
+                  marginRight: 15,
                 }}
-                value={this.state.vpage}
-                onChange={this.handleChangePage}
-                placeholder="Numar pagina"
-                prefix={<UserOutlined />}
-              />
-              <Input
-                style={{
-                  marginRight: 30,
-                }}
-                value={this.state.vperpage}
-                onChange={this.handleChangePerPage}
-                placeholder="Itemi per pagina"
-                prefix={<UserOutlined />}
-              />
-              <Button
-                id="dataButton"
-                type="primary"
-                onClick={() =>
-                  this.getOrderList(this.state.vpage, this.state.vperpage)
-                }
               >
-                {" "}
-                Descarca{" "}
-              </Button>
-              <CsvDownload data={this.state.result} />
+                <Input
+                  value={this.state.vpage}
+                  onChange={this.handleChangePage}
+                  placeholder="Numar pagina"
+                  prefix={<UserOutlined />}
+                />
+                <Text
+                  style={{
+                    marginRight: 10,
+                  }}
+                >
+                  Pagina curenta: {this.state.vpage} din{" "}
+                  {this.state.number_of_pages}
+                </Text>
+              </Layout>
+
+              <Layout
+                style={{
+                  backgroundColor: "white",
+                  marginRight: 75,
+                }}
+              >
+                <Input
+                  value={this.state.vperpage}
+                  onChange={this.handleChangePerPage}
+                  placeholder="Itemi per pagina"
+                  prefix={<UserOutlined />}
+                />
+                <Text
+                  style={{
+                    marginRight: 10,
+                  }}
+                >
+                  Numarul maxim : {this.state.vperpage} din 100
+                </Text>
+              </Layout>
+
+              <Layout
+                style={{
+                  backgroundColor: "white",
+                  flexDirection: "row",
+                  marginBottom: 20,
+                }}
+              >
+                <Button
+                  id="dataButton"
+                  type="primary"
+                  onClick={() =>
+                    this.getOrderList(this.state.vpage, this.state.vperpage)
+                  }
+                >
+                  {" "}
+                  Descarca{" "}
+                </Button>
+                <Button
+                  style={{
+                    marginLeft: 10,
+                  }}
+                  id="dataButton"
+                  type="primary"
+                  onClick={() =>
+                    this.getAllOrdersToExcel(
+                      1,
+                      perpage,
+                      this.state.number_of_pages
+                    )
+                  }
+                >
+                  {" "}
+                  To Excel{" "}
+                </Button>
+              </Layout>
+
+              {/* <CsvDownload data={this.state.downloadabledata} /> */}
             </Layout>
           </Layout>
+          <Progress percent={this.state.progress_status} />
           <Divider />
           <Layout
             style={{

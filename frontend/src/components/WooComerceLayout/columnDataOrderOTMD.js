@@ -54,6 +54,16 @@ export const getColumnOrder = () => {
           .localeCompare((b.number_of_items || "|||").toUpperCase()),
     },
     {
+      title: "Nume Item",
+      dataIndex: "name_of_item",
+      width: 350,
+      editable: true,
+      sorter: (a, b) =>
+        (a.name_of_item || "|||")
+          .toUpperCase()
+          .localeCompare((b.name_of_item || "|||").toUpperCase()),
+    },
+    {
       title: "Data Creare",
       dataIndex: "date_created",
       width: 350,

@@ -9,12 +9,11 @@ import { AuthProvider } from "./components/contextConfig";
  * The main react component for the application.
  */
 export default class App extends Component {
-
   render() {
     return (
-        <AuthProvider>
-          <AppLayout/>
-        </AuthProvider>
+      <AuthProvider>
+        <AppLayout />
+      </AuthProvider>
     );
   }
 }
