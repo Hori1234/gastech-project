@@ -17,8 +17,8 @@ class Config(object):
     API_TITLE = 'O.T.M.D API'
     API_VERSION = '1.0'
     OPENAPI_VERSION = '3.0.0'
-    OPENAPI_SWAGGER_UI_VERSION = "2.0"
-    OPENAPI_JSON_PATH = 'swagger.json'
+    #OPENAPI_SWAGGER_UI_VERSION = '2.0'
+    OPENAPI_JSON_PATH = './static/swagger.json'
     OPENAPI_URL_PREFIX = '/'
     OPENAPI_SWAGGER_UI_PATH = '/api'
     OPENAPI_SWAGGER_UI_URL = 'https://cdn.jsdelivr.net/npm/swagger-ui-dist/'
