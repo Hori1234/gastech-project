@@ -1,45 +1,77 @@
-version: '3.8'
+version: "3.8"
 services:
-    nginx:
-        build:
-            context: .
-            dockerfile: ./docker/nginx/Dockerfile
-        restart: always
-        ports:
-            - "80:80/tcp"
-            - "443:443/tcp"
-        environment:
-            CERTBOT_EMAIL: ${CERTBOT_EMAIL}
-            ENVSUBST_VARS: FQDN
-            FQDN: ${DOMAIN}
-        volumes:
-            - ./nginx:/etc/nginx/user.conf.d:ro
-            - letsencrypt:/etc/letsencrypt
-        depends_on:
-            - backend
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    restart: always
+    ports:
+      - "80:80/tcp"
+      - "8080:80/tcp"
+      - "443:443/tcp"
+    environment:
+      ENVSUBST_VARS: FQDN
+      FQDN: ${DOMAIN}
+      #NGINX_HOST: 192.168.0.166
+      #NGINX_PORT: 80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+    links:
+      - backend:backend
+    networks:
+      webapp:
+        aliases:
+          - nginx
 
-    backend:
-        build:
-            context: .
-            dockerfile: ./docker/backend/Dockerfile
-        entrypoint: /backend-entrypoint.sh
-        ports:
-            - "5000:5000"
-        depends_on:
-            - db
-        restart: always
-        environment:
-            SECRET_KEY: ${SECRET_KEY}
-            DATABASE_URI: postgresql+psycopg2://postgres:${DB_PASSWORD}@db:5432/vbl
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    entrypoint: /backend-entrypoint.sh
+    ports:
+      - "5000/tcp"
+    expose:
+      - "5000/tcp"
+    depends_on:
+      - db
+    restart: always
+    networks:
+      webapp:
+        aliases:
+          - backend
+    environment:
+      #- SECRET_KEY: "wowsupersecretenzo"
+      PGHOST: "db"
+      PGDATABASE: "vbl"
+      PGUSER: "admin"
+      SQL_HOST: "db"
+      SQL_PORT: "5432"
+      DATABASE: "postgres"
+      PGPASSWORD: "mysecretpassword"
+      DATABASE_URL: postgresql+psycopg2://admin:mysecretpassword@db:5432/vbl
 
-    db:
-        image: postgres:latest
-        volumes:
-            - db_data:/var/lib/postgresql/data
-        environment:
-            POSTGRES_DB: vbl
-            POSTGRES_PASSWORD: ${DB_PASSWORD}
-        restart: always
+  db:
+    image: postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432/tcp"
+    expose:
+      - "5432/tcp"
+    environment:
+      POSTGRES_DB: "vbl"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "mysecretpassword"
+    restart: always
+    networks:
+      webapp:
+        aliases:
+          - db
 volumes:
-    db_data:
-    letsencrypt:
+  db_data:
+    driver: local
+  letsencrypt:
+networks:
+  webapp:

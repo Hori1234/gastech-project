@@ -12,9 +12,12 @@ class Config(object):
     TRUCK_TYPES = ['terminal', 'regional', 'port']
 
     # API configuration
-    API_TITLE = 'T.R.U.C.K.S. API'
+    FLASK_RUN_HOST = '0.0.0.0'
+    FLASK_RUN_PORT= 5000
+    API_TITLE = 'O.T.M.D API'
     API_VERSION = '1.0'
-    OPENAPI_VERSION = '3.0.2'
+    OPENAPI_VERSION = '3.0.0'
+    OPENAPI_SWAGGER_UI_VERSION = "2.0"
     OPENAPI_JSON_PATH = 'swagger.json'
     OPENAPI_URL_PREFIX = '/'
     OPENAPI_SWAGGER_UI_PATH = '/api'

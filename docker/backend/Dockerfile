@@ -25,3 +25,5 @@ COPY ./docker/backend/backend-entrypoint.sh /backend-entrypoint.sh
 RUN mv ./backend/migrations migrations
 RUN chmod +x /backend-entrypoint.sh
 USER backend
+EXPOSE 5000
+#CMD [ "./backend-entrypoint.sh" ]

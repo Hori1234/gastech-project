@@ -5,6 +5,7 @@ atomicwrites==1.4.0
 attrs==20.2.0
 bcrypt==3.2.0
 cffi==1.14.2
+bash==0.6
 click==7.1.2
 colorama==0.4.3
 coverage==5.3
@@ -33,7 +34,7 @@ openpyxl==3.0.5
 packaging==20.4
 pandas==1.1.2
 pluggy==0.13.1
-#psycopg2==2.8.6
+psycopg2==2.8.6
 py==1.9.0
 pycodestyle==2.6.0
 pycparser==2.20

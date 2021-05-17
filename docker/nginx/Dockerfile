@@ -2,14 +2,30 @@ FROM node:12-alpine AS builder
 
 WORKDIR /frontend
 
-COPY ./frontend/package.json ./
+ADD ./frontend/package.json ./
 
+RUN yarn add json-2-csv
+RUN yarn add write-file-p
 RUN yarn install
 
-COPY ./frontend/ ./
+ADD ./frontend/ ./
+
 RUN yarn build
 
-
-FROM staticfloat/nginx-certbot
-
-COPY --from=builder /frontend/build/ /usr/share/nginx/html
+#FROM staticfloat/nginx-certbot
+FROM nginx:stable-alpine as frontendserver
+ADD /frontend/build/ /usr/share/nginx/html
+#ADD /frontend/build/ /bin/www
+WORKDIR /nginx
+ADD ./nginx/ ./
+RUN rm /etc/nginx/nginx.conf
+RUN rm /etc/nginx/conf.d/default.conf
+#ADD /nginx/nginx-server.conf /etc/nginx/conf.d/default.conf
+#ADD /nginx/nginx-server.conf /etc/nginx/nginx.conf
+ADD /nginx/nginx.conf /etc/nginx/nginx.conf
+#ADD /nginx/nginx.conf /etc/nginx/conf.d/default.conf
+#ADD /nginx/nginx-server.conf /etc/nginx/sites-enabled/default
+#ADD /nginx/nginx-server.conf /etc/nginx/sites-available
+EXPOSE 80
+EXPOSE 443
+CMD [ "nginx", "-g", "daemon off;" ]

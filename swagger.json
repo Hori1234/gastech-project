@@ -1,0 +1,2204 @@
+{
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "headers": {
+              "Set-Cookie": {
+                "schema": {
+                  "type": "string",
+                  "example": "session=abcdefg123456; Path=/; HttpOnly"
+                },
+                "description": "Setting the authorization cookie"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountInfo"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginArguments"
+              }
+            }
+          }
+        },
+        "summary": "Logs users into the system.",
+        "tags": ["authentication"]
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "responses": {
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Logs out the currently logged in user.",
+        "description": "Required roles: any",
+        "tags": ["authentication"]
+      }
+    },
+    "/api/auth/user": {
+      "get": {
+        "responses": {
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountInfo"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Checks the currently logged in user. Returns the account if the user\nis logged in.",
+        "description": "Required roles: any",
+        "tags": ["authentication"]
+      },
+      "post": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountInfo"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountInfo"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Creates a new user. Returns the account of the newly created user.",
+        "description": "Required roles: Administrator",
+        "tags": ["authentication"]
+      }
+    },
+    "/api/auth/user/{user_id}": {
+      "patch": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountInfo"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Patch-AccountInfo"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Change the information of a user.",
+        "description": "Required roles: Administrator",
+        "tags": ["authentication"]
+      },
+      "delete": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Delete a user from the system.",
+        "description": "The user cannot delete their own account. When the user tries,\nstatus code 400 is returned.\nRequired roles: Administrator",
+        "tags": ["authentication"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "user_id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ]
+    },
+    "/api/auth/users": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AccountInfo"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-Pagination": {
+                "description": "Pagination metadata",
+                "schema": {
+                  "$ref": "#/components/schemas/PaginationMetadata"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          },
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "summary": "Get a list of users in the system.",
+        "description": "The list is served in pages. These can be controlled using\nthe parameters in the query string.\nRoles required: Administrator",
+        "tags": ["authentication"]
+      }
+    },
+    "/api/sheets/": {
+      "post": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sheet"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/File"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Parses the orders and truck availability sheets files.",
+        "tags": ["sheets"]
+      }
+    },
+    "/api/sheets/orders": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          }
+        },
+        "summary": "Get a list of uploaded order sheets in the system.",
+        "description": "The list is served in pages. These can be controlled using\nthe parameters in the query string.\nRoles required: Planner, Administrator",
+        "tags": ["sheets"]
+      }
+    },
+    "/api/sheets/trucks": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          }
+        },
+        "summary": "Get a list of uploaded truck sheets in the system.",
+        "description": "The list is served in pages. These can be controlled using\nthe parameters in the query string.\nRoles required: Planner, Administrator",
+        "tags": ["sheets"]
+      }
+    },
+    "/api/orders/sheet/{sheet_id_or_latest}": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderTable"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Get a list of orders from an order sheet.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\norder sheet will be requested.\n\nRequired roles: view-only, planner, administrator",
+        "tags": ["orders"]
+      },
+      "post": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Create a new order in an order list.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\norder sheet will be used.\n\nThe request can contain any key value pair.\nIf the key is not known, a new field will be created for it.\n\nRequired roles: planner, administrator",
+        "tags": ["orders"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "sheet_id_or_latest",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/api/orders/{order_id}": {
+      "get": {
+        "responses": {
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Get a specific order on an order sheet.",
+        "description": "Required roles: planner, administrator",
+        "tags": ["orders"]
+      },
+      "patch": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Patch-Order"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Change a specific order from an order sheet.",
+        "description": "The request can contain any key value pair except the key 'others'.\nIf the key is not known, a new field will be created for it.\n\nRequired roles: planner, administrator",
+        "tags": ["orders"]
+      },
+      "delete": {
+        "responses": {
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Delete a specific order from an order sheet.",
+        "description": "When an order is deleted, the other orders will get a new id assigned.\n\nRequired roles: planner, administrator",
+        "tags": ["orders"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "order_id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ]
+    },
+    "/api/orders/timeline/{sheet_id_or_latest}": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimeLine"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Gets a the parameters needed for making a timeline.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\norder sheet will be used to create the timeline.\n\nRequired roles: view-only, planner, administrator",
+        "tags": ["orders"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "sheet_id_or_latest",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/api/trucks/sheet/{sheet_id_or_latest}": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TruckTable"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Get a list of truck from a truck sheet.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\ntruck sheet will be used.\n\nRequired roles: planner, administrator",
+        "tags": ["trucks"]
+      },
+      "post": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Truck"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Truck"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Create a new truck in a truck list.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\ntruck sheet will be used.\n\nThe request can contain any key value pair.\nIf the key is not known, a new field will be created for it.\n\nRequired roles: planner, administrator",
+        "tags": ["trucks"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "sheet_id_or_latest",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/api/trucks/{truck_id}": {
+      "get": {
+        "responses": {
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Truck"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Get a specific truck on a truck sheet.",
+        "description": "Required roles: planner, administrator",
+        "tags": ["trucks"]
+      },
+      "patch": {
+        "responses": {
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          },
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Truck"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Patch-Truck"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Change a specific truck from a truck sheet.",
+        "description": "In case `sheet_id_or_latest` is `latest`, the most recently uploaded\ntruck sheet will be used.\n\nThe request can contain any key value pair except the key 'others'.\nIf the key is not known, a new field will be created for it.\n\nRequired roles: planner, administrator",
+        "tags": ["trucks"]
+      },
+      "delete": {
+        "responses": {
+          "503": {
+            "$ref": "#/components/responses/SERVICE_UNAVAILABLE"
+          },
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "401": {
+            "$ref": "#/components/responses/UNAUTHORIZED"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Delete a specific truck from a truck sheet.",
+        "description": "When a truck is deleted, the other trucks will get a new id assigned.\n\nRequired roles: planner, administrator",
+        "tags": ["trucks"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "truck_id",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      ]
+    },
+    "/api/plannings/": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Planning"
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-Pagination": {
+                "description": "Pagination metadata",
+                "schema": {
+                  "$ref": "#/components/schemas/PaginationMetadata"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          },
+          "422": {
+            "$ref": "#/components/responses/UNPROCESSABLE_ENTITY"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10,
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "summary": "Get a list of plannings in the system.",
+        "description": "The list is served in pages. These can be controlled using\nthe parameters in the query string.\n\nRoles required: View-only, planner, administrator",
+        "tags": ["plannings"]
+      }
+    },
+    "/api/plannings/{truck_sheet_id}/{order_sheet_id}": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Planning"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Get a single planning.",
+        "description": "`Truck_sheet_id` and `order_sheet_id` can both be the primary key of\nthe sheets, or `latest` to use the latest sheet.\n\nRoles required: View-only, planner, administrator",
+        "tags": ["plannings"]
+      },
+      "post": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "400": {
+            "$ref": "#/components/responses/BAD_REQUEST"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Planning"
+                }
+              }
+            }
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ],
+        "summary": "Publish a planning.",
+        "description": "Both the truck availability sheet and the order sheet cannot be used\nalready in another planning. If that is the case, a 400 response will\nbe returned.\n\n`Truck_sheet_id` and `order_sheet_id` can both be the primary key of\nthe sheets, or `latest` to use the latest sheet.",
+        "tags": ["plannings"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "truck_sheet_id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "in": "path",
+          "name": "order_sheet_id",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "/api/reports/firstrides/{sheet_id_or_latest}": {
+      "get": {
+        "responses": {
+          "404": {
+            "$ref": "#/components/responses/NOT_FOUND"
+          },
+          "200": {
+            "description": "OK"
+          },
+          "default": {
+            "$ref": "#/components/responses/DEFAULT_ERROR"
+          }
+        },
+        "summary": "Get a workbook containing a first rides report from an order sheet.",
+        "description": "In case 'sheet_id_or_latest is 'latest', the most recently uploaded\norder sheet will be used.\n\nRequired roles: view-only, planner, administrator",
+        "tags": ["reports"]
+      },
+      "parameters": [
+        {
+          "in": "path",
+          "name": "sheet_id_or_latest",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "info": {
+    "title": "O.T.M.D API",
+    "version": "1.0"
+  },
+  "tags": [
+    {
+      "name": "authentication",
+      "description": "Authenticate and manage users"
+    },
+    {
+      "name": "sheets",
+      "description": "Upload and parse sheets"
+    },
+    {
+      "name": "orders",
+      "description": "Request and change orders"
+    },
+    {
+      "name": "trucks",
+      "description": "Request and change truck availability"
+    },
+    {
+      "name": "plannings",
+      "description": "Publish and view plannings"
+    },
+    {
+      "name": "reports",
+      "description": "Get report like first rides assignment"
+    }
+  ],
+  "openapi": "3.0.0",
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "Error name"
+          },
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "description": "Error code"
+          },
+          "errors": {
+            "type": "object",
+            "description": "Errors"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          }
+        }
+      },
+      "LoginArguments": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "The username of the user to login"
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "description": "The password of the user to login"
+          },
+          "remember": {
+            "type": "boolean",
+            "description": "Whether the user should stay logged in after exiting the web application"
+          }
+        },
+        "required": ["password", "username"]
+      },
+      "AccountInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true,
+            "description": "The ID of the user"
+          },
+          "username": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "The username of the user"
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The password of the user"
+          },
+          "role": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "The role of the user"
+          }
+        },
+        "required": ["password", "role", "username"]
+      },
+      "Patch-AccountInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true,
+            "description": "The ID of the user"
+          },
+          "username": {
+            "type": "string",
+            "maxLength": 40,
+            "description": "The username of the user"
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true,
+            "description": "The password of the user"
+          },
+          "role": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "The role of the user"
+          }
+        }
+      },
+      "PaginationMetadata": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total_pages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "first_page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "last_page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "previous_page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "next_page": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "File": {
+        "type": "object",
+        "properties": {
+          "file_1": {
+            "type": "string",
+            "format": "binary"
+          }
+        },
+        "required": ["file_1"]
+      },
+      "Sheet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "upload_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "Partial-TruckID": {
+        "type": "object",
+        "properties": {
+          "truck_id": {
+            "type": "string"
+          }
+        }
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "latest_dep_time": {
+            "type": "string",
+            "readOnly": true
+          },
+          "service_time": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "truck_id": {
+            "readOnly": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Partial-TruckID"
+              }
+            ]
+          },
+          "truck_s_number": {
+            "type": "integer",
+            "format": "int32",
+            "writeOnly": true,
+            "nullable": true
+          },
+          "others": {
+            "type": "object",
+            "readOnly": true
+          },
+          "order_number": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "inl_terminal": {
+            "type": "string"
+          },
+          "truck_type": {
+            "type": "string"
+          },
+          "departure_time": {
+            "type": "string",
+            "nullable": true
+          },
+          "hierarchy": {
+            "type": "number",
+            "format": "float"
+          },
+          "delivery_deadline": {
+            "type": "string"
+          },
+          "driving_time": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "process_time": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "required": [
+          "delivery_deadline",
+          "driving_time",
+          "hierarchy",
+          "inl_terminal",
+          "process_time",
+          "truck_type"
+        ]
+      },
+      "OrderTable": {
+        "type": "object",
+        "properties": {
+          "column_names": {
+            "type": "object"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Order"
+            }
+          }
+        }
+      },
+      "Patch-Order": {
+        "type": "object",
+        "properties": {
+          "latest_dep_time": {
+            "type": "string",
+            "readOnly": true
+          },
+          "service_time": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "truck_id": {
+            "readOnly": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Partial-TruckID"
+              }
+            ]
+          },
+          "truck_s_number": {
+            "type": "integer",
+            "format": "int32",
+            "writeOnly": true,
+            "nullable": true
+          },
+          "others": {
+            "type": "object",
+            "readOnly": true
+          },
+          "order_number": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "inl_terminal": {
+            "type": "string"
+          },
+          "truck_type": {
+            "type": "string"
+          },
+          "departure_time": {
+            "type": "string",
+            "nullable": true
+          },
+          "hierarchy": {
+            "type": "number",
+            "format": "float"
+          },
+          "delivery_deadline": {
+            "type": "string"
+          },
+          "driving_time": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "process_time": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "TimeLineSchemaOthers": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "client": {
+            "type": "string"
+          },
+          "booking_id": {
+            "type": "string"
+          },
+          "container_id": {
+            "type": "string"
+          }
+        }
+      },
+      "TimeLine": {
+        "type": "object",
+        "properties": {
+          "truck_id": {
+            "$ref": "#/components/schemas/Partial-TruckID"
+          },
+          "end_time": {
+            "type": "string"
+          },
+          "others": {
+            "$ref": "#/components/schemas/TimeLineSchemaOthers"
+          },
+          "departure_time": {
+            "type": "string"
+          },
+          "order_type": {
+            "type": "string"
+          }
+        }
+      },
+      "Partial-Order": {
+        "type": "object",
+        "properties": {
+          "order_number": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "departure_time": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Truck": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "writeOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Partial-Order"
+            }
+          },
+          "others": {
+            "type": "object",
+            "readOnly": true
+          },
+          "s_number": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "truck_id": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          },
+          "truck_type": {
+            "type": "string"
+          },
+          "business_type": {
+            "type": "string"
+          },
+          "terminal": {
+            "type": "string"
+          },
+          "hierarchy": {
+            "type": "number",
+            "format": "float"
+          },
+          "use_cost": {
+            "type": "number",
+            "format": "float"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "starting_time": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "availability",
+          "business_type",
+          "date",
+          "hierarchy",
+          "starting_time",
+          "terminal",
+          "truck_id",
+          "truck_type",
+          "use_cost"
+        ]
+      },
+      "TruckTable": {
+        "type": "object",
+        "properties": {
+          "trucks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Truck"
+            }
+          },
+          "column_names": {
+            "type": "object"
+          }
+        }
+      },
+      "Patch-Truck": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "writeOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Partial-Order"
+            }
+          },
+          "others": {
+            "type": "object",
+            "readOnly": true
+          },
+          "s_number": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "truck_id": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "boolean"
+          },
+          "truck_type": {
+            "type": "string"
+          },
+          "business_type": {
+            "type": "string"
+          },
+          "terminal": {
+            "type": "string"
+          },
+          "hierarchy": {
+            "type": "number",
+            "format": "float"
+          },
+          "use_cost": {
+            "type": "number",
+            "format": "float"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "starting_time": {
+            "type": "string"
+          }
+        }
+      },
+      "Planning": {
+        "type": "object",
+        "properties": {
+          "truck_sheet_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order_sheet_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "published_on": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "required": ["order_sheet_id", "truck_sheet_id"]
+      }
+    },
+    "responses": {
+      "CONTINUE": {
+        "description": "Continue",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "SWITCHING_PROTOCOLS": {
+        "description": "Switching Protocols",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PROCESSING": {
+        "description": "Processing",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "OK": {
+        "description": "OK",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "CREATED": {
+        "description": "Created",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ACCEPTED": {
+        "description": "Accepted",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NON_AUTHORITATIVE_INFORMATION": {
+        "description": "Non-Authoritative Information",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NO_CONTENT": {
+        "description": "No Content",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "RESET_CONTENT": {
+        "description": "Reset Content",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PARTIAL_CONTENT": {
+        "description": "Partial Content",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "MULTI_STATUS": {
+        "description": "Multi-Status",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ALREADY_REPORTED": {
+        "description": "Already Reported",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "IM_USED": {
+        "description": "IM Used",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "MULTIPLE_CHOICES": {
+        "description": "Multiple Choices",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "MOVED_PERMANENTLY": {
+        "description": "Moved Permanently",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "FOUND": {
+        "description": "Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "SEE_OTHER": {
+        "description": "See Other",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NOT_MODIFIED": {
+        "description": "Not Modified",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "USE_PROXY": {
+        "description": "Use Proxy",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "TEMPORARY_REDIRECT": {
+        "description": "Temporary Redirect",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PERMANENT_REDIRECT": {
+        "description": "Permanent Redirect",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "BAD_REQUEST": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "UNAUTHORIZED": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PAYMENT_REQUIRED": {
+        "description": "Payment Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "FORBIDDEN": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NOT_FOUND": {
+        "description": "Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "METHOD_NOT_ALLOWED": {
+        "description": "Method Not Allowed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NOT_ACCEPTABLE": {
+        "description": "Not Acceptable",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PROXY_AUTHENTICATION_REQUIRED": {
+        "description": "Proxy Authentication Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "REQUEST_TIMEOUT": {
+        "description": "Request Timeout",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "CONFLICT": {
+        "description": "Conflict",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "GONE": {
+        "description": "Gone",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "LENGTH_REQUIRED": {
+        "description": "Length Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PRECONDITION_FAILED": {
+        "description": "Precondition Failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "REQUEST_ENTITY_TOO_LARGE": {
+        "description": "Request Entity Too Large",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "REQUEST_URI_TOO_LONG": {
+        "description": "Request-URI Too Long",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "UNSUPPORTED_MEDIA_TYPE": {
+        "description": "Unsupported Media Type",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "REQUESTED_RANGE_NOT_SATISFIABLE": {
+        "description": "Requested Range Not Satisfiable",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "EXPECTATION_FAILED": {
+        "description": "Expectation Failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "MISDIRECTED_REQUEST": {
+        "description": "Misdirected Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "UNPROCESSABLE_ENTITY": {
+        "description": "Unprocessable Entity",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "LOCKED": {
+        "description": "Locked",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "FAILED_DEPENDENCY": {
+        "description": "Failed Dependency",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "UPGRADE_REQUIRED": {
+        "description": "Upgrade Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "PRECONDITION_REQUIRED": {
+        "description": "Precondition Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "TOO_MANY_REQUESTS": {
+        "description": "Too Many Requests",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "REQUEST_HEADER_FIELDS_TOO_LARGE": {
+        "description": "Request Header Fields Too Large",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "UNAVAILABLE_FOR_LEGAL_REASONS": {
+        "description": "Unavailable For Legal Reasons",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "INTERNAL_SERVER_ERROR": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NOT_IMPLEMENTED": {
+        "description": "Not Implemented",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "BAD_GATEWAY": {
+        "description": "Bad Gateway",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "SERVICE_UNAVAILABLE": {
+        "description": "Service Unavailable",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "GATEWAY_TIMEOUT": {
+        "description": "Gateway Timeout",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "HTTP_VERSION_NOT_SUPPORTED": {
+        "description": "HTTP Version Not Supported",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "VARIANT_ALSO_NEGOTIATES": {
+        "description": "Variant Also Negotiates",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "INSUFFICIENT_STORAGE": {
+        "description": "Insufficient Storage",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "LOOP_DETECTED": {
+        "description": "Loop Detected",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NOT_EXTENDED": {
+        "description": "Not Extended",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NETWORK_AUTHENTICATION_REQUIRED": {
+        "description": "Network Authentication Required",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "DEFAULT_ERROR": {
+        "description": "Default error response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "cookieAuth": {
+        "type": "apiKey",
+        "description": "This API can be accessed using cookie authentication with a basic login",
+        "in": "cookie",
+        "name": "session"
+      }
+    }
+  }
+}

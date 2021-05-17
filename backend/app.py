@@ -17,6 +17,7 @@ def create_app(config=Config):
     app = Flask(__name__)
     app.config.from_object(config)
 
+
     # Initialise flask plugins
     db.init_app(app)
     api.init_app(app)
@@ -24,5 +25,6 @@ def create_app(config=Config):
     login.init_app(app)
     migrate.init_app(app, db)
     register_api(api)
+
 
     return app

@@ -438,9 +438,10 @@ export default class WoocomerceComponent extends Component {
                 <Button
                   id="dataButton"
                   type="primary"
-                  onClick={() =>
-                    this.getOrderList(this.state.vpage, this.state.vperpage)
-                  }
+                  onClick={() => {
+                    this.getOrderList(this.state.vpage, this.state.vperpage);
+                    csvDownload(this.state.result);
+                  }}
                 >
                   {" "}
                   Descarca{" "}
