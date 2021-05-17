@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 // Context for keeping the current user state
 export const AuthContext = React.createContext({
   status: "pending",
   error: null,
-  user: null
+  user: null,
 });
 
 /**
@@ -22,7 +22,7 @@ const AuthProvider = (props) => {
     status: "pending",
     error: null,
     user: null,
-    getUsersStatus: "pending"
+    getUsersStatus: "pending",
   });
 
   // Use history to redirect the user to the correct page after logging in
@@ -36,7 +36,7 @@ const AuthProvider = (props) => {
   React.useEffect((state) => {
     // check if user is already logged in
     axios
-      .get("/api/auth/user")
+      .get("/auth/user")
       .then((res) => {
         setState((state) => ({
           ...state,
@@ -61,7 +61,7 @@ const AuthProvider = (props) => {
    */
   const login = async (credentials) => {
     return axios
-      .post("/api/auth/login", credentials)
+      .post("/auth/login", credentials)
       .then((res) => {
         setState((state) => ({
           ...state,
@@ -87,7 +87,7 @@ const AuthProvider = (props) => {
    */
   const logout = async () => {
     return axios
-      .post("/api/auth/logout")
+      .post("/auth/logout")
       .then(() => {
         setState((state) => ({
           ...state,
@@ -119,7 +119,7 @@ const AuthProvider = (props) => {
     } else {
       return requiredRoles.includes(state.user.role);
     }
-  }
+  };
 
   // return the provider for the context, using the state and functions of this component
   return (
@@ -128,7 +128,7 @@ const AuthProvider = (props) => {
         state,
         login,
         logout,
-        verifyRole
+        verifyRole,
       }}
       {...props}
     />

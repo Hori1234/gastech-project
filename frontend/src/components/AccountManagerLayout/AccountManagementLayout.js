@@ -54,7 +54,7 @@ export default class AccountManagementLayout extends Component {
    */
   getUsers = async (vPage, vPage_size) => {
     return axios
-      .get("/api/auth/users", {
+      .get("/auth/users", {
         params: {
           page: vPage,
           page_size: vPage_size,
@@ -103,7 +103,7 @@ export default class AccountManagementLayout extends Component {
    */
   deleteAccount = (id) => {
     return axios
-      .delete(`/api/auth/user/${id}`)
+      .delete(`/auth/user/${id}`)
       .then(() => {
         const filteredData = this.state.data.filter((item) => item.id !== id);
         this.setState({
@@ -127,7 +127,7 @@ export default class AccountManagementLayout extends Component {
    */
   editAccount = async (user_id, vUsername, vPassword, vRole) => {
     return axios
-      .patch(`/api/auth/user/${user_id}`, {
+      .patch(`/auth/user/${user_id}`, {
         username: vUsername,
         password: vPassword,
         role: vRole,
@@ -161,7 +161,7 @@ export default class AccountManagementLayout extends Component {
    */
   addAccount = async (vUsername, vPassword, vRole) => {
     return axios
-      .post("/api/auth/user", {
+      .post("/auth/user", {
         username: vUsername,
         password: vPassword,
         role: vRole,

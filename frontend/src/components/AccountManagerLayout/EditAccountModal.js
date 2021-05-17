@@ -6,7 +6,8 @@ import {
   Typography,
   Select,
   Divider,
-  message, Modal,
+  message,
+  Modal,
 } from "antd";
 
 import { UserSwitchOutlined } from "@ant-design/icons";
@@ -29,7 +30,7 @@ export default class EditAccountModal extends Component {
 
   /**
    * Username is updated.
-   * @param {Returned value of the triggered event} event 
+   * @param {Returned value of the triggered event} event
    */
   handleChangeUsername = (event) => {
     this.setState({
@@ -39,7 +40,7 @@ export default class EditAccountModal extends Component {
 
   /**
    * Password is updated.
-   * @param {Returned value of the triggered event} event 
+   * @param {Returned value of the triggered event} event
    */
   handleChangePassword = (event) => {
     this.setState({
@@ -49,27 +50,24 @@ export default class EditAccountModal extends Component {
 
   /**
    * Role is updated.
-   * @param {Returned value of the triggered event} value 
+   * @param {Returned value of the triggered event} value
    */
   handleChangeRole = (value) => {
     this.setState({ nRole: value });
   };
 
   handleOK = () => {
-    if (
-      this.state.nUsername !== "" &&
-      this.state.nPassword !== ""
-    ) {
+    if (this.state.nUsername !== "" && this.state.nPassword !== "") {
       this.props.editAccount(
         this.props.info.id,
         this.state.nUsername,
         this.state.nPassword,
         this.state.nRole
-      )
+      );
     } else {
       message.warning("Fill all the empty fields");
     }
-  }
+  };
 
   /**
    * Renders the edit account modal.
@@ -90,7 +88,7 @@ export default class EditAccountModal extends Component {
 
     /**
      * Error if not all the fields are completed
-     * @param {Error information} errorInfo 
+     * @param {Error information} errorInfo
      */
     const onFinishFailed = (errorInfo) => {
       message.error(
@@ -143,11 +141,12 @@ export default class EditAccountModal extends Component {
               >
                 <Title style={{ fontSize: 16 }}>Welcome </Title>
                 <Text style={{ fontSize: 14 }}>
-                  Change the following fields to update the new user information.
+                  Change the following fields to update the new user
+                  information.
                 </Text>
               </Layout>
             </Layout>
-            <Divider style={{ marginTop: -170 }}/>
+            <Divider style={{ marginTop: -170 }} />
           </Layout>
           <Layout
             style={{
@@ -170,10 +169,7 @@ export default class EditAccountModal extends Component {
                 label="Role"
                 rules={[{ type: "string", min: 0, max: 99 }]}
               >
-                <Select
-                  placeholder={this.props.info.role}
-                  disabled={true}
-                />
+                <Select placeholder={this.props.info.role} disabled={true} />
               </Form.Item>
             </Form>
 
