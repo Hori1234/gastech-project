@@ -33,20 +33,12 @@ export default function NavigationLayout() {
         return "0";
       case "/account":
         return "1";
-      case "/upload":
-        return "2";
-      case "/planning":
-        return "3";
-      case "/view":
-        return "4";
-      case "/data":
-        return "5";
-      case "/monthly":
-        return "6";
       case "/woocom":
-        return "8";
-      case "/woocomsycc":
-        return "9";
+        return "2";
+      case "/woocomcn":
+        return "3";
+      case "/woocomse":
+        return "4";
       default:
         return null;
     }
@@ -110,28 +102,16 @@ export default function NavigationLayout() {
                   <Menu.Item key="1">
                     <Link to="/account">Account Management</Link>
                   </Menu.Item>
-                  {/* <Menu.Item key="2">
-                      <Link to="/upload">Upload</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                      <Link to="/planning">Create Planning</Link>
-                    </Menu.Item>
-                    <Menu.Item key="4">
-                      <Link to="/view">View Planning</Link>
-                    </Menu.Item>
-                    <Menu.Item key="5">
-                      <Link to="/data">Data Visualisation</Link>
-                    </Menu.Item>
-                    <Menu.Item key="6">
-                      <Link to="/monthly">Monthly Data Analytics</Link>
-                    </Menu.Item> */}
-                  <Menu.Item key="8">
-                    <Link to="/woocom">Woocomerce OTMD</Link>
+                  <Menu.Item key="2">
+                    <Link to="/woocom">Woocom OTMD</Link>
                   </Menu.Item>
-                  <Menu.Item key="9">
-                    <Link to="/woocomsycc">Woocomerce Sycc</Link>
+                  <Menu.Item key="3">
+                    <Link to="/woocomcn">Woocom OTMD CN</Link>
                   </Menu.Item>
-                  <Menu.Item key="7" onClick={auth.logout}>
+                  <Menu.Item key="4">
+                    <Link to="/woocomse">Woocom OTMD SE</Link>
+                  </Menu.Item>
+                  <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>
                 </SubMenu>
@@ -144,25 +124,19 @@ export default function NavigationLayout() {
                   icon={<UserOutlined />}
                   title={auth.state.user.username}
                 >
-                  <Menu.Item key="1">
+                  <Menu.Item key="0">
                     <Link to="/">Home</Link>
                   </Menu.Item>
-                  {/* <Menu.Item key="2">
-                      <Link to="/upload">Upload</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                      <Link to="/planning">Create Planning</Link>
-                    </Menu.Item>
-                    <Menu.Item key="4">
-                      <Link to="/view">View Planning</Link>
-                    </Menu.Item>
-                    <Menu.Item key="5">
-                      <Link to="/data">Data Visualisation</Link>
-                    </Menu.Item>
-                    <Menu.Item key="6">
-                      <Link to="/monthly">Monthly Data Analytics</Link>
-                    </Menu.Item> */}
-                  <Menu.Item key="7" onClick={auth.logout}>
+                  <Menu.Item key="2">
+                    <Link to="/woocom">Woocom OTMD</Link>
+                  </Menu.Item>
+                  <Menu.Item key="3">
+                    <Link to="/woocomcn">Woocom OTMD CN</Link>
+                  </Menu.Item>
+                  <Menu.Item key="4">
+                    <Link to="/woocomse">Woocom OTMD SE</Link>
+                  </Menu.Item>
+                  <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>
                 </SubMenu>
@@ -175,7 +149,7 @@ export default function NavigationLayout() {
                   icon={<UserOutlined />}
                   title={auth.state.user.username}
                 >
-                  <Menu.Item key="3">
+                  <Menu.Item key="0">
                     <Link to="/">Home</Link>
                   </Menu.Item>
                   {/* <Menu.Item key="4">
@@ -184,7 +158,7 @@ export default function NavigationLayout() {
                     <Menu.Item key="6">
                       <Link to="/monthly">Monthly Data Analytics</Link>
                     </Menu.Item> */}
-                  <Menu.Item key="7" onClick={auth.logout}>
+                  <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>
                 </SubMenu>
@@ -225,9 +199,11 @@ export default function NavigationLayout() {
               </Layout>
             </Content>
           </Layout>
-          {/* <Footer style={{ textAlign: "center", height: 0 }}>
-            O.T.M.D - Services ©2021 Created by OTMD Group
-          </Footer> */}
+          {
+            <Footer style={{ textAlign: "center", height: 0 }}>
+              O.T.M.D - Services ©2021 Created by OTMD Group
+            </Footer>
+          }
         </Layout>
       </Layout>
     </Layout>

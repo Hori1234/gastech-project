@@ -21,8 +21,11 @@ const Home = lazy(() => import("../Home/Home"));
 const WoocomerceComponent = lazy(() =>
   import("../WooComerceLayout/WoocomerceComponent")
 );
-const WoocommerceComponentSycc = lazy(() =>
-  import("../WooComerceLayout/WoocommerceComponentSycc")
+const WoocomerceOTMDcn = lazy(() =>
+  import("../WooComerceLayout/WoocomerceOTMDcn")
+);
+const WoocomerceOTMDse = lazy(() =>
+  import("../WooComerceLayout/WoocomerceOTMDse")
 );
 
 /**
@@ -92,18 +95,25 @@ export default function PageRouter() {
           <Home />
         </PrivateRoute>
         <PrivateRoute
+          path="/woocomcn"
+          exact
+          requiredRoles={["planner", "administrator"]}
+        >
+          <WoocomerceOTMDcn />
+        </PrivateRoute>
+        <PrivateRoute
+          path="/woocomse"
+          exact
+          requiredRoles={["planner", "administrator"]}
+        >
+          <WoocomerceOTMDse />
+        </PrivateRoute>
+        <PrivateRoute
           path="/woocom"
           exact
           requiredRoles={["planner", "administrator"]}
         >
           <WoocomerceComponent />
-        </PrivateRoute>
-        <PrivateRoute
-          path="/woocomsycc"
-          exact
-          requiredRoles={["planner", "administrator"]}
-        >
-          <WoocommerceComponentSycc />
         </PrivateRoute>
         <Route>
           <Redirect to="/" />

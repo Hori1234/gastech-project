@@ -32,8 +32,7 @@ const WooCommerce = new WooCommerceRestApi({
   version: "wc/v3", // WooCommerce WP REST API version
   queryStringAuth: true,
 });
-
-export default class WoocomerceComponent extends Component {
+export default class WoocomerceOTMDcn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,8 +87,8 @@ export default class WoocomerceComponent extends Component {
   }
 
   componentDidMount() {
-    this.setState({ startingColumns: this.state.columns });
-    this.getOrderList(currentpage, perpage);
+    //this.setState({ startingColumns: this.state.columns });
+    //this.getOrderList(currentpage, perpage);
   }
 
   getAllOrdersToExcel = async (vpage, vperpage, nrpages) => {

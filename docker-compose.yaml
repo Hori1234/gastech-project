@@ -39,6 +39,7 @@ services:
     restart: always
     networks:
       webapp:
+        #ipv4_address: "192.168.208.3"
         aliases:
           - backend
     environment:
@@ -75,3 +76,7 @@ volumes:
   letsencrypt:
 networks:
   webapp:
+    driver: bridge
+    #ipam:
+    #  config:
+    #    - subnet: 192.168.208.0/24

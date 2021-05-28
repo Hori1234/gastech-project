@@ -36,7 +36,7 @@ const AuthProvider = (props) => {
   React.useEffect((state) => {
     // check if user is already logged in
     axios
-      .get("/auth/user")
+      .get("/api/auth/user")
       .then((res) => {
         setState((state) => ({
           ...state,
@@ -61,7 +61,7 @@ const AuthProvider = (props) => {
    */
   const login = async (credentials) => {
     return axios
-      .post("/auth/login", credentials)
+      .post("/api/auth/login", credentials)
       .then((res) => {
         setState((state) => ({
           ...state,
@@ -87,7 +87,7 @@ const AuthProvider = (props) => {
    */
   const logout = async () => {
     return axios
-      .post("/auth/logout")
+      .post("/api/auth/logout")
       .then(() => {
         setState((state) => ({
           ...state,

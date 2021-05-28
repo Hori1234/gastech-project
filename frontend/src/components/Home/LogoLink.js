@@ -35,7 +35,13 @@ export default function LogoLink({ image, title, description, to }) {
         <Text style={{ fontWeight: "bold", fontSize: "18" }}>{title}</Text>
         <Text style={{ fontSize: " 14" }}>{description}</Text>
       </Layout>
-      <Layout style={{ alignItems: "flex-end", backgroundColor: "white" }}>
+      <Layout
+        style={{
+          alignItems: "flex-end",
+          backgroundColor: "white",
+          marginLeft: 20,
+        }}
+      >
         <Button id="dataButton" type="primary">
           <Link to={to}>Go</Link>
         </Button>

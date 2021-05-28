@@ -34,31 +34,35 @@ export default class Home extends Component {
                 marginBottom: 50,
                 marginRight: 100,
                 backgroundColor: "white",
-                marginLeft: 30,
+                marginLeft: 10,
               }}
             >
-              <LogoLink
-                image={require("../Images/view-planning.svg")}
-                title={"View Planning"}
-                description={"View the planning that was created for today"}
-                to={"/view"}
-              />
-              <LogoLink
-                image={require("../Images/Data Analytics.webp")}
-                title={"Monthly Data Analytics"}
-                description={
-                  "View statistical data about this and past plannings"
-                }
-                to={"/monthly"}
-              />
               {(context.state.user.role === "planner" ||
                 context.state.user.role === "administrator") && (
                 <>
                   <LogoLink
                     image={require("../Images/Data Visualisation.webp")}
-                    title={"Data Visualisation"}
-                    description={"View charts of the supplied data"}
-                    to={"/data"}
+                    title={"OTMD"}
+                    description={
+                      "Pagina de Woocomerce pentru centrul OTMD Central"
+                    }
+                    to={"/woocom"}
+                  />
+                  <LogoLink
+                    image={require("../Images/view-planning.svg")}
+                    title={"OTMD Centru Nord"}
+                    description={
+                      "Pagina de Woocomerce pentru centrul Sud-EstPagina de Woocomerce pentru centrul OTMD Nord"
+                    }
+                    to={"/woocomcn"}
+                  />
+                  <LogoLink
+                    image={require("../Images/Data Analytics.webp")}
+                    title={"OTMD Centru Sud-Est"}
+                    description={
+                      "Pagina de Woocomerce pentru centrul OTMD Sud-Est"
+                    }
+                    to={"/woocomse"}
                   />
                 </>
               )}
@@ -82,7 +86,7 @@ export default class Home extends Component {
                 display: "flex",
                 alignItems: "flex-start",
                 backgroundColor: "white",
-                marginRight: 30,
+                marginRight: 20,
               }}
             >
               {(context.state.user.role === "planner" ||
@@ -92,15 +96,9 @@ export default class Home extends Component {
                     image={require("../Images/upload-file.svg")}
                     title={"Upload Documents"}
                     description={
-                      "Upload the documents for the creation of the plannings"
+                      "Uploadarea articolelor in format .pdf -- INCA IN LUCRU"
                     }
                     to={"/upload"}
-                  />
-                  <LogoLink
-                    image={require("../Images/23_generate_value_for_investors_rapid_growth_planning-512.svg")}
-                    title={"Create Planning"}
-                    description={"Manual and automatic creation of a planning"}
-                    to={"/planning"}
                   />
                 </>
               )}
@@ -109,7 +107,7 @@ export default class Home extends Component {
                   image={require("../Images/1635626-200.png")}
                   title={"Account Management"}
                   description={
-                    "Manage roles, usernames, and passwords for all users"
+                    "Modificarea/Adaugarea/Stergerea conturilor echipei OTMD"
                   }
                   to={"/account"}
                 />
