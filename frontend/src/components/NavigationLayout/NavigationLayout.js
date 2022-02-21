@@ -33,11 +33,11 @@ export default function NavigationLayout() {
         return "0";
       case "/account":
         return "1";
-      case "/woocom":
+      case "/expl":
         return "2";
-      case "/woocomcn":
+      case "/hierarch":
         return "3";
-      case "/woocomse":
+      case "/stats":
         return "4";
       default:
         return null;
@@ -82,7 +82,7 @@ export default function NavigationLayout() {
               icon={<UserOutlined />}
             />
 
-            <Divider>O.T.M.D - Services</Divider>
+            <Divider>GASTech - Services</Divider>
             <Menu
               mode="inline"
               defaultOpenKeys={["sub1"]}
@@ -103,13 +103,13 @@ export default function NavigationLayout() {
                     <Link to="/account">Account Management</Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/woocom">Woocom OTMD</Link>
+                    <Link to="/expl">Finding Outliers</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/woocomcn">Woocom OTMD CN</Link>
+                    <Link to="/hierarch">Hierarchical Data</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
-                    <Link to="/woocomse">Woocom OTMD SE</Link>
+                    <Link to="/stats">Statistics</Link>
                   </Menu.Item>
                   <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
@@ -128,13 +128,13 @@ export default function NavigationLayout() {
                     <Link to="/">Home</Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/woocom">Woocom OTMD</Link>
+                    <Link to="/expl">Finding Outliers</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/woocomcn">Woocom OTMD CN</Link>
+                    <Link to="/hierarch">Hierarchical Data</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
-                    <Link to="/woocomse">Woocom OTMD SE</Link>
+                    <Link to="/stats">Statistics</Link>
                   </Menu.Item>
                   <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
@@ -201,7 +201,7 @@ export default function NavigationLayout() {
           </Layout>
           {
             <Footer style={{ textAlign: "center", height: 0 }}>
-              O.T.M.D - Services ©2021 Created by OTMD Group
+              GASTech - Services ©2021 Created by Group Project 18
             </Footer>
           }
         </Layout>

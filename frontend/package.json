@@ -11,9 +11,7 @@
     "antd": "^4.6.2",
     "axios": "^0.20.0",
     "gantt": "^3.1.0",
-    "jest-puppeteer": "^4.4.0",
-    "puppeteer": "^5.3.1",
-    "puppeteer-core": "^5.3.1",
+    "json-2-csv": "^3.10.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-charts": "^3.0.15",
@@ -21,7 +19,8 @@
     "react-json-to-csv": "^1.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "woocommerce-api": "^1.5.0"
+    "woocommerce-api": "^1.5.0",
+    "write-file-p": "^1.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -7,26 +7,20 @@ const AccountManagementLayout = lazy(() =>
   import("../AccountManagerLayout/AccountManagementLayout")
 );
 const Logout = lazy(() => import("../Logout/Logout"));
-const ManualPlanning = lazy(() => import("../ManualPlanning/ManualPlanning"));
-const ViewPlanning = lazy(() =>
-  import("../ViewPlanningPageLayout/ViewPlanning")
-);
-const DataVisualization = lazy(() =>
-  import("../DataVisualization/DataVisualization")
-);
-const MonthlyDataAnalytics = lazy(() =>
-  import("../MonthlyDataAnalytics/MonthlyDataAnalytics")
-);
 const Home = lazy(() => import("../Home/Home"));
-const WoocomerceComponent = lazy(() =>
-  import("../WooComerceLayout/WoocomerceComponent")
+
+const HierarchicalLayout = lazy(() =>
+  import("../HierarchicalLayout/hierarchicallayout")
 );
-const WoocomerceOTMDcn = lazy(() =>
-  import("../WooComerceLayout/WoocomerceOTMDcn")
+
+const ExploratoryLayout = lazy(() =>
+  import("../ExploratoryLayout/exploratorylayout")
 );
-const WoocomerceOTMDse = lazy(() =>
-  import("../WooComerceLayout/WoocomerceOTMDse")
+
+const StatisticsLayout = lazy(() =>
+  import("../StatisticsLayout/statisticslayout")
 );
+
 
 /**
  * Defines the routing for the pages in the NavigationLayout component.
@@ -67,27 +61,6 @@ export default function PageRouter() {
           <Logout />
         </Route>
         <PrivateRoute
-          path="/planning"
-          requiredRoles={["planner", "administrator"]}
-        >
-          <ManualPlanning />
-        </PrivateRoute>
-        <PrivateRoute
-          path="/view"
-          requiredRoles={["view-only", "planner", "administrator"]}
-        >
-          <ViewPlanning />
-        </PrivateRoute>
-        <PrivateRoute path="/data" requiredRoles={["planner", "administrator"]}>
-          <DataVisualization />
-        </PrivateRoute>
-        <PrivateRoute
-          path="/monthly"
-          requiredRoles={["view-only", "planner", "administrator"]}
-        >
-          <MonthlyDataAnalytics />
-        </PrivateRoute>
-        <PrivateRoute
           path="/"
           exact
           requiredRoles={["view-only", "planner", "administrator"]}
@@ -95,25 +68,25 @@ export default function PageRouter() {
           <Home />
         </PrivateRoute>
         <PrivateRoute
-          path="/woocomcn"
+          path="/expl"
           exact
           requiredRoles={["planner", "administrator"]}
         >
-          <WoocomerceOTMDcn />
+          <ExploratoryLayout />
         </PrivateRoute>
         <PrivateRoute
-          path="/woocomse"
+          path="/hierarch"
           exact
           requiredRoles={["planner", "administrator"]}
         >
-          <WoocomerceOTMDse />
+          <HierarchicalLayout />
         </PrivateRoute>
         <PrivateRoute
-          path="/woocom"
+          path="/stats"
           exact
           requiredRoles={["planner", "administrator"]}
         >
-          <WoocomerceComponent />
+          <StatisticsLayout />
         </PrivateRoute>
         <Route>
           <Redirect to="/" />
