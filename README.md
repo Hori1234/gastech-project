@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-# otmdservices
-=======
-# SEP 2021_Q1 Group 2
-
->>>>>>> master
+This is the VisualizationTool made for 2AMV10 
+By Group Project 18
