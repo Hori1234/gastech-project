@@ -42,27 +42,27 @@ export default class Home extends Component {
                 <>
                   <LogoLink
                     image={require("../Images/Data Visualisation.webp")}
-                    title={"OTMD"}
+                    title={"Statistics"}
                     description={
-                      "Pagina de Woocomerce pentru centrul OTMD Central"
+                      "Page with the afferent statistics regarding our data challenge."
                     }
-                    to={"/woocom"}
+                    to={"/stats"}
                   />
                   <LogoLink
                     image={require("../Images/view-planning.svg")}
-                    title={"OTMD Centru Nord"}
+                    title={"Finding Outliers"}
                     description={
-                      "Pagina de Woocomerce pentru centrul Sud-EstPagina de Woocomerce pentru centrul OTMD Nord"
+                      "Using this tool you can find the outliers present in the dataset in a exploratory fahsion."
                     }
-                    to={"/woocomcn"}
+                    to={"/expl"}
                   />
                   <LogoLink
                     image={require("../Images/Data Analytics.webp")}
-                    title={"OTMD Centru Sud-Est"}
+                    title={"Hierarchical Data"}
                     description={
-                      "Pagina de Woocomerce pentru centrul OTMD Sud-Est"
+                      "Using this tool you can find the hierarchical relations between the employees"
                     }
-                    to={"/woocomse"}
+                    to={"/hierarch"}
                   />
                 </>
               )}

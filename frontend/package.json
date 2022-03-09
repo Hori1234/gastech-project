@@ -10,6 +10,8 @@
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "antd": "^4.6.2",
     "axios": "^0.20.0",
+    "d3": "^7.3.0",
+    "d3-scale": "^4.0.2",
     "gantt": "^3.1.0",
     "json-2-csv": "^3.10.2",
     "react": "^16.13.1",
