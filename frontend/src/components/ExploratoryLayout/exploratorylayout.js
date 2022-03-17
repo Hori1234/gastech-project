@@ -30,21 +30,17 @@ export default class exploratorylayout extends Component {
   render() {
     return (
       <Layout style={{
-        backgroundColor: "pink", display: "flex", width: "100%"
+        backgroundColor: "white", display: "flex", width: "100%"
       }}>
         <Layout
           style={{
-            backgroundColor: "yellow", display: "flex", width: "100%", flexDirection: "row", height: "5%",
+            backgroundColor: "white", display: "flex", width: "100%", flexDirection: "row", height: "5%",
             justifyContent: "flex-start",alignItemsArr:"center"
         }}>
           <Button
             style={{ marginLeft: 10,}}
             onClick={()=>this.changeGraphState("network")}>
-            Network Graph</Button>
-          <Button
-            style={{ marginLeft: 10,}}
-            onClick={()=>this.changeGraphState("tsne")}>
-            t-SNE</Button>
+            Network Graph/ TSNE</Button>
           <Button
             style={{ marginLeft: 10,}}
             onClick={()=>this.changeGraphState("heatmap")}>
@@ -56,9 +52,9 @@ export default class exploratorylayout extends Component {
           backgroundColor: "green", width: "100%", height: "95%",
           justifyContent: "center",alignItems:"center",
         }}>
-          {this.state.graphstate === "network" && <NetworkComponent data={[5,10,1,3]} size={[500,500]}/>}
+          {this.state.graphstate === "network" && <NetworkComponent data={[5,10,1,3]}/>}
           {this.state.graphstate === "heatmap" && <HeatmapComponent />}
-          {this.state.graphstate === "tsne" && <TSNEComponent/>}
+          
         </Layout>
 
       </Layout>
