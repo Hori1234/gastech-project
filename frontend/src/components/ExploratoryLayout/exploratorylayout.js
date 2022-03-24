@@ -43,7 +43,7 @@ export default class exploratorylayout extends Component {
             Network Graph/ TSNE</Button>
           <Button
             style={{ marginLeft: 10,}}
-            onClick={()=>this.changeGraphState("heatmap")}>
+            onClick={()=>this.changeGraphState("tsne")}>
             Heatmap</Button>
 
         </Layout>
@@ -53,7 +53,7 @@ export default class exploratorylayout extends Component {
           justifyContent: "center",alignItems:"center",
         }}>
           {this.state.graphstate === "network" && <NetworkComponent data={[5,10,1,3]}/>}
-          {this.state.graphstate === "heatmap" && <HeatmapComponent />}
+          {this.state.graphstate === "tsne" && <TSNEComponent />}
           
         </Layout>
 
