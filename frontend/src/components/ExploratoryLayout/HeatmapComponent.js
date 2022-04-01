@@ -16,24 +16,39 @@ export default class HeatmapComponent extends Component {
     this.HeatmapBuild()
   }
 
+  componentDidUpdate() {
+    if (this.props.changedata == true) {
+      this.handleSvgRefresh()
+      this.HeatmapBuild()
+    }
+  }
+
+  handleSvgRefresh = () => {
+    d3.select("#heatmap").selectAll("svg").remove();
+  }
+
   HeatmapBuild = () => {
-    const margin = {top: 300, right: 25, bottom: 30, left: 50},
-  width = 450 ,
-  height = 450 ;
+    const margin = {top: 100, right: 25, bottom: 30, left: 50},
+  width = 600 ,
+  height = 680 ;
 
   // append the svg object to the body of the page
-  const svg = d3.select("#heatmap").selectAll("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    const svg = d3.select("#heatmap")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   //Read the data
-  d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv").then(function(data) {
+  d3.csv(`../static/files/${this.props.datapath}.csv`).then(function(data) {
 
     // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
-    const myGroups = Array.from(new Set(data.map(d => d.group)))
-    const myVars = Array.from(new Set(data.map(d => d.variable)))
+    const myGroups = Array.from(new Set(data.map(d => d.IDPF)))
+    const myVars = Array.from(new Set(data.map(d => d.Subject)))
+
+    console.log("My groups", myGroups);
+    console.log("my vars", myVars)
 
     // Build X scales and axis:
     const x = d3.scaleBand()
@@ -59,7 +74,7 @@ export default class HeatmapComponent extends Component {
     // Build color scale
     const myColor = d3.scaleSequential()
       .interpolator(d3.interpolateInferno)
-      .domain([1,100])
+      .domain([1,0.5])
 
     // create a tooltip
     const tooltip = d3.select("#heatmap")
@@ -68,9 +83,10 @@ export default class HeatmapComponent extends Component {
       .attr("class", "tooltip")
       .style("background-color", "white")
       .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
-      .style("padding", "5px")
+      .style("border-width", 30)
+      .style("border-height",15)
+      .style("border-radius", "2px")
+      .style("padding", "2px")
 
     // Three function that change the tooltip when user hover / move / leave a cell
     const mouseover = function(event,d) {
@@ -82,9 +98,9 @@ export default class HeatmapComponent extends Component {
     }
     const mousemove = function(event,d) {
       tooltip
-        .html("The exact value of<br>this cell is: " + d.value)
-        .style("left", (event.x)/2 + "px")
-        .style("top", (event.y)/2 + "px")
+        .html("The exact value of<br>this cell is: " + d.Similarity)
+        .style("left", "300px")
+        .style("top", "300px")
     }
     const mouseleave = function(event,d) {
       tooltip
@@ -96,21 +112,38 @@ export default class HeatmapComponent extends Component {
 
     // add the squares
     svg.selectAll()
-      .data(data, function(d) {return d.group+':'+d.variable;})
+      .data(data, function(d) {return d.IDPF+':'+d.Subject;})
       .join("rect")
-        .attr("x", function(d) { return x(d.group) })
-        .attr("y", function(d) { return y(d.variable) })
+        .attr("x", function(d) { return x(d.IDPF) })
+        .attr("y", function(d) { return y(d.Subject) })
         .attr("rx", 4)
         .attr("ry", 4)
         .attr("width", x.bandwidth() )
         .attr("height", y.bandwidth() )
-        .style("fill", function(d) { return myColor(d.value)} )
+        .style("fill", function(d) { return myColor(d.Similarity)} )
         .style("stroke-width", 4)
         .style("stroke", "none")
         .style("opacity", 0.8)
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave)
+      .on("mouseover", function(event,d) {
+        tooltip
+          .style("opacity", 1)
+        d3.select(this)
+          .style("stroke", "black")
+          .style("opacity", 1)
+      })
+      .on("mousemove", function(event,d) {
+        const [x, y] = d3.pointer(event);
+        tooltip
+          .html("The exact value of<br>this cell is: " + d.Similarity)
+          .attr('transform', `translate(${x}, ${y})`);
+      })
+      .on("mouseleave", function(event,d) {
+        tooltip
+          .style("opacity", 0)
+        d3.select(this)
+          .style("stroke", "none")
+          .style("opacity", 0.8)
+      })
   })
 
   // Add title to graph
@@ -119,7 +152,7 @@ export default class HeatmapComponent extends Component {
           .attr("y", -50)
           .attr("text-anchor", "left")
           .style("font-size", "22px")
-          .text("A d3.js heatmap");
+          .text("Heatmap for the density of the subject heathers");
 
   // Add subtitle to graph
   svg.append("text")
@@ -129,22 +162,19 @@ export default class HeatmapComponent extends Component {
           .style("font-size", "14px")
           .style("fill", "grey")
           .style("max-width", 400)
-          .text("A short description of the take-away message of this chart.");
+          .text("Heatmap to show the similarity in texts sent by the employees between the employees in the specified date.");
 
   }
   render() {
     return (
       <div id="heatmap"
-                  style={{ display:"flex",
-                  height: "100%", backgroundColor: "white"
+                  style={{ height:837,
+                   backgroundColor: "white"
                   }}
                   ref={this.heatmapvis}
                >
                   
-                  <svg style={{ width: "100%",
-                  height: "100%" }}>
-
-                  </svg>
+                  
             
       </div>
     )

@@ -1,0 +1,825 @@
+,ID,IDPF,IDPT,Subject,Similarity
+44,275,1,17,Security procedures for January 20 VIP visit,0.77
+45,864,1,55,RE: Impact of local politics on profit margin,1
+46,763,1,48,RE: Impact of local politics on profit margin,1
+47,714,1,44,RE: Impact of local politics on profit margin,1
+48,782,1,49,Security update: how to handle reporters on the grounds,0.71
+49,92,1,6,RE: Field work rotation schedule,0.76
+50,528,1,34,RE: Field work rotation schedule,0.76
+51,327,1,21,RE: Security procedures for January 20 VIP visit,0.82
+52,430,1,28,RE: Facilities preparations for VIP visit,0.84
+53,250,1,16,RE: Facilities preparations for VIP visit,0.84
+54,289,1,18,RE: Field work rotation schedule,0.76
+55,298,1,19,RE: Facilities preparations for VIP visit,0.84
+56,196,1,13,RE: Facilities preparations for VIP visit,0.84
+57,491,1,31,RE: Security update: how to handle reporters on the grounds,0.78
+58,731,1,45,Missing sweater,0.7
+59,508,1,32,RE: Security procedures for January 20 VIP visit,0.82
+60,276,1,17,RE: Security update: how to handle reporters on the grounds,0.78
+61,277,1,17,RE: Security procedures for January 20 VIP visit,0.82
+62,220,1,14,RE: Missing sweater,0.74
+63,197,1,13,RE: Mandatory safety training,0.8
+64,252,1,16,RE: Mandatory safety training,0.8
+65,253,1,16,RE: Mandatory safety training,0.8
+567,764,1,48,RE: Impromptu golf vacation - who's in?,0.92
+568,865,1,55,RE: Impromptu golf vacation - who's in?,0.92
+67,91,2,6,Field work rotation schedule,0.72
+68,597,2,39,Software review report,0.72
+69,796,2,50,RE: Software review report,0.7
+70,92,2,6,RE: Field work rotation schedule,0.71
+71,528,2,34,RE: Field work rotation schedule,0.71
+72,27,2,2,RE: Union meeting,0.77
+73,289,2,18,RE: Field work rotation schedule,0.71
+74,251,2,16,RE: Union meeting,0.77
+386,195,2,13,RE: Awwww- cute!,0.73
+387,490,2,31,RE: Awwww- cute!,0.73
+388,93,2,6,RE: GIS update,0.84
+389,327,2,21,RE: Security procedures for January 20 VIP visit,0.71
+390,288,2,18,RE: GIS update,0.84
+391,289,2,18,RE: Field work rotation schedule,0.75
+392,290,2,18,RE: Remember Casino night!,0.73
+393,447,2,29,RE: Remember Casino night!,0.73
+394,514,2,33,RE: GIS update,0.84
+395,529,2,34,RE: Remember Casino night!,0.73
+396,507,2,32,RE: Remember Casino night!,0.73
+397,94,2,6,RE: Remember Casino night!,0.73
+398,251,2,16,RE: Union meeting,1
+399,508,2,32,RE: Security procedures for January 20 VIP visit,0.71
+400,334,2,22,RE: GIS update,0.84
+401,854,2,54,RE: GIS update,0.84
+402,277,2,17,RE: Security procedures for January 20 VIP visit,0.71
+403,315,2,20,RE: GIS update,0.84
+404,544,2,35,RE: GIS update,0.84
+405,620,2,40,RE: GIS update,0.84
+406,220,2,14,RE: Missing sweater,0.73
+407,530,2,34,RE: GIS update,0.84
+408,197,2,13,RE: Mandatory safety training,0.79
+409,252,2,16,RE: Mandatory safety training,0.79
+410,253,2,16,RE: Mandatory safety training,0.79
+429,490,2,31,RE: Awwww- cute!,0.77
+430,93,2,6,RE: GIS update,0.73
+431,288,2,18,RE: GIS update,0.73
+432,289,2,18,RE: Field work rotation schedule,0.73
+433,237,2,15,RE: Document stuck,1
+434,290,2,18,RE: Remember Casino night!,0.71
+435,447,2,29,RE: Remember Casino night!,0.71
+436,514,2,33,RE: GIS update,0.73
+437,529,2,34,RE: Remember Casino night!,0.71
+438,507,2,32,RE: Remember Casino night!,0.71
+439,94,2,6,RE: Remember Casino night!,0.71
+440,334,2,22,RE: GIS update,0.73
+441,854,2,54,RE: GIS update,0.73
+442,315,2,20,RE: GIS update,0.73
+443,544,2,35,RE: GIS update,0.73
+444,620,2,40,RE: GIS update,0.73
+445,220,2,14,RE: Missing sweater,0.7
+446,530,2,34,RE: GIS update,0.73
+447,197,2,13,RE: Mandatory safety training,0.72
+448,252,2,16,RE: Mandatory safety training,0.72
+449,253,2,16,RE: Mandatory safety training,0.72
+23,182,4,12,RE: Funny!!,1
+24,429,4,28,RE: Funny!!,1
+25,195,4,13,RE: Awwww- cute!,0.74
+26,490,4,31,RE: Awwww- cute!,0.74
+216,597,6,39,Software review report,0.83
+217,796,6,50,RE: Software review report,0.74
+218,92,6,6,RE: Field work rotation schedule,0.92
+219,528,6,34,RE: Field work rotation schedule,0.92
+220,289,6,18,RE: Field work rotation schedule,0.92
+302,528,6,34,RE: Field work rotation schedule,1
+303,27,6,2,RE: Union meeting,0.75
+304,28,6,2,RE: Document stuck,0.73
+305,93,6,6,RE: GIS update,0.75
+306,327,6,21,RE: Security procedures for January 20 VIP visit,0.8
+307,288,6,18,RE: GIS update,0.75
+308,430,6,28,RE: Facilities preparations for VIP visit,0.75
+309,250,6,16,RE: Facilities preparations for VIP visit,0.75
+310,289,6,18,RE: Field work rotation schedule,1
+311,298,6,19,RE: Facilities preparations for VIP visit,0.75
+312,237,6,15,RE: Document stuck,0.73
+313,290,6,18,RE: Remember Casino night!,0.73
+314,447,6,29,RE: Remember Casino night!,0.73
+315,514,6,33,RE: GIS update,0.75
+316,196,6,13,RE: Facilities preparations for VIP visit,0.75
+317,529,6,34,RE: Remember Casino night!,0.73
+318,507,6,32,RE: Remember Casino night!,0.73
+319,94,6,6,RE: Remember Casino night!,0.73
+320,251,6,16,RE: Union meeting,0.75
+321,508,6,32,RE: Security procedures for January 20 VIP visit,0.8
+322,334,6,22,RE: GIS update,0.75
+323,854,6,54,RE: GIS update,0.75
+324,277,6,17,RE: Security procedures for January 20 VIP visit,0.8
+325,315,6,20,RE: GIS update,0.75
+326,544,6,35,RE: GIS update,0.75
+327,620,6,40,RE: GIS update,0.75
+328,220,6,14,RE: Missing sweater,0.7
+329,530,6,34,RE: GIS update,0.75
+330,197,6,13,RE: Mandatory safety training,0.81
+331,252,6,16,RE: Mandatory safety training,0.81
+332,253,6,16,RE: Mandatory safety training,0.81
+466,327,6,21,RE: Security procedures for January 20 VIP visit,0.74
+467,288,6,18,RE: GIS update,1
+468,513,6,33,GIS update,0.81
+469,289,6,18,RE: Field work rotation schedule,0.75
+470,237,6,15,RE: Document stuck,0.73
+471,290,6,18,RE: Remember Casino night!,0.77
+472,447,6,29,RE: Remember Casino night!,0.77
+473,514,6,33,RE: GIS update,1
+474,543,6,35,GIS update,0.81
+475,529,6,34,RE: Remember Casino night!,0.77
+476,507,6,32,RE: Remember Casino night!,0.77
+477,94,6,6,RE: Remember Casino night!,0.77
+478,251,6,16,RE: Union meeting,0.84
+479,508,6,32,RE: Security procedures for January 20 VIP visit,0.74
+480,334,6,22,RE: GIS update,1
+481,854,6,54,RE: GIS update,1
+482,277,6,17,RE: Security procedures for January 20 VIP visit,0.74
+483,315,6,20,RE: GIS update,1
+484,544,6,35,RE: GIS update,1
+485,620,6,40,RE: GIS update,1
+486,220,6,14,RE: Missing sweater,0.71
+487,530,6,34,RE: GIS update,1
+488,197,6,13,RE: Mandatory safety training,0.72
+489,252,6,16,RE: Mandatory safety training,0.72
+490,253,6,16,RE: Mandatory safety training,0.72
+721,251,6,16,RE: Union meeting,0.73
+722,508,6,32,RE: Security procedures for January 20 VIP visit,0.7
+723,334,6,22,RE: GIS update,0.77
+724,854,6,54,RE: GIS update,0.77
+725,277,6,17,RE: Security procedures for January 20 VIP visit,0.7
+726,315,6,20,RE: GIS update,0.77
+727,544,6,35,RE: GIS update,0.77
+728,620,6,40,RE: GIS update,0.77
+729,530,6,34,RE: GIS update,0.77
+30,429,12,28,RE: Funny!!,1
+31,195,12,13,RE: Awwww- cute!,0.74
+32,490,12,31,RE: Awwww- cute!,0.74
+0,53,13,4,RE: Funny!!,0.84
+1,182,13,12,RE: Funny!!,0.84
+2,429,13,28,RE: Funny!!,0.84
+411,28,13,2,RE: Document stuck,0.77
+412,490,13,31,RE: Awwww- cute!,1
+413,93,13,6,RE: GIS update,0.78
+414,288,13,18,RE: GIS update,0.78
+415,237,13,15,RE: Document stuck,0.77
+416,290,13,18,RE: Remember Casino night!,0.81
+417,447,13,29,RE: Remember Casino night!,0.81
+418,514,13,33,RE: GIS update,0.78
+419,529,13,34,RE: Remember Casino night!,0.81
+420,507,13,32,RE: Remember Casino night!,0.81
+421,94,13,6,RE: Remember Casino night!,0.81
+422,251,13,16,RE: Union meeting,0.73
+423,334,13,22,RE: GIS update,0.78
+424,854,13,54,RE: GIS update,0.78
+425,315,13,20,RE: GIS update,0.78
+426,544,13,35,RE: GIS update,0.78
+427,620,13,40,RE: GIS update,0.78
+428,530,13,34,RE: GIS update,0.78
+681,491,13,31,RE: Security update: how to handle reporters on the grounds,0.77
+682,508,13,32,RE: Security procedures for January 20 VIP visit,0.9
+683,276,13,17,RE: Security update: how to handle reporters on the grounds,0.77
+684,277,13,17,RE: Security procedures for January 20 VIP visit,0.9
+685,764,13,48,RE: Impromptu golf vacation - who's in?,0.72
+686,865,13,55,RE: Impromptu golf vacation - who's in?,0.72
+687,220,13,14,RE: Missing sweater,0.72
+688,197,13,13,RE: Mandatory safety training,0.81
+689,252,13,16,RE: Mandatory safety training,0.81
+690,253,13,16,RE: Mandatory safety training,0.81
+821,252,13,16,RE: Mandatory safety training,1
+822,253,13,16,RE: Mandatory safety training,1
+221,747,14,46,RE: You never get a second chance to make a first impression,0.97
+814,530,14,34,RE: GIS update,0.71
+815,197,14,13,RE: Mandatory safety training,0.84
+816,252,14,16,RE: Mandatory safety training,0.84
+817,253,14,16,RE: Mandatory safety training,0.84
+167,28,15,2,RE: Document stuck,0.81
+168,237,15,15,RE: Document stuck,0.81
+200,390,15,25,RE: Tools,1
+201,378,15,24,RE: Files,0.89
+202,730,15,45,RE: Files,0.89
+203,27,15,2,RE: Union meeting,0.76
+204,195,15,13,RE: Awwww- cute!,0.73
+205,490,15,31,RE: Awwww- cute!,0.73
+206,93,15,6,RE: GIS update,0.77
+207,288,15,18,RE: GIS update,0.77
+208,514,15,33,RE: GIS update,0.77
+209,251,15,16,RE: Union meeting,0.76
+210,334,15,22,RE: GIS update,0.77
+211,854,15,54,RE: GIS update,0.77
+212,315,15,20,RE: GIS update,0.77
+213,544,15,35,RE: GIS update,0.77
+214,620,15,40,RE: GIS update,0.77
+215,530,15,34,RE: GIS update,0.77
+615,290,15,18,RE: Remember Casino night!,0.71
+616,447,15,29,RE: Remember Casino night!,0.71
+617,514,15,33,RE: GIS update,0.73
+618,529,15,34,RE: Remember Casino night!,0.71
+619,507,15,32,RE: Remember Casino night!,0.71
+620,94,15,6,RE: Remember Casino night!,0.71
+621,334,15,22,RE: GIS update,0.73
+622,854,15,54,RE: GIS update,0.73
+623,315,15,20,RE: GIS update,0.73
+624,544,15,35,RE: GIS update,0.73
+625,620,15,40,RE: GIS update,0.73
+626,220,15,14,RE: Missing sweater,0.7
+627,530,15,34,RE: GIS update,0.73
+628,197,15,13,RE: Mandatory safety training,0.72
+629,252,15,16,RE: Mandatory safety training,0.72
+630,253,15,16,RE: Mandatory safety training,0.72
+706,328,15,21,RE: They need that report today,1
+569,289,16,18,RE: Field work rotation schedule,0.75
+570,298,16,19,RE: Facilities preparations for VIP visit,1
+571,196,16,13,RE: Facilities preparations for VIP visit,1
+572,491,16,31,RE: Security update: how to handle reporters on the grounds,0.77
+573,508,16,32,RE: Security procedures for January 20 VIP visit,0.9
+574,276,16,17,RE: Security update: how to handle reporters on the grounds,0.77
+575,277,16,17,RE: Security procedures for January 20 VIP visit,0.9
+576,764,16,48,RE: Impromptu golf vacation - who's in?,0.72
+577,865,16,55,RE: Impromptu golf vacation - who's in?,0.72
+578,220,16,14,RE: Missing sweater,0.72
+579,197,16,13,RE: Mandatory safety training,0.81
+580,252,16,16,RE: Mandatory safety training,0.81
+581,253,16,16,RE: Mandatory safety training,0.81
+730,508,16,32,RE: Security procedures for January 20 VIP visit,0.71
+731,334,16,22,RE: GIS update,0.84
+732,854,16,54,RE: GIS update,0.84
+733,277,16,17,RE: Security procedures for January 20 VIP visit,0.71
+734,315,16,20,RE: GIS update,0.84
+735,544,16,35,RE: GIS update,0.84
+736,620,16,40,RE: GIS update,0.84
+737,220,16,14,RE: Missing sweater,0.73
+738,530,16,34,RE: GIS update,0.84
+739,197,16,13,RE: Mandatory safety training,0.79
+740,252,16,16,RE: Mandatory safety training,0.79
+741,253,16,16,RE: Mandatory safety training,0.79
+823,253,16,16,RE: Mandatory safety training,1
+75,864,17,55,RE: Impact of local politics on profit margin,0.77
+76,763,17,48,RE: Impact of local politics on profit margin,0.77
+77,91,17,6,Field work rotation schedule,0.74
+78,714,17,44,RE: Impact of local politics on profit margin,0.77
+79,92,17,6,RE: Field work rotation schedule,0.77
+80,528,17,34,RE: Field work rotation schedule,0.77
+81,327,17,21,RE: Security procedures for January 20 VIP visit,0.95
+82,430,17,28,RE: Facilities preparations for VIP visit,0.85
+83,250,17,16,RE: Facilities preparations for VIP visit,0.85
+84,289,17,18,RE: Field work rotation schedule,0.77
+85,298,17,19,RE: Facilities preparations for VIP visit,0.85
+86,196,17,13,RE: Facilities preparations for VIP visit,0.85
+87,508,17,32,RE: Security procedures for January 20 VIP visit,0.95
+88,277,17,17,RE: Security procedures for January 20 VIP visit,0.95
+89,197,17,13,RE: Mandatory safety training,0.72
+90,252,17,16,RE: Mandatory safety training,0.72
+91,253,17,16,RE: Mandatory safety training,0.72
+766,277,17,17,RE: Security procedures for January 20 VIP visit,0.74
+767,220,17,14,RE: Missing sweater,0.71
+777,315,17,20,RE: GIS update,0.74
+778,764,17,48,RE: Impromptu golf vacation - who's in?,0.7
+779,865,17,55,RE: Impromptu golf vacation - who's in?,0.7
+780,544,17,35,RE: GIS update,0.74
+781,620,17,40,RE: GIS update,0.74
+782,220,17,14,RE: Missing sweater,0.72
+783,530,17,34,RE: GIS update,0.74
+784,197,17,13,RE: Mandatory safety training,0.8
+785,252,17,16,RE: Mandatory safety training,0.8
+786,253,17,16,RE: Mandatory safety training,0.8
+333,93,18,6,RE: GIS update,0.81
+334,288,18,18,RE: GIS update,0.81
+335,513,18,33,GIS update,1
+336,514,18,33,RE: GIS update,0.81
+337,543,18,35,GIS update,1
+338,334,18,22,RE: GIS update,0.81
+339,854,18,54,RE: GIS update,0.81
+340,315,18,20,RE: GIS update,0.81
+341,544,18,35,RE: GIS update,0.81
+342,620,18,40,RE: GIS update,0.81
+343,530,18,34,RE: GIS update,0.81
+522,513,18,33,GIS update,0.81
+523,289,18,18,RE: Field work rotation schedule,0.75
+524,237,18,15,RE: Document stuck,0.73
+525,290,18,18,RE: Remember Casino night!,0.77
+526,447,18,29,RE: Remember Casino night!,0.77
+527,514,18,33,RE: GIS update,1
+528,543,18,35,GIS update,0.81
+529,529,18,34,RE: Remember Casino night!,0.77
+530,507,18,32,RE: Remember Casino night!,0.77
+531,94,18,6,RE: Remember Casino night!,0.77
+532,251,18,16,RE: Union meeting,0.84
+533,508,18,32,RE: Security procedures for January 20 VIP visit,0.74
+534,334,18,22,RE: GIS update,1
+535,854,18,54,RE: GIS update,1
+536,277,18,17,RE: Security procedures for January 20 VIP visit,0.74
+537,315,18,20,RE: GIS update,1
+538,544,18,35,RE: GIS update,1
+539,620,18,40,RE: GIS update,1
+540,220,18,14,RE: Missing sweater,0.71
+541,530,18,34,RE: GIS update,1
+542,197,18,13,RE: Mandatory safety training,0.72
+543,252,18,16,RE: Mandatory safety training,0.72
+544,253,18,16,RE: Mandatory safety training,0.72
+582,298,18,19,RE: Facilities preparations for VIP visit,0.75
+583,237,18,15,RE: Document stuck,0.73
+584,290,18,18,RE: Remember Casino night!,0.73
+585,447,18,29,RE: Remember Casino night!,0.73
+586,514,18,33,RE: GIS update,0.75
+587,196,18,13,RE: Facilities preparations for VIP visit,0.75
+588,529,18,34,RE: Remember Casino night!,0.73
+589,507,18,32,RE: Remember Casino night!,0.73
+590,94,18,6,RE: Remember Casino night!,0.73
+591,251,18,16,RE: Union meeting,0.75
+592,508,18,32,RE: Security procedures for January 20 VIP visit,0.8
+593,334,18,22,RE: GIS update,0.75
+594,854,18,54,RE: GIS update,0.75
+595,277,18,17,RE: Security procedures for January 20 VIP visit,0.8
+596,315,18,20,RE: GIS update,0.75
+597,544,18,35,RE: GIS update,0.75
+598,620,18,40,RE: GIS update,0.75
+599,220,18,14,RE: Missing sweater,0.7
+600,530,18,34,RE: GIS update,0.75
+601,197,18,13,RE: Mandatory safety training,0.81
+602,252,18,16,RE: Mandatory safety training,0.81
+603,253,18,16,RE: Mandatory safety training,0.81
+631,447,18,29,RE: Remember Casino night!,1
+632,514,18,33,RE: GIS update,0.77
+633,529,18,34,RE: Remember Casino night!,1
+634,507,18,32,RE: Remember Casino night!,1
+635,94,18,6,RE: Remember Casino night!,1
+636,251,18,16,RE: Union meeting,0.73
+637,508,18,32,RE: Security procedures for January 20 VIP visit,0.7
+638,334,18,22,RE: GIS update,0.77
+639,854,18,54,RE: GIS update,0.77
+640,277,18,17,RE: Security procedures for January 20 VIP visit,0.7
+641,315,18,20,RE: GIS update,0.77
+642,544,18,35,RE: GIS update,0.77
+643,620,18,40,RE: GIS update,0.77
+644,530,18,34,RE: GIS update,0.77
+604,196,19,13,RE: Facilities preparations for VIP visit,1
+605,491,19,31,RE: Security update: how to handle reporters on the grounds,0.77
+606,508,19,32,RE: Security procedures for January 20 VIP visit,0.9
+607,276,19,17,RE: Security update: how to handle reporters on the grounds,0.77
+608,277,19,17,RE: Security procedures for January 20 VIP visit,0.9
+609,764,19,48,RE: Impromptu golf vacation - who's in?,0.72
+610,865,19,55,RE: Impromptu golf vacation - who's in?,0.72
+611,220,19,14,RE: Missing sweater,0.72
+612,197,19,13,RE: Mandatory safety training,0.81
+613,252,19,16,RE: Mandatory safety training,0.81
+614,253,19,16,RE: Mandatory safety training,0.81
+33,7,20,1,RE: Impact of local politics on profit margin,0.79
+34,864,20,55,RE: Impact of local politics on profit margin,0.79
+35,763,20,48,RE: Impact of local politics on profit margin,0.79
+36,714,20,44,RE: Impact of local politics on profit margin,0.79
+37,782,20,49,Security update: how to handle reporters on the grounds,0.72
+38,430,20,28,RE: Facilities preparations for VIP visit,0.74
+39,250,20,16,RE: Facilities preparations for VIP visit,0.74
+40,298,20,19,RE: Facilities preparations for VIP visit,0.74
+41,196,20,13,RE: Facilities preparations for VIP visit,0.74
+42,491,20,31,RE: Security update: how to handle reporters on the grounds,0.74
+43,276,20,17,RE: Security update: how to handle reporters on the grounds,0.74
+787,544,20,35,RE: GIS update,1
+788,620,20,40,RE: GIS update,1
+789,220,20,14,RE: Missing sweater,0.71
+790,530,20,34,RE: GIS update,1
+791,197,20,13,RE: Mandatory safety training,0.72
+792,252,20,16,RE: Mandatory safety training,0.72
+793,253,20,16,RE: Mandatory safety training,0.72
+491,238,21,15,RE: They need that report today,0.89
+492,328,21,21,RE: They need that report today,0.89
+493,288,21,18,RE: GIS update,0.74
+494,430,21,28,RE: Facilities preparations for VIP visit,0.9
+495,250,21,16,RE: Facilities preparations for VIP visit,0.9
+496,289,21,18,RE: Field work rotation schedule,0.8
+497,298,21,19,RE: Facilities preparations for VIP visit,0.9
+498,290,21,18,RE: Remember Casino night!,0.7
+499,447,21,29,RE: Remember Casino night!,0.7
+500,514,21,33,RE: GIS update,0.74
+501,196,21,13,RE: Facilities preparations for VIP visit,0.9
+502,529,21,34,RE: Remember Casino night!,0.7
+503,491,21,31,RE: Security update: how to handle reporters on the grounds,0.74
+504,507,21,32,RE: Remember Casino night!,0.7
+505,94,21,6,RE: Remember Casino night!,0.7
+506,251,21,16,RE: Union meeting,0.71
+507,508,21,32,RE: Security procedures for January 20 VIP visit,1
+508,334,21,22,RE: GIS update,0.74
+509,276,21,17,RE: Security update: how to handle reporters on the grounds,0.74
+510,854,21,54,RE: GIS update,0.74
+511,277,21,17,RE: Security procedures for January 20 VIP visit,1
+512,315,21,20,RE: GIS update,0.74
+513,764,21,48,RE: Impromptu golf vacation - who's in?,0.7
+514,865,21,55,RE: Impromptu golf vacation - who's in?,0.7
+515,544,21,35,RE: GIS update,0.74
+516,620,21,40,RE: GIS update,0.74
+517,220,21,14,RE: Missing sweater,0.72
+518,530,21,34,RE: GIS update,0.74
+519,197,21,13,RE: Mandatory safety training,0.8
+520,252,21,16,RE: Mandatory safety training,0.8
+521,253,21,16,RE: Mandatory safety training,0.8
+756,854,22,54,RE: GIS update,1
+757,277,22,17,RE: Security procedures for January 20 VIP visit,0.74
+758,315,22,20,RE: GIS update,1
+759,544,22,35,RE: GIS update,1
+760,620,22,40,RE: GIS update,1
+761,220,22,14,RE: Missing sweater,0.71
+762,530,22,34,RE: GIS update,1
+763,197,22,13,RE: Mandatory safety training,0.72
+764,252,22,16,RE: Mandatory safety training,0.72
+765,253,22,16,RE: Mandatory safety training,0.72
+287,730,24,45,RE: Files,1
+288,27,24,2,RE: Union meeting,0.73
+289,93,24,6,RE: GIS update,0.75
+290,288,24,18,RE: GIS update,0.75
+291,514,24,33,RE: GIS update,0.75
+292,251,24,16,RE: Union meeting,0.73
+293,334,24,22,RE: GIS update,0.75
+294,854,24,54,RE: GIS update,0.75
+295,315,24,20,RE: GIS update,0.75
+296,544,24,35,RE: GIS update,0.75
+297,620,24,40,RE: GIS update,0.75
+298,220,24,14,RE: Missing sweater,0.76
+299,530,24,34,RE: GIS update,0.75
+66,729,25,45,Files,0.78
+229,378,25,24,RE: Files,0.89
+230,730,25,45,RE: Files,0.89
+231,27,25,2,RE: Union meeting,0.76
+232,195,25,13,RE: Awwww- cute!,0.73
+233,490,25,31,RE: Awwww- cute!,0.73
+234,93,25,6,RE: GIS update,0.77
+235,288,25,18,RE: GIS update,0.77
+236,514,25,33,RE: GIS update,0.77
+237,251,25,16,RE: Union meeting,0.76
+238,334,25,22,RE: GIS update,0.77
+239,854,25,54,RE: GIS update,0.77
+240,315,25,20,RE: GIS update,0.77
+241,544,25,35,RE: GIS update,0.77
+242,620,25,40,RE: GIS update,0.77
+243,530,25,34,RE: GIS update,0.77
+3,314,27,20,Congratulations on your service anniversary,0.79
+4,7,27,1,RE: Impact of local politics on profit margin,0.95
+5,275,27,17,Security procedures for January 20 VIP visit,0.75
+6,864,27,55,RE: Impact of local politics on profit margin,0.95
+7,763,27,48,RE: Impact of local politics on profit margin,0.95
+8,91,27,6,Field work rotation schedule,0.7
+9,714,27,44,RE: Impact of local politics on profit margin,0.95
+10,782,27,49,Security update: how to handle reporters on the grounds,0.71
+11,327,27,21,RE: Security procedures for January 20 VIP visit,0.72
+12,430,27,28,RE: Facilities preparations for VIP visit,0.77
+13,250,27,16,RE: Facilities preparations for VIP visit,0.77
+14,298,27,19,RE: Facilities preparations for VIP visit,0.77
+15,196,27,13,RE: Facilities preparations for VIP visit,0.77
+16,491,27,31,RE: Security update: how to handle reporters on the grounds,0.7
+17,508,27,32,RE: Security procedures for January 20 VIP visit,0.72
+18,276,27,17,RE: Security update: how to handle reporters on the grounds,0.7
+19,277,27,17,RE: Security procedures for January 20 VIP visit,0.72
+20,197,27,13,RE: Mandatory safety training,0.7
+21,252,27,16,RE: Mandatory safety training,0.7
+22,253,27,16,RE: Mandatory safety training,0.7
+133,195,28,13,RE: Awwww- cute!,0.74
+134,490,28,31,RE: Awwww- cute!,0.74
+545,250,28,16,RE: Facilities preparations for VIP visit,1
+546,289,28,18,RE: Field work rotation schedule,0.75
+547,298,28,19,RE: Facilities preparations for VIP visit,1
+548,196,28,13,RE: Facilities preparations for VIP visit,1
+549,491,28,31,RE: Security update: how to handle reporters on the grounds,0.77
+550,508,28,32,RE: Security procedures for January 20 VIP visit,0.9
+551,276,28,17,RE: Security update: how to handle reporters on the grounds,0.77
+552,277,28,17,RE: Security procedures for January 20 VIP visit,0.9
+553,764,28,48,RE: Impromptu golf vacation - who's in?,0.72
+554,865,28,55,RE: Impromptu golf vacation - who's in?,0.72
+555,220,28,14,RE: Missing sweater,0.72
+556,197,28,13,RE: Mandatory safety training,0.81
+557,252,28,16,RE: Mandatory safety training,0.81
+558,253,28,16,RE: Mandatory safety training,0.81
+222,491,29,31,RE: Security update: how to handle reporters on the grounds,0.73
+223,276,29,17,RE: Security update: how to handle reporters on the grounds,0.73
+224,220,29,14,RE: Missing sweater,0.71
+645,514,29,33,RE: GIS update,0.77
+646,529,29,34,RE: Remember Casino night!,1
+647,507,29,32,RE: Remember Casino night!,1
+648,94,29,6,RE: Remember Casino night!,1
+649,251,29,16,RE: Union meeting,0.73
+650,508,29,32,RE: Security procedures for January 20 VIP visit,0.7
+651,334,29,22,RE: GIS update,0.77
+652,854,29,54,RE: GIS update,0.77
+653,277,29,17,RE: Security procedures for January 20 VIP visit,0.7
+654,315,29,20,RE: GIS update,0.77
+655,544,29,35,RE: GIS update,0.77
+656,620,29,40,RE: GIS update,0.77
+657,530,29,34,RE: GIS update,0.77
+131,195,31,13,RE: Awwww- cute!,0.82
+132,490,31,31,RE: Awwww- cute!,0.82
+450,93,31,6,RE: GIS update,0.78
+451,288,31,18,RE: GIS update,0.78
+452,237,31,15,RE: Document stuck,0.77
+453,290,31,18,RE: Remember Casino night!,0.81
+454,447,31,29,RE: Remember Casino night!,0.81
+455,514,31,33,RE: GIS update,0.78
+456,529,31,34,RE: Remember Casino night!,0.81
+457,507,31,32,RE: Remember Casino night!,0.81
+458,94,31,6,RE: Remember Casino night!,0.81
+459,251,31,16,RE: Union meeting,0.73
+460,334,31,22,RE: GIS update,0.78
+461,854,31,54,RE: GIS update,0.78
+462,315,31,20,RE: GIS update,0.78
+463,544,31,35,RE: GIS update,0.78
+464,620,31,40,RE: GIS update,0.78
+465,530,31,34,RE: GIS update,0.78
+702,508,31,32,RE: Security procedures for January 20 VIP visit,0.74
+703,276,31,17,RE: Security update: how to handle reporters on the grounds,1
+704,277,31,17,RE: Security procedures for January 20 VIP visit,0.74
+705,220,31,14,RE: Missing sweater,0.71
+711,94,32,6,RE: Remember Casino night!,1
+712,251,32,16,RE: Union meeting,0.73
+713,508,32,32,RE: Security procedures for January 20 VIP visit,0.7
+714,334,32,22,RE: GIS update,0.77
+715,854,32,54,RE: GIS update,0.77
+716,277,32,17,RE: Security procedures for January 20 VIP visit,0.7
+717,315,32,20,RE: GIS update,0.77
+718,544,32,35,RE: GIS update,0.77
+719,620,32,40,RE: GIS update,0.77
+720,530,32,34,RE: GIS update,0.77
+742,334,32,22,RE: GIS update,0.74
+743,276,32,17,RE: Security update: how to handle reporters on the grounds,0.74
+744,854,32,54,RE: GIS update,0.74
+745,277,32,17,RE: Security procedures for January 20 VIP visit,1
+746,315,32,20,RE: GIS update,0.74
+747,764,32,48,RE: Impromptu golf vacation - who's in?,0.7
+748,865,32,55,RE: Impromptu golf vacation - who's in?,0.7
+749,544,32,35,RE: GIS update,0.74
+750,620,32,40,RE: GIS update,0.74
+751,220,32,14,RE: Missing sweater,0.72
+752,530,32,34,RE: GIS update,0.74
+753,197,32,13,RE: Mandatory safety training,0.8
+754,252,32,16,RE: Mandatory safety training,0.8
+755,253,32,16,RE: Mandatory safety training,0.8
+559,514,33,33,RE: GIS update,0.81
+560,543,33,35,GIS update,1
+561,334,33,22,RE: GIS update,0.81
+562,854,33,54,RE: GIS update,0.81
+563,315,33,20,RE: GIS update,0.81
+564,544,33,35,RE: GIS update,0.81
+565,620,33,40,RE: GIS update,0.81
+566,530,33,34,RE: GIS update,0.81
+658,543,33,35,GIS update,0.81
+659,529,33,34,RE: Remember Casino night!,0.77
+660,507,33,32,RE: Remember Casino night!,0.77
+661,94,33,6,RE: Remember Casino night!,0.77
+662,251,33,16,RE: Union meeting,0.84
+663,508,33,32,RE: Security procedures for January 20 VIP visit,0.74
+664,334,33,22,RE: GIS update,1
+665,854,33,54,RE: GIS update,1
+666,277,33,17,RE: Security procedures for January 20 VIP visit,0.74
+667,315,33,20,RE: GIS update,1
+668,544,33,35,RE: GIS update,1
+669,620,33,40,RE: GIS update,1
+670,220,33,14,RE: Missing sweater,0.71
+671,530,33,34,RE: GIS update,1
+672,197,33,13,RE: Mandatory safety training,0.72
+673,252,33,16,RE: Mandatory safety training,0.72
+674,253,33,16,RE: Mandatory safety training,0.72
+356,27,34,2,RE: Union meeting,0.75
+357,28,34,2,RE: Document stuck,0.73
+358,93,34,6,RE: GIS update,0.75
+359,327,34,21,RE: Security procedures for January 20 VIP visit,0.8
+360,288,34,18,RE: GIS update,0.75
+361,430,34,28,RE: Facilities preparations for VIP visit,0.75
+362,250,34,16,RE: Facilities preparations for VIP visit,0.75
+363,289,34,18,RE: Field work rotation schedule,1
+364,298,34,19,RE: Facilities preparations for VIP visit,0.75
+365,237,34,15,RE: Document stuck,0.73
+366,290,34,18,RE: Remember Casino night!,0.73
+367,447,34,29,RE: Remember Casino night!,0.73
+368,514,34,33,RE: GIS update,0.75
+369,196,34,13,RE: Facilities preparations for VIP visit,0.75
+370,529,34,34,RE: Remember Casino night!,0.73
+371,507,34,32,RE: Remember Casino night!,0.73
+372,94,34,6,RE: Remember Casino night!,0.73
+373,251,34,16,RE: Union meeting,0.75
+374,508,34,32,RE: Security procedures for January 20 VIP visit,0.8
+375,334,34,22,RE: GIS update,0.75
+376,854,34,54,RE: GIS update,0.75
+377,277,34,17,RE: Security procedures for January 20 VIP visit,0.8
+378,315,34,20,RE: GIS update,0.75
+379,544,34,35,RE: GIS update,0.75
+380,620,34,40,RE: GIS update,0.75
+381,220,34,14,RE: Missing sweater,0.7
+382,530,34,34,RE: GIS update,0.75
+383,197,34,13,RE: Mandatory safety training,0.81
+384,252,34,16,RE: Mandatory safety training,0.81
+385,253,34,16,RE: Mandatory safety training,0.81
+691,507,34,32,RE: Remember Casino night!,1
+692,94,34,6,RE: Remember Casino night!,1
+693,251,34,16,RE: Union meeting,0.73
+694,508,34,32,RE: Security procedures for January 20 VIP visit,0.7
+695,334,34,22,RE: GIS update,0.77
+696,854,34,54,RE: GIS update,0.77
+697,277,34,17,RE: Security procedures for January 20 VIP visit,0.7
+698,315,34,20,RE: GIS update,0.77
+699,544,34,35,RE: GIS update,0.77
+700,620,34,40,RE: GIS update,0.77
+701,530,34,34,RE: GIS update,0.77
+818,197,34,13,RE: Mandatory safety training,0.72
+819,252,34,16,RE: Mandatory safety training,0.72
+820,253,34,16,RE: Mandatory safety training,0.72
+675,334,35,22,RE: GIS update,0.81
+676,854,35,54,RE: GIS update,0.81
+677,315,35,20,RE: GIS update,0.81
+678,544,35,35,RE: GIS update,0.81
+679,620,35,40,RE: GIS update,0.81
+680,530,35,34,RE: GIS update,0.81
+803,620,35,40,RE: GIS update,1
+804,220,35,14,RE: Missing sweater,0.71
+805,530,35,34,RE: GIS update,1
+806,197,35,13,RE: Mandatory safety training,0.72
+807,252,35,16,RE: Mandatory safety training,0.72
+808,253,35,16,RE: Mandatory safety training,0.72
+27,446,39,29,RE: Can anyone swap on-call slots with me?,0.95
+135,681,39,43,RE: Security patches needed,1
+136,796,39,50,RE: Software review report,0.74
+137,378,39,24,RE: Files,0.7
+138,92,39,6,RE: Field work rotation schedule,0.75
+139,730,39,45,RE: Files,0.7
+140,528,39,34,RE: Field work rotation schedule,0.75
+141,27,39,2,RE: Union meeting,0.76
+142,28,39,2,RE: Document stuck,0.74
+143,93,39,6,RE: GIS update,0.74
+144,327,39,21,RE: Security procedures for January 20 VIP visit,0.75
+145,288,39,18,RE: GIS update,0.74
+146,430,39,28,RE: Facilities preparations for VIP visit,0.74
+147,250,39,16,RE: Facilities preparations for VIP visit,0.74
+148,289,39,18,RE: Field work rotation schedule,0.75
+149,298,39,19,RE: Facilities preparations for VIP visit,0.74
+150,237,39,15,RE: Document stuck,0.74
+151,514,39,33,RE: GIS update,0.74
+152,196,39,13,RE: Facilities preparations for VIP visit,0.74
+153,251,39,16,RE: Union meeting,0.76
+154,508,39,32,RE: Security procedures for January 20 VIP visit,0.75
+155,334,39,22,RE: GIS update,0.74
+156,854,39,54,RE: GIS update,0.74
+157,277,39,17,RE: Security procedures for January 20 VIP visit,0.75
+158,315,39,20,RE: GIS update,0.74
+159,764,39,48,RE: Impromptu golf vacation - who's in?,0.7
+160,865,39,55,RE: Impromptu golf vacation - who's in?,0.7
+161,544,39,35,RE: GIS update,0.74
+162,620,39,40,RE: GIS update,0.74
+163,530,39,34,RE: GIS update,0.74
+164,197,39,13,RE: Mandatory safety training,0.76
+165,252,39,16,RE: Mandatory safety training,0.76
+166,253,39,16,RE: Mandatory safety training,0.76
+225,796,39,50,RE: Software review report,0.89
+226,92,39,6,RE: Field work rotation schedule,0.78
+227,528,39,34,RE: Field work rotation schedule,0.78
+228,289,39,18,RE: Field work rotation schedule,0.78
+809,220,40,14,RE: Missing sweater,0.71
+810,530,40,34,RE: GIS update,1
+811,197,40,13,RE: Mandatory safety training,0.72
+812,252,40,16,RE: Mandatory safety training,0.72
+813,253,40,16,RE: Mandatory safety training,0.72
+244,290,41,18,RE: Remember Casino night!,0.9
+245,447,41,29,RE: Remember Casino night!,0.9
+246,529,41,34,RE: Remember Casino night!,0.9
+247,507,41,32,RE: Remember Casino night!,0.9
+248,94,41,6,RE: Remember Casino night!,0.9
+28,596,43,39,RE: Security patches needed,0.82
+29,681,43,43,RE: Security patches needed,0.82
+169,796,43,50,RE: Software review report,0.74
+170,378,43,24,RE: Files,0.7
+171,92,43,6,RE: Field work rotation schedule,0.75
+172,730,43,45,RE: Files,0.7
+173,528,43,34,RE: Field work rotation schedule,0.75
+174,27,43,2,RE: Union meeting,0.76
+175,28,43,2,RE: Document stuck,0.74
+176,93,43,6,RE: GIS update,0.74
+177,327,43,21,RE: Security procedures for January 20 VIP visit,0.75
+178,288,43,18,RE: GIS update,0.74
+179,430,43,28,RE: Facilities preparations for VIP visit,0.74
+180,250,43,16,RE: Facilities preparations for VIP visit,0.74
+181,289,43,18,RE: Field work rotation schedule,0.75
+182,298,43,19,RE: Facilities preparations for VIP visit,0.74
+183,237,43,15,RE: Document stuck,0.74
+184,514,43,33,RE: GIS update,0.74
+185,196,43,13,RE: Facilities preparations for VIP visit,0.74
+186,251,43,16,RE: Union meeting,0.76
+187,508,43,32,RE: Security procedures for January 20 VIP visit,0.75
+188,334,43,22,RE: GIS update,0.74
+189,854,43,54,RE: GIS update,0.74
+190,277,43,17,RE: Security procedures for January 20 VIP visit,0.75
+191,315,43,20,RE: GIS update,0.74
+192,764,43,48,RE: Impromptu golf vacation - who's in?,0.7
+193,865,43,55,RE: Impromptu golf vacation - who's in?,0.7
+194,544,43,35,RE: GIS update,0.74
+195,620,43,40,RE: GIS update,0.74
+196,530,43,34,RE: GIS update,0.74
+197,197,43,13,RE: Mandatory safety training,0.76
+198,252,43,16,RE: Mandatory safety training,0.76
+199,253,43,16,RE: Mandatory safety training,0.76
+249,782,44,49,Security update: how to handle reporters on the grounds,0.71
+250,92,44,6,RE: Field work rotation schedule,0.76
+251,528,44,34,RE: Field work rotation schedule,0.76
+252,327,44,21,RE: Security procedures for January 20 VIP visit,0.82
+253,430,44,28,RE: Facilities preparations for VIP visit,0.84
+254,250,44,16,RE: Facilities preparations for VIP visit,0.84
+255,289,44,18,RE: Field work rotation schedule,0.76
+256,298,44,19,RE: Facilities preparations for VIP visit,0.84
+257,196,44,13,RE: Facilities preparations for VIP visit,0.84
+258,491,44,31,RE: Security update: how to handle reporters on the grounds,0.78
+259,731,44,45,Missing sweater,0.7
+260,508,44,32,RE: Security procedures for January 20 VIP visit,0.82
+261,276,44,17,RE: Security update: how to handle reporters on the grounds,0.78
+262,277,44,17,RE: Security procedures for January 20 VIP visit,0.82
+263,220,44,14,RE: Missing sweater,0.74
+264,197,44,13,RE: Mandatory safety training,0.8
+265,252,44,16,RE: Mandatory safety training,0.8
+266,253,44,16,RE: Mandatory safety training,0.8
+344,27,45,2,RE: Union meeting,0.73
+345,93,45,6,RE: GIS update,0.75
+346,288,45,18,RE: GIS update,0.75
+347,514,45,33,RE: GIS update,0.75
+348,251,45,16,RE: Union meeting,0.73
+349,334,45,22,RE: GIS update,0.75
+350,854,45,54,RE: GIS update,0.75
+351,315,45,20,RE: GIS update,0.75
+352,544,45,35,RE: GIS update,0.75
+353,620,45,40,RE: GIS update,0.75
+354,220,45,14,RE: Missing sweater,0.76
+355,530,45,34,RE: GIS update,0.75
+707,220,45,14,RE: Missing sweater,0.83
+708,197,45,13,RE: Mandatory safety training,0.74
+709,252,45,16,RE: Mandatory safety training,0.74
+710,253,45,16,RE: Mandatory safety training,0.74
+112,714,48,44,RE: Impact of local politics on profit margin,1
+113,782,48,49,Security update: how to handle reporters on the grounds,0.71
+114,92,48,6,RE: Field work rotation schedule,0.76
+115,528,48,34,RE: Field work rotation schedule,0.76
+116,327,48,21,RE: Security procedures for January 20 VIP visit,0.82
+117,430,48,28,RE: Facilities preparations for VIP visit,0.84
+118,250,48,16,RE: Facilities preparations for VIP visit,0.84
+119,289,48,18,RE: Field work rotation schedule,0.76
+120,298,48,19,RE: Facilities preparations for VIP visit,0.84
+121,196,48,13,RE: Facilities preparations for VIP visit,0.84
+122,491,48,31,RE: Security update: how to handle reporters on the grounds,0.78
+123,731,48,45,Missing sweater,0.7
+124,508,48,32,RE: Security procedures for January 20 VIP visit,0.82
+125,276,48,17,RE: Security update: how to handle reporters on the grounds,0.78
+126,277,48,17,RE: Security procedures for January 20 VIP visit,0.82
+127,220,48,14,RE: Missing sweater,0.74
+128,197,48,13,RE: Mandatory safety training,0.8
+129,252,48,16,RE: Mandatory safety training,0.8
+130,253,48,16,RE: Mandatory safety training,0.8
+794,865,48,55,RE: Impromptu golf vacation - who's in?,1
+795,220,48,14,RE: Missing sweater,0.77
+796,197,48,13,RE: Mandatory safety training,0.78
+797,252,48,16,RE: Mandatory safety training,0.78
+798,253,48,16,RE: Mandatory safety training,0.78
+300,491,49,31,RE: Security update: how to handle reporters on the grounds,0.95
+301,276,49,17,RE: Security update: how to handle reporters on the grounds,0.95
+267,92,50,6,RE: Field work rotation schedule,0.86
+268,528,50,34,RE: Field work rotation schedule,0.86
+269,27,50,2,RE: Union meeting,0.79
+270,93,50,6,RE: GIS update,0.82
+271,327,50,21,RE: Security procedures for January 20 VIP visit,0.72
+272,288,50,18,RE: GIS update,0.82
+273,289,50,18,RE: Field work rotation schedule,0.86
+274,514,50,33,RE: GIS update,0.82
+275,251,50,16,RE: Union meeting,0.79
+276,508,50,32,RE: Security procedures for January 20 VIP visit,0.72
+277,334,50,22,RE: GIS update,0.82
+278,854,50,54,RE: GIS update,0.82
+279,277,50,17,RE: Security procedures for January 20 VIP visit,0.72
+280,315,50,20,RE: GIS update,0.82
+281,544,50,35,RE: GIS update,0.82
+282,620,50,40,RE: GIS update,0.82
+283,530,50,34,RE: GIS update,0.82
+284,197,50,13,RE: Mandatory safety training,0.79
+285,252,50,16,RE: Mandatory safety training,0.79
+286,253,50,16,RE: Mandatory safety training,0.79
+768,277,54,17,RE: Security procedures for January 20 VIP visit,0.74
+769,315,54,20,RE: GIS update,1
+770,544,54,35,RE: GIS update,1
+771,620,54,40,RE: GIS update,1
+772,220,54,14,RE: Missing sweater,0.71
+773,530,54,34,RE: GIS update,1
+774,197,54,13,RE: Mandatory safety training,0.72
+775,252,54,16,RE: Mandatory safety training,0.72
+776,253,54,16,RE: Mandatory safety training,0.72
+92,763,55,48,RE: Impact of local politics on profit margin,1
+93,714,55,44,RE: Impact of local politics on profit margin,1
+94,782,55,49,Security update: how to handle reporters on the grounds,0.71
+95,92,55,6,RE: Field work rotation schedule,0.76
+96,528,55,34,RE: Field work rotation schedule,0.76
+97,327,55,21,RE: Security procedures for January 20 VIP visit,0.82
+98,430,55,28,RE: Facilities preparations for VIP visit,0.84
+99,250,55,16,RE: Facilities preparations for VIP visit,0.84
+100,289,55,18,RE: Field work rotation schedule,0.76
+101,298,55,19,RE: Facilities preparations for VIP visit,0.84
+102,196,55,13,RE: Facilities preparations for VIP visit,0.84
+103,491,55,31,RE: Security update: how to handle reporters on the grounds,0.78
+104,731,55,45,Missing sweater,0.7
+105,508,55,32,RE: Security procedures for January 20 VIP visit,0.82
+106,276,55,17,RE: Security update: how to handle reporters on the grounds,0.78
+107,277,55,17,RE: Security procedures for January 20 VIP visit,0.82
+108,220,55,14,RE: Missing sweater,0.74
+109,197,55,13,RE: Mandatory safety training,0.8
+110,252,55,16,RE: Mandatory safety training,0.8
+111,253,55,16,RE: Mandatory safety training,0.8
+799,220,55,14,RE: Missing sweater,0.77
+800,197,55,13,RE: Mandatory safety training,0.78
+801,252,55,16,RE: Mandatory safety training,0.78
+802,253,55,16,RE: Mandatory safety training,0.78

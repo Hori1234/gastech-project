@@ -1,0 +1,911 @@
+,ID,IDPF,IDPT,Subject,Similarity
+37,324,1,21,"RE: Hey, Iâ€™m going home sick.",0.94
+38,2,1,1,"RE: Hey, Iâ€™m going home sick.",0.94
+291,158,1,11,RE: Iâ€™m in! -  post a list,0.72
+292,311,1,20,RE: Iâ€™m in! -  post a list,0.72
+293,474,1,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+294,526,1,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+295,146,1,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+296,853,1,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+297,512,1,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+893,744,1,46,RE: Can someone cover for me next week?,0.71
+894,285,1,18,RE: Money for coffee fund,0.9
+895,274,1,17,RE: Money for coffee fund,0.9
+896,248,1,16,RE: Caution downtown,0.75
+897,817,1,51,RE: Caution downtown,0.75
+254,180,2,12,RE: Traffic advisory for today,0.92
+255,828,2,52,Resolution of incident,0.72
+256,21,2,2,RE: Traffic advisory for today,0.92
+257,634,2,41,Planning for staff picnic,0.78
+258,272,2,17,Money for coffee fund,0.77
+259,344,2,23,RE: Traffic advisory for today,0.92
+260,50,2,4,RE: Traffic advisory for today,0.92
+261,411,2,27,RE: Planning for staff picnic,0.77
+262,273,2,17,RE: Planning for staff picnic,0.77
+263,284,2,18,RE: Planning for staff picnic,0.77
+264,3,2,1,RE: Planning for staff picnic,0.77
+265,285,2,18,RE: Money for coffee fund,0.76
+266,274,2,17,RE: Money for coffee fund,0.76
+590,146,2,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+591,634,2,41,Planning for staff picnic,0.77
+592,233,2,15,RE: Document stuck,0.82
+593,272,2,17,Money for coffee fund,0.74
+594,344,2,23,RE: Traffic advisory for today,1
+595,388,2,25,RE: Resolution of incident,0.81
+596,50,2,4,RE: Traffic advisory for today,1
+597,778,2,49,RE: Resolution of incident,0.81
+598,333,2,22,RE: Need a ride to lunch later,0.73
+599,376,2,24,RE: Resolution of incident,0.81
+600,853,2,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+601,512,2,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+602,345,2,23,RE: List of repairs needed,0.7
+603,411,2,27,RE: Planning for staff picnic,0.88
+604,273,2,17,RE: Planning for staff picnic,0.88
+605,284,2,18,RE: Planning for staff picnic,0.88
+606,74,2,5,RE: Need a ride to lunch later,0.73
+607,3,2,1,RE: Planning for staff picnic,0.88
+608,744,2,46,RE: Can someone cover for me next week?,0.72
+609,285,2,18,RE: Money for coffee fund,0.86
+610,274,2,17,RE: Money for coffee fund,0.86
+611,51,2,4,RE: List of repairs needed,0.7
+612,248,2,16,RE: Caution downtown,0.76
+613,817,2,51,RE: Caution downtown,0.76
+631,345,2,23,RE: List of repairs needed,0.89
+632,51,2,4,RE: List of repairs needed,0.89
+866,248,2,16,RE: Caution downtown,0.8
+867,817,2,51,RE: Caution downtown,0.8
+777,778,4,49,RE: Resolution of incident,0.81
+778,333,4,22,RE: Need a ride to lunch later,0.73
+779,376,4,24,RE: Resolution of incident,0.81
+780,853,4,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+781,512,4,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+782,345,4,23,RE: List of repairs needed,0.7
+783,411,4,27,RE: Planning for staff picnic,0.88
+784,273,4,17,RE: Planning for staff picnic,0.88
+785,284,4,18,RE: Planning for staff picnic,0.88
+786,74,4,5,RE: Need a ride to lunch later,0.73
+787,3,4,1,RE: Planning for staff picnic,0.88
+788,744,4,46,RE: Can someone cover for me next week?,0.72
+789,285,4,18,RE: Money for coffee fund,0.86
+790,274,4,17,RE: Money for coffee fund,0.86
+791,51,4,4,RE: List of repairs needed,0.7
+792,248,4,16,RE: Caution downtown,0.76
+793,817,4,51,RE: Caution downtown,0.76
+575,21,5,2,RE: Traffic advisory for today,0.72
+576,233,5,15,RE: Document stuck,0.73
+577,344,5,23,RE: Traffic advisory for today,0.72
+578,50,5,4,RE: Traffic advisory for today,0.72
+579,333,5,22,RE: Need a ride to lunch later,0.72
+580,411,5,27,RE: Planning for staff picnic,0.74
+581,273,5,17,RE: Planning for staff picnic,0.74
+582,284,5,18,RE: Planning for staff picnic,0.74
+583,74,5,5,RE: Need a ride to lunch later,0.72
+584,3,5,1,RE: Planning for staff picnic,0.74
+585,744,5,46,RE: Can someone cover for me next week?,0.71
+586,285,5,18,RE: Money for coffee fund,0.75
+587,274,5,17,RE: Money for coffee fund,0.75
+588,248,5,16,RE: Caution downtown,0.77
+589,817,5,51,RE: Caution downtown,0.77
+682,333,5,22,RE: Need a ride to lunch later,0.92
+683,74,5,5,RE: Need a ride to lunch later,0.92
+854,216,5,14,RE: Catering?!?,1
+855,159,5,11,RE: Catering?!?,1
+856,555,5,36,RE: Catering?!?,1
+857,745,5,46,RE: Catering?!?,1
+884,3,5,1,RE: Planning for staff picnic,0.74
+885,744,5,46,RE: Can someone cover for me next week?,0.79
+886,285,5,18,RE: Money for coffee fund,0.75
+887,274,5,17,RE: Money for coffee fund,0.75
+888,248,5,16,RE: Caution downtown,0.71
+889,817,5,51,RE: Caution downtown,0.71
+908,346,7,23,RE: Be Careful!,1
+206,428,8,28,RE: Traffic advisory for today,0.7
+207,193,8,13,RE: List of repairs needed,1
+208,180,8,12,RE: Traffic advisory for today,0.7
+209,21,8,2,RE: Traffic advisory for today,0.7
+210,22,8,2,List of repairs needed,0.89
+211,233,8,15,RE: Document stuck,0.7
+212,344,8,23,RE: Traffic advisory for today,0.7
+213,50,8,4,RE: Traffic advisory for today,0.7
+214,345,8,23,RE: List of repairs needed,1
+215,285,8,18,RE: Money for coffee fund,0.71
+216,274,8,17,RE: Money for coffee fund,0.71
+217,51,8,4,RE: List of repairs needed,1
+840,109,8,7,RE: Be Careful!,0.82
+841,346,8,23,RE: Be Careful!,0.82
+562,539,9,35,Well 1033-01 stabilization progress report,0.75
+563,540,9,35,RE: Downhole prediction 2522-00,0.72
+564,475,9,30,RE: Well 1033-01 stabilization progress report,0.73
+565,476,9,30,RE: Downhole prediction 2522-00 - check your parameters,0.94
+566,852,9,54,RE: Downhole prediction 2522-00 - check your parameters,0.94
+567,138,9,9,RE: Downhole prediction 2522-00 - check your parameters,0.94
+614,540,10,35,RE: Downhole prediction 2522-00,0.78
+615,442,10,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+616,589,10,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+617,475,10,30,RE: Well 1033-01 stabilization progress report,0.84
+618,476,10,30,RE: Downhole prediction 2522-00 - check your parameters,0.77
+619,344,10,23,RE: Traffic advisory for today,0.7
+620,443,10,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+621,852,10,54,RE: Downhole prediction 2522-00 - check your parameters,0.77
+622,50,10,4,RE: Traffic advisory for today,0.7
+623,853,10,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+624,512,10,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+625,138,10,9,RE: Downhole prediction 2522-00 - check your parameters,0.77
+626,590,10,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+627,444,10,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+628,677,10,43,RE: GT-SeismicProcessorPro Bug Report,0.71
+629,285,10,18,RE: Money for coffee fund,0.76
+630,274,10,17,RE: Money for coffee fund,0.76
+425,311,11,20,RE: Iâ€™m in! -  post a list,1
+426,474,11,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+427,526,11,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+428,146,11,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+429,442,11,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+430,589,11,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+431,443,11,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+432,853,11,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+433,512,11,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+434,590,11,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+435,444,11,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+436,677,11,43,RE: GT-SeismicProcessorPro Bug Report,0.7
+871,555,11,36,RE: Catering?!?,1
+872,745,11,46,RE: Catering?!?,1
+361,213,12,14,RE: Dress for success - Dress to impress,0.72
+362,633,12,41,RE: Dress for success - Dress to impress,0.72
+363,828,12,52,Resolution of incident,0.72
+364,474,12,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+365,526,12,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+366,71,12,5,RE: Dress for success - Dress to impress,0.72
+367,21,12,2,RE: Traffic advisory for today,1
+368,146,12,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+369,634,12,41,Planning for staff picnic,0.77
+370,233,12,15,RE: Document stuck,0.82
+371,272,12,17,Money for coffee fund,0.74
+372,344,12,23,RE: Traffic advisory for today,1
+373,388,12,25,RE: Resolution of incident,0.81
+374,50,12,4,RE: Traffic advisory for today,1
+375,778,12,49,RE: Resolution of incident,0.81
+376,333,12,22,RE: Need a ride to lunch later,0.73
+377,376,12,24,RE: Resolution of incident,0.81
+378,853,12,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+379,512,12,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+380,345,12,23,RE: List of repairs needed,0.7
+381,411,12,27,RE: Planning for staff picnic,0.88
+382,273,12,17,RE: Planning for staff picnic,0.88
+383,284,12,18,RE: Planning for staff picnic,0.88
+384,74,12,5,RE: Need a ride to lunch later,0.73
+385,3,12,1,RE: Planning for staff picnic,0.88
+386,744,12,46,RE: Can someone cover for me next week?,0.72
+387,285,12,18,RE: Money for coffee fund,0.86
+388,274,12,17,RE: Money for coffee fund,0.86
+389,51,12,4,RE: List of repairs needed,0.7
+390,248,12,16,RE: Caution downtown,0.76
+391,817,12,51,RE: Caution downtown,0.76
+350,180,13,12,RE: Traffic advisory for today,0.7
+351,21,13,2,RE: Traffic advisory for today,0.7
+352,22,13,2,List of repairs needed,0.89
+353,233,13,15,RE: Document stuck,0.7
+354,344,13,23,RE: Traffic advisory for today,0.7
+355,50,13,4,RE: Traffic advisory for today,0.7
+356,345,13,23,RE: List of repairs needed,1
+357,285,13,18,RE: Money for coffee fund,0.71
+358,274,13,17,RE: Money for coffee fund,0.71
+359,51,13,4,RE: List of repairs needed,1
+392,633,14,41,RE: Dress for success - Dress to impress,1
+393,71,14,5,RE: Dress for success - Dress to impress,1
+394,21,14,2,RE: Traffic advisory for today,0.72
+395,233,14,15,RE: Document stuck,0.73
+396,344,14,23,RE: Traffic advisory for today,0.72
+397,50,14,4,RE: Traffic advisory for today,0.72
+398,333,14,22,RE: Need a ride to lunch later,0.72
+399,411,14,27,RE: Planning for staff picnic,0.74
+400,273,14,17,RE: Planning for staff picnic,0.74
+401,284,14,18,RE: Planning for staff picnic,0.74
+402,74,14,5,RE: Need a ride to lunch later,0.72
+403,3,14,1,RE: Planning for staff picnic,0.74
+404,744,14,46,RE: Can someone cover for me next week?,0.71
+405,285,14,18,RE: Money for coffee fund,0.75
+406,274,14,17,RE: Money for coffee fund,0.75
+407,248,14,16,RE: Caution downtown,0.77
+408,817,14,51,RE: Caution downtown,0.77
+645,333,14,22,RE: Need a ride to lunch later,0.71
+646,74,14,5,RE: Need a ride to lunch later,0.71
+647,744,14,46,RE: Can someone cover for me next week?,0.95
+649,387,14,25,RE: No hurry,1
+650,333,14,22,RE: Need a ride to lunch later,0.79
+651,74,14,5,RE: Need a ride to lunch later,0.79
+652,744,14,46,RE: Can someone cover for me next week?,0.75
+653,248,14,16,RE: Caution downtown,0.72
+654,817,14,51,RE: Caution downtown,0.72
+868,159,14,11,RE: Catering?!?,1
+869,555,14,36,RE: Catering?!?,1
+870,745,14,46,RE: Catering?!?,1
+689,344,15,23,RE: Traffic advisory for today,0.82
+690,50,15,4,RE: Traffic advisory for today,0.82
+691,345,15,23,RE: List of repairs needed,0.7
+692,411,15,27,RE: Planning for staff picnic,0.76
+693,273,15,17,RE: Planning for staff picnic,0.76
+694,284,15,18,RE: Planning for staff picnic,0.76
+695,3,15,1,RE: Planning for staff picnic,0.76
+696,285,15,18,RE: Money for coffee fund,0.72
+697,274,15,17,RE: Money for coffee fund,0.72
+698,51,15,4,RE: List of repairs needed,0.7
+699,248,15,16,RE: Caution downtown,0.81
+700,817,15,51,RE: Caution downtown,0.81
+18,343,16,23,RE: List of repairs needed,0.89
+19,129,16,8,RE: List of repairs needed,0.89
+20,193,16,13,RE: List of repairs needed,0.89
+21,22,16,2,List of repairs needed,1
+22,345,16,23,RE: List of repairs needed,0.89
+23,51,16,4,RE: List of repairs needed,0.89
+909,817,16,51,RE: Caution downtown,1
+723,344,17,23,RE: Traffic advisory for today,0.74
+724,50,17,4,RE: Traffic advisory for today,0.74
+725,411,17,27,RE: Planning for staff picnic,0.79
+726,273,17,17,RE: Planning for staff picnic,0.79
+727,284,17,18,RE: Planning for staff picnic,0.79
+728,3,17,1,RE: Planning for staff picnic,0.79
+729,285,17,18,RE: Money for coffee fund,0.92
+730,274,17,17,RE: Money for coffee fund,0.92
+858,284,17,18,RE: Planning for staff picnic,1
+859,74,17,5,RE: Need a ride to lunch later,0.74
+860,3,17,1,RE: Planning for staff picnic,1
+861,744,17,46,RE: Can someone cover for me next week?,0.71
+862,285,17,18,RE: Money for coffee fund,0.9
+863,274,17,17,RE: Money for coffee fund,0.9
+864,248,17,16,RE: Caution downtown,0.75
+865,817,17,51,RE: Caution downtown,0.75
+905,51,17,4,RE: List of repairs needed,0.71
+906,248,17,16,RE: Caution downtown,0.77
+907,817,17,51,RE: Caution downtown,0.77
+140,587,18,39,RE: Service anniversaries!,0.74
+141,863,18,55,RE: Late for meeting,0.76
+142,397,18,26,RE: Late for meeting,0.76
+143,538,18,35,RE: Files,1
+144,332,18,22,RE: Service anniversaries!,0.74
+877,74,18,5,RE: Need a ride to lunch later,0.74
+878,3,18,1,RE: Planning for staff picnic,1
+879,744,18,46,RE: Can someone cover for me next week?,0.71
+880,285,18,18,RE: Money for coffee fund,0.9
+881,274,18,17,RE: Money for coffee fund,0.9
+882,248,18,16,RE: Caution downtown,0.75
+883,817,18,51,RE: Caution downtown,0.75
+900,274,18,17,RE: Money for coffee fund,1
+901,51,18,4,RE: List of repairs needed,0.71
+902,248,18,16,RE: Caution downtown,0.77
+903,817,18,51,RE: Caution downtown,0.77
+138,158,20,11,RE: Iâ€™m in! -  post a list,0.96
+139,311,20,20,RE: Iâ€™m in! -  post a list,0.96
+437,474,20,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+438,526,20,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+439,146,20,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+440,442,20,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+441,589,20,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+442,443,20,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+443,853,20,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+444,512,20,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.73
+445,590,20,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+446,444,20,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+447,677,20,43,RE: GT-SeismicProcessorPro Bug Report,0.7
+118,2,21,1,"RE: Hey, Iâ€™m going home sick.",1
+119,158,21,11,RE: Iâ€™m in! -  post a list,0.72
+120,311,21,20,RE: Iâ€™m in! -  post a list,0.72
+121,474,21,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+122,526,21,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+123,146,21,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+124,853,21,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+125,512,21,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.72
+409,442,22,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+410,589,22,39,RE: GT-SeismicProcessorPro Bug Report,0.72
+411,443,22,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+412,590,22,39,RE: GT-SeismicProcessorPro Bug Report,0.72
+413,444,22,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+414,677,22,43,RE: GT-SeismicProcessorPro Bug Report,0.72
+806,376,22,24,RE: Resolution of incident,0.72
+807,411,22,27,RE: Planning for staff picnic,0.74
+808,273,22,17,RE: Planning for staff picnic,0.74
+809,284,22,18,RE: Planning for staff picnic,0.74
+810,74,22,5,RE: Need a ride to lunch later,1
+811,3,22,1,RE: Planning for staff picnic,0.74
+812,744,22,46,RE: Can someone cover for me next week?,0.79
+813,285,22,18,RE: Money for coffee fund,0.75
+814,274,22,17,RE: Money for coffee fund,0.75
+815,248,22,16,RE: Caution downtown,0.71
+816,817,22,51,RE: Caution downtown,0.71
+184,129,23,8,RE: List of repairs needed,1
+185,428,23,28,RE: Traffic advisory for today,0.7
+186,193,23,13,RE: List of repairs needed,1
+187,180,23,12,RE: Traffic advisory for today,0.7
+188,21,23,2,RE: Traffic advisory for today,0.7
+189,22,23,2,List of repairs needed,0.89
+190,233,23,15,RE: Document stuck,0.7
+191,344,23,23,RE: Traffic advisory for today,0.7
+192,50,23,4,RE: Traffic advisory for today,0.7
+193,345,23,23,RE: List of repairs needed,1
+194,285,23,18,RE: Money for coffee fund,0.71
+195,274,23,17,RE: Money for coffee fund,0.71
+196,51,23,4,RE: List of repairs needed,1
+731,388,23,25,RE: Resolution of incident,0.81
+732,50,23,4,RE: Traffic advisory for today,1
+733,778,23,49,RE: Resolution of incident,0.81
+734,333,23,22,RE: Need a ride to lunch later,0.73
+735,376,23,24,RE: Resolution of incident,0.81
+736,853,23,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+737,512,23,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+738,345,23,23,RE: List of repairs needed,0.7
+739,411,23,27,RE: Planning for staff picnic,0.88
+740,273,23,17,RE: Planning for staff picnic,0.88
+741,284,23,18,RE: Planning for staff picnic,0.88
+742,74,23,5,RE: Need a ride to lunch later,0.73
+743,3,23,1,RE: Planning for staff picnic,0.88
+744,744,23,46,RE: Can someone cover for me next week?,0.72
+745,285,23,18,RE: Money for coffee fund,0.86
+746,274,23,17,RE: Money for coffee fund,0.86
+747,51,23,4,RE: List of repairs needed,0.7
+748,248,23,16,RE: Caution downtown,0.76
+749,817,23,51,RE: Caution downtown,0.76
+842,285,23,18,RE: Money for coffee fund,0.71
+843,274,23,17,RE: Money for coffee fund,0.71
+844,51,23,4,RE: List of repairs needed,1
+817,411,24,27,RE: Planning for staff picnic,0.84
+818,273,24,17,RE: Planning for staff picnic,0.84
+819,590,24,39,RE: GT-SeismicProcessorPro Bug Report,0.75
+820,284,24,18,RE: Planning for staff picnic,0.84
+821,74,24,5,RE: Need a ride to lunch later,0.72
+822,444,24,29,RE: GT-SeismicProcessorPro Bug Report,0.75
+823,3,24,1,RE: Planning for staff picnic,0.84
+824,677,24,43,RE: GT-SeismicProcessorPro Bug Report,0.75
+825,285,24,18,RE: Money for coffee fund,0.84
+826,274,24,17,RE: Money for coffee fund,0.84
+448,215,25,14,RE: No hurry,0.79
+449,387,25,25,RE: No hurry,0.79
+677,333,25,22,RE: Need a ride to lunch later,0.79
+678,74,25,5,RE: Need a ride to lunch later,0.79
+679,744,25,46,RE: Can someone cover for me next week?,0.75
+680,248,25,16,RE: Caution downtown,0.72
+681,817,25,51,RE: Caution downtown,0.72
+763,50,25,4,RE: Traffic advisory for today,0.81
+764,778,25,49,RE: Resolution of incident,1
+765,333,25,22,RE: Need a ride to lunch later,0.72
+766,376,25,24,RE: Resolution of incident,1
+767,411,25,27,RE: Planning for staff picnic,0.84
+768,273,25,17,RE: Planning for staff picnic,0.84
+769,590,25,39,RE: GT-SeismicProcessorPro Bug Report,0.75
+770,284,25,18,RE: Planning for staff picnic,0.84
+771,74,25,5,RE: Need a ride to lunch later,0.72
+772,444,25,29,RE: GT-SeismicProcessorPro Bug Report,0.75
+773,3,25,1,RE: Planning for staff picnic,0.84
+774,677,25,43,RE: GT-SeismicProcessorPro Bug Report,0.75
+775,285,25,18,RE: Money for coffee fund,0.84
+776,274,25,17,RE: Money for coffee fund,0.84
+71,839,26,53,RE: Traffic advisory for today,0.7
+72,428,26,28,RE: Traffic advisory for today,0.7
+73,863,26,55,RE: Late for meeting,0.84
+74,397,26,26,RE: Late for meeting,0.84
+75,180,26,12,RE: Traffic advisory for today,0.7
+76,21,26,2,RE: Traffic advisory for today,0.7
+77,634,26,41,Planning for staff picnic,0.71
+78,344,26,23,RE: Traffic advisory for today,0.7
+79,50,26,4,RE: Traffic advisory for today,0.7
+325,538,26,35,RE: Files,0.76
+326,180,26,12,RE: Traffic advisory for today,0.82
+327,213,26,14,RE: Dress for success - Dress to impress,0.78
+328,633,26,41,RE: Dress for success - Dress to impress,0.78
+329,71,26,5,RE: Dress for success - Dress to impress,0.78
+330,21,26,2,RE: Traffic advisory for today,0.82
+331,215,26,14,RE: No hurry,0.72
+332,387,26,25,RE: No hurry,0.72
+333,233,26,15,RE: Document stuck,0.76
+334,344,26,23,RE: Traffic advisory for today,0.82
+335,388,26,25,RE: Resolution of incident,0.75
+336,50,26,4,RE: Traffic advisory for today,0.82
+337,778,26,49,RE: Resolution of incident,0.75
+338,333,26,22,RE: Need a ride to lunch later,0.77
+339,376,26,24,RE: Resolution of incident,0.75
+340,411,26,27,RE: Planning for staff picnic,0.8
+341,273,26,17,RE: Planning for staff picnic,0.8
+342,284,26,18,RE: Planning for staff picnic,0.8
+343,74,26,5,RE: Need a ride to lunch later,0.77
+344,3,26,1,RE: Planning for staff picnic,0.8
+345,744,26,46,RE: Can someone cover for me next week?,0.77
+346,285,26,18,RE: Money for coffee fund,0.77
+347,274,26,17,RE: Money for coffee fund,0.77
+348,248,26,16,RE: Caution downtown,0.73
+349,817,26,51,RE: Caution downtown,0.73
+520,710,27,44,RE: Yearly numbers looking good,1
+845,273,27,17,RE: Planning for staff picnic,1
+846,284,27,18,RE: Planning for staff picnic,1
+847,74,27,5,RE: Need a ride to lunch later,0.74
+848,3,27,1,RE: Planning for staff picnic,1
+849,744,27,46,RE: Can someone cover for me next week?,0.71
+850,285,27,18,RE: Money for coffee fund,0.9
+851,274,27,17,RE: Money for coffee fund,0.9
+852,248,27,16,RE: Caution downtown,0.75
+853,817,27,51,RE: Caution downtown,0.75
+2,839,28,53,RE: Traffic advisory for today,0.92
+3,428,28,28,RE: Traffic advisory for today,0.92
+4,20,28,2,Traffic advisory for today,1
+5,180,28,12,RE: Traffic advisory for today,0.92
+6,828,28,52,Resolution of incident,0.72
+7,21,28,2,RE: Traffic advisory for today,0.92
+8,634,28,41,Planning for staff picnic,0.78
+9,272,28,17,Money for coffee fund,0.77
+10,344,28,23,RE: Traffic advisory for today,0.92
+11,50,28,4,RE: Traffic advisory for today,0.92
+12,411,28,27,RE: Planning for staff picnic,0.77
+13,273,28,17,RE: Planning for staff picnic,0.77
+14,284,28,18,RE: Planning for staff picnic,0.77
+15,3,28,1,RE: Planning for staff picnic,0.77
+16,285,28,18,RE: Money for coffee fund,0.76
+17,274,28,17,RE: Money for coffee fund,0.76
+218,20,28,2,Traffic advisory for today,0.92
+219,863,28,55,RE: Late for meeting,0.82
+220,397,28,26,RE: Late for meeting,0.82
+221,193,28,13,RE: List of repairs needed,0.7
+222,180,28,12,RE: Traffic advisory for today,1
+223,213,28,14,RE: Dress for success - Dress to impress,0.72
+224,633,28,41,RE: Dress for success - Dress to impress,0.72
+225,828,28,52,Resolution of incident,0.72
+226,474,28,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+227,526,28,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+228,71,28,5,RE: Dress for success - Dress to impress,0.72
+229,21,28,2,RE: Traffic advisory for today,1
+230,146,28,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+231,634,28,41,Planning for staff picnic,0.77
+232,233,28,15,RE: Document stuck,0.82
+233,272,28,17,Money for coffee fund,0.74
+234,344,28,23,RE: Traffic advisory for today,1
+235,388,28,25,RE: Resolution of incident,0.81
+236,50,28,4,RE: Traffic advisory for today,1
+237,778,28,49,RE: Resolution of incident,0.81
+238,333,28,22,RE: Need a ride to lunch later,0.73
+239,376,28,24,RE: Resolution of incident,0.81
+240,853,28,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+241,512,28,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+242,345,28,23,RE: List of repairs needed,0.7
+243,411,28,27,RE: Planning for staff picnic,0.88
+244,273,28,17,RE: Planning for staff picnic,0.88
+245,284,28,18,RE: Planning for staff picnic,0.88
+246,74,28,5,RE: Need a ride to lunch later,0.73
+247,3,28,1,RE: Planning for staff picnic,0.88
+248,744,28,46,RE: Can someone cover for me next week?,0.72
+249,285,28,18,RE: Money for coffee fund,0.86
+250,274,28,17,RE: Money for coffee fund,0.86
+251,51,28,4,RE: List of repairs needed,0.7
+252,248,28,16,RE: Caution downtown,0.76
+253,817,28,51,RE: Caution downtown,0.76
+267,332,29,22,RE: Service anniversaries!,0.72
+268,675,29,43,GT-SeismicProcessorPro Bug Report,0.94
+269,158,29,11,RE: Iâ€™m in! -  post a list,0.7
+270,311,29,20,RE: Iâ€™m in! -  post a list,0.7
+271,851,29,54,RE: Downhole prediction 2522-00,0.7
+272,676,29,43,GT-SeismicProcessorPro Bug Report,0.94
+273,474,29,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+274,526,29,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+275,146,29,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+276,540,29,35,RE: Downhole prediction 2522-00,0.7
+277,442,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+278,588,29,39,GT-SeismicProcessorPro Bug Report,0.94
+279,589,29,39,RE: GT-SeismicProcessorPro Bug Report,1
+280,443,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+281,388,29,25,RE: Resolution of incident,0.75
+282,778,29,49,RE: Resolution of incident,0.75
+283,376,29,24,RE: Resolution of incident,0.75
+284,853,29,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+285,512,29,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+286,590,29,39,RE: GT-SeismicProcessorPro Bug Report,1
+287,444,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+288,677,29,43,RE: GT-SeismicProcessorPro Bug Report,1
+289,285,29,18,RE: Money for coffee fund,0.72
+290,274,29,17,RE: Money for coffee fund,0.72
+655,588,29,39,GT-SeismicProcessorPro Bug Report,0.94
+656,589,29,39,RE: GT-SeismicProcessorPro Bug Report,1
+657,443,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+658,388,29,25,RE: Resolution of incident,0.75
+659,778,29,49,RE: Resolution of incident,0.75
+660,376,29,24,RE: Resolution of incident,0.75
+661,853,29,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+662,512,29,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+663,590,29,39,RE: GT-SeismicProcessorPro Bug Report,1
+664,444,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+665,677,29,43,RE: GT-SeismicProcessorPro Bug Report,1
+666,285,29,18,RE: Money for coffee fund,0.72
+667,274,29,17,RE: Money for coffee fund,0.72
+750,388,29,25,RE: Resolution of incident,0.75
+751,778,29,49,RE: Resolution of incident,0.75
+752,376,29,24,RE: Resolution of incident,0.75
+753,853,29,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+754,512,29,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+755,590,29,39,RE: GT-SeismicProcessorPro Bug Report,1
+756,444,29,29,RE: GT-SeismicProcessorPro Bug Report,1
+757,677,29,43,RE: GT-SeismicProcessorPro Bug Report,1
+758,285,29,18,RE: Money for coffee fund,0.72
+759,274,29,17,RE: Money for coffee fund,0.72
+890,677,29,43,RE: GT-SeismicProcessorPro Bug Report,1
+891,285,29,18,RE: Money for coffee fund,0.72
+892,274,29,17,RE: Money for coffee fund,0.72
+467,474,30,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.97
+468,526,30,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.97
+469,137,30,9,Downhole prediction 2522-00 - check your parameters,0.7
+470,539,30,35,Well 1033-01 stabilization progress report,0.8
+471,146,30,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.97
+472,475,30,30,RE: Well 1033-01 stabilization progress report,0.81
+473,476,30,30,RE: Downhole prediction 2522-00 - check your parameters,0.72
+474,852,30,54,RE: Downhole prediction 2522-00 - check your parameters,0.72
+475,853,30,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.97
+476,512,30,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.97
+477,138,30,9,RE: Downhole prediction 2522-00 - check your parameters,0.72
+521,526,30,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+522,539,30,35,Well 1033-01 stabilization progress report,0.75
+523,21,30,2,RE: Traffic advisory for today,0.7
+524,146,30,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+525,540,30,35,RE: Downhole prediction 2522-00,0.78
+526,442,30,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+527,589,30,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+528,475,30,30,RE: Well 1033-01 stabilization progress report,0.84
+529,476,30,30,RE: Downhole prediction 2522-00 - check your parameters,0.77
+530,344,30,23,RE: Traffic advisory for today,0.7
+531,443,30,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+532,852,30,54,RE: Downhole prediction 2522-00 - check your parameters,0.77
+533,50,30,4,RE: Traffic advisory for today,0.7
+534,853,30,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+535,512,30,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+536,138,30,9,RE: Downhole prediction 2522-00 - check your parameters,0.77
+537,590,30,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+538,444,30,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+539,677,30,43,RE: GT-SeismicProcessorPro Bug Report,0.71
+540,285,30,18,RE: Money for coffee fund,0.76
+541,274,30,17,RE: Money for coffee fund,0.76
+712,476,30,30,RE: Downhole prediction 2522-00 - check your parameters,0.8
+713,852,30,54,RE: Downhole prediction 2522-00 - check your parameters,0.8
+714,853,30,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.84
+715,512,30,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.84
+716,138,30,9,RE: Downhole prediction 2522-00 - check your parameters,0.8
+717,285,30,18,RE: Money for coffee fund,0.71
+718,274,30,17,RE: Money for coffee fund,0.71
+719,852,30,54,RE: Downhole prediction 2522-00 - check your parameters,1
+720,853,30,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.77
+721,512,30,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.77
+722,138,30,9,RE: Downhole prediction 2522-00 - check your parameters,1
+834,138,33,9,RE: Downhole prediction 2522-00 - check your parameters,0.77
+835,590,33,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+836,444,33,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+837,677,33,43,RE: GT-SeismicProcessorPro Bug Report,0.71
+838,285,33,18,RE: Money for coffee fund,0.76
+839,274,33,17,RE: Money for coffee fund,0.76
+126,851,34,54,RE: Downhole prediction 2522-00,0.9
+127,473,34,30,Wellhead flow rate data - overpressure at well 1783-03?,0.72
+128,474,34,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+129,526,34,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+130,137,34,9,Downhole prediction 2522-00 - check your parameters,0.82
+131,146,34,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+132,540,34,35,RE: Downhole prediction 2522-00,0.9
+133,476,34,30,RE: Downhole prediction 2522-00 - check your parameters,0.82
+134,852,34,54,RE: Downhole prediction 2522-00 - check your parameters,0.82
+135,853,34,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+136,512,34,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+137,138,34,9,RE: Downhole prediction 2522-00 - check your parameters,0.82
+542,539,34,35,Well 1033-01 stabilization progress report,0.75
+543,21,34,2,RE: Traffic advisory for today,0.7
+544,146,34,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+545,540,34,35,RE: Downhole prediction 2522-00,0.78
+546,442,34,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+547,589,34,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+548,475,34,30,RE: Well 1033-01 stabilization progress report,0.84
+549,476,34,30,RE: Downhole prediction 2522-00 - check your parameters,0.77
+550,344,34,23,RE: Traffic advisory for today,0.7
+551,443,34,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+552,852,34,54,RE: Downhole prediction 2522-00 - check your parameters,0.77
+553,50,34,4,RE: Traffic advisory for today,0.7
+554,853,34,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+555,512,34,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+556,138,34,9,RE: Downhole prediction 2522-00 - check your parameters,0.77
+557,590,34,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+558,444,34,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+559,677,34,43,RE: GT-SeismicProcessorPro Bug Report,0.71
+560,285,34,18,RE: Money for coffee fund,0.76
+561,274,34,17,RE: Money for coffee fund,0.76
+70,37,35,3,Plants,0.72
+360,332,35,22,RE: Service anniversaries!,0.74
+568,146,35,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.75
+569,475,35,30,RE: Well 1033-01 stabilization progress report,0.94
+570,476,35,30,RE: Downhole prediction 2522-00 - check your parameters,0.72
+571,852,35,54,RE: Downhole prediction 2522-00 - check your parameters,0.72
+572,853,35,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.75
+573,512,35,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.75
+574,138,35,9,RE: Downhole prediction 2522-00 - check your parameters,0.72
+633,442,35,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+634,589,35,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+635,475,35,30,RE: Well 1033-01 stabilization progress report,0.73
+636,476,35,30,RE: Downhole prediction 2522-00 - check your parameters,0.86
+637,443,35,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+638,852,35,54,RE: Downhole prediction 2522-00 - check your parameters,0.86
+639,853,35,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+640,512,35,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+641,138,35,9,RE: Downhole prediction 2522-00 - check your parameters,0.86
+642,590,35,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+643,444,35,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+644,677,35,43,RE: GT-SeismicProcessorPro Bug Report,0.7
+478,73,36,5,RE: Catering?!?,0.91
+479,216,36,14,RE: Catering?!?,0.91
+480,159,36,11,RE: Catering?!?,0.91
+481,555,36,36,RE: Catering?!?,0.91
+482,745,36,46,RE: Catering?!?,0.91
+904,745,36,46,RE: Catering?!?,1
+39,791,39,50,RE: GT-SeismicProcessorPro Bug Report,1
+40,674,39,43,GT-SeismicProcessorPro Bug Report,0.94
+41,587,39,39,RE: Service anniversaries!,0.72
+42,441,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+43,332,39,22,RE: Service anniversaries!,0.72
+44,675,39,43,GT-SeismicProcessorPro Bug Report,0.94
+45,158,39,11,RE: Iâ€™m in! -  post a list,0.7
+46,311,39,20,RE: Iâ€™m in! -  post a list,0.7
+47,851,39,54,RE: Downhole prediction 2522-00,0.7
+48,676,39,43,GT-SeismicProcessorPro Bug Report,0.94
+49,474,39,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+50,526,39,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+51,146,39,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+52,540,39,35,RE: Downhole prediction 2522-00,0.7
+53,442,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+54,588,39,39,GT-SeismicProcessorPro Bug Report,0.94
+55,589,39,39,RE: GT-SeismicProcessorPro Bug Report,1
+56,443,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+57,388,39,25,RE: Resolution of incident,0.75
+58,778,39,49,RE: Resolution of incident,0.75
+59,376,39,24,RE: Resolution of incident,0.75
+60,853,39,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+61,512,39,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+62,590,39,39,RE: GT-SeismicProcessorPro Bug Report,1
+63,444,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+64,677,39,43,RE: GT-SeismicProcessorPro Bug Report,1
+65,285,39,18,RE: Money for coffee fund,0.72
+66,274,39,17,RE: Money for coffee fund,0.72
+197,441,39,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+198,538,39,35,RE: Files,0.74
+199,332,39,22,RE: Service anniversaries!,1
+200,442,39,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+201,589,39,39,RE: GT-SeismicProcessorPro Bug Report,0.72
+202,443,39,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+203,590,39,39,RE: GT-SeismicProcessorPro Bug Report,0.72
+204,444,39,29,RE: GT-SeismicProcessorPro Bug Report,0.72
+205,677,39,43,RE: GT-SeismicProcessorPro Bug Report,0.72
+684,589,39,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+685,443,39,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+686,590,39,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+687,444,39,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+688,677,39,43,RE: GT-SeismicProcessorPro Bug Report,0.94
+701,443,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+702,388,39,25,RE: Resolution of incident,0.75
+703,778,39,49,RE: Resolution of incident,0.75
+704,376,39,24,RE: Resolution of incident,0.75
+705,853,39,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+706,512,39,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+707,590,39,39,RE: GT-SeismicProcessorPro Bug Report,1
+708,444,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+709,677,39,43,RE: GT-SeismicProcessorPro Bug Report,1
+710,285,39,18,RE: Money for coffee fund,0.72
+711,274,39,17,RE: Money for coffee fund,0.72
+873,444,39,29,RE: GT-SeismicProcessorPro Bug Report,1
+874,677,39,43,RE: GT-SeismicProcessorPro Bug Report,1
+875,285,39,18,RE: Money for coffee fund,0.72
+876,274,39,17,RE: Money for coffee fund,0.72
+0,587,41,39,RE: Service anniversaries!,0.76
+1,332,41,22,RE: Service anniversaries!,0.76
+67,213,41,14,RE: Dress for success - Dress to impress,0.95
+68,633,41,41,RE: Dress for success - Dress to impress,0.95
+69,71,41,5,RE: Dress for success - Dress to impress,0.95
+324,233,41,15,RE: Document stuck,0.81
+490,71,41,5,RE: Dress for success - Dress to impress,1
+491,21,41,2,RE: Traffic advisory for today,0.72
+492,233,41,15,RE: Document stuck,0.73
+493,344,41,23,RE: Traffic advisory for today,0.72
+494,50,41,4,RE: Traffic advisory for today,0.72
+495,333,41,22,RE: Need a ride to lunch later,0.72
+496,411,41,27,RE: Planning for staff picnic,0.74
+497,273,41,17,RE: Planning for staff picnic,0.74
+498,284,41,18,RE: Planning for staff picnic,0.74
+499,74,41,5,RE: Need a ride to lunch later,0.72
+500,3,41,1,RE: Planning for staff picnic,0.74
+501,744,41,46,RE: Can someone cover for me next week?,0.71
+502,285,41,18,RE: Money for coffee fund,0.75
+503,274,41,17,RE: Money for coffee fund,0.75
+504,248,41,16,RE: Caution downtown,0.77
+505,817,41,51,RE: Caution downtown,0.77
+668,272,41,17,Money for coffee fund,0.85
+669,344,41,23,RE: Traffic advisory for today,0.77
+670,50,41,4,RE: Traffic advisory for today,0.77
+671,411,41,27,RE: Planning for staff picnic,0.93
+672,273,41,17,RE: Planning for staff picnic,0.93
+673,284,41,18,RE: Planning for staff picnic,0.93
+674,3,41,1,RE: Planning for staff picnic,0.93
+675,285,41,18,RE: Money for coffee fund,0.83
+676,274,41,17,RE: Money for coffee fund,0.83
+24,586,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+25,791,43,50,RE: GT-SeismicProcessorPro Bug Report,0.94
+26,674,43,43,GT-SeismicProcessorPro Bug Report,1
+27,441,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+28,675,43,43,GT-SeismicProcessorPro Bug Report,1
+29,676,43,43,GT-SeismicProcessorPro Bug Report,1
+30,442,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+31,588,43,39,GT-SeismicProcessorPro Bug Report,1
+32,589,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+33,443,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+34,590,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+35,444,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+36,677,43,43,RE: GT-SeismicProcessorPro Bug Report,0.94
+108,441,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+109,675,43,43,GT-SeismicProcessorPro Bug Report,1
+110,676,43,43,GT-SeismicProcessorPro Bug Report,1
+111,442,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+112,588,43,39,GT-SeismicProcessorPro Bug Report,1
+113,589,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+114,443,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+115,590,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+116,444,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+117,677,43,43,RE: GT-SeismicProcessorPro Bug Report,0.94
+415,676,43,43,GT-SeismicProcessorPro Bug Report,1
+416,442,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+417,588,43,39,GT-SeismicProcessorPro Bug Report,1
+418,589,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+419,443,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+420,590,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+421,444,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+422,677,43,43,RE: GT-SeismicProcessorPro Bug Report,0.94
+483,442,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+484,588,43,39,GT-SeismicProcessorPro Bug Report,1
+485,589,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+486,443,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+487,590,43,39,RE: GT-SeismicProcessorPro Bug Report,0.94
+488,444,43,29,RE: GT-SeismicProcessorPro Bug Report,0.94
+489,677,43,43,RE: GT-SeismicProcessorPro Bug Report,0.94
+898,285,43,18,RE: Money for coffee fund,0.72
+899,274,43,17,RE: Money for coffee fund,0.72
+423,410,44,27,RE: Yearly numbers looking good,0.86
+424,710,44,44,RE: Yearly numbers looking good,0.86
+648,726,45,45,RE: Too funy - you have to see this...,0.94
+107,130,46,8,Mandatory safety training,0.71
+794,333,49,22,RE: Need a ride to lunch later,0.72
+795,376,49,24,RE: Resolution of incident,1
+796,411,49,27,RE: Planning for staff picnic,0.84
+797,273,49,17,RE: Planning for staff picnic,0.84
+798,590,49,39,RE: GT-SeismicProcessorPro Bug Report,0.75
+799,284,49,18,RE: Planning for staff picnic,0.84
+800,74,49,5,RE: Need a ride to lunch later,0.72
+801,444,49,29,RE: GT-SeismicProcessorPro Bug Report,0.75
+802,3,49,1,RE: Planning for staff picnic,0.84
+803,677,49,43,RE: GT-SeismicProcessorPro Bug Report,0.75
+804,285,49,18,RE: Money for coffee fund,0.84
+805,274,49,17,RE: Money for coffee fund,0.84
+80,674,50,43,GT-SeismicProcessorPro Bug Report,0.94
+81,587,50,39,RE: Service anniversaries!,0.72
+82,441,50,29,RE: GT-SeismicProcessorPro Bug Report,1
+83,332,50,22,RE: Service anniversaries!,0.72
+84,675,50,43,GT-SeismicProcessorPro Bug Report,0.94
+85,158,50,11,RE: Iâ€™m in! -  post a list,0.7
+86,311,50,20,RE: Iâ€™m in! -  post a list,0.7
+87,851,50,54,RE: Downhole prediction 2522-00,0.7
+88,676,50,43,GT-SeismicProcessorPro Bug Report,0.94
+89,474,50,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+90,526,50,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+91,146,50,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+92,540,50,35,RE: Downhole prediction 2522-00,0.7
+93,442,50,29,RE: GT-SeismicProcessorPro Bug Report,1
+94,588,50,39,GT-SeismicProcessorPro Bug Report,0.94
+95,589,50,39,RE: GT-SeismicProcessorPro Bug Report,1
+96,443,50,29,RE: GT-SeismicProcessorPro Bug Report,1
+97,388,50,25,RE: Resolution of incident,0.75
+98,778,50,49,RE: Resolution of incident,0.75
+99,376,50,24,RE: Resolution of incident,0.75
+100,853,50,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+101,512,50,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.71
+102,590,50,39,RE: GT-SeismicProcessorPro Bug Report,1
+103,444,50,29,RE: GT-SeismicProcessorPro Bug Report,1
+104,677,50,43,RE: GT-SeismicProcessorPro Bug Report,1
+105,285,50,18,RE: Money for coffee fund,0.72
+106,274,50,17,RE: Money for coffee fund,0.72
+506,21,52,2,RE: Traffic advisory for today,0.72
+507,634,52,41,Planning for staff picnic,0.73
+508,272,52,17,Money for coffee fund,0.77
+509,344,52,23,RE: Traffic advisory for today,0.72
+510,388,52,25,RE: Resolution of incident,0.9
+511,50,52,4,RE: Traffic advisory for today,0.72
+512,778,52,49,RE: Resolution of incident,0.9
+513,376,52,24,RE: Resolution of incident,0.9
+514,411,52,27,RE: Planning for staff picnic,0.74
+515,273,52,17,RE: Planning for staff picnic,0.74
+516,284,52,18,RE: Planning for staff picnic,0.74
+517,3,52,1,RE: Planning for staff picnic,0.74
+518,285,52,18,RE: Money for coffee fund,0.78
+519,274,52,17,RE: Money for coffee fund,0.78
+145,343,53,23,RE: List of repairs needed,0.7
+146,129,53,8,RE: List of repairs needed,0.7
+147,428,53,28,RE: Traffic advisory for today,1
+148,20,53,2,Traffic advisory for today,0.92
+149,863,53,55,RE: Late for meeting,0.82
+150,397,53,26,RE: Late for meeting,0.82
+151,193,53,13,RE: List of repairs needed,0.7
+152,180,53,12,RE: Traffic advisory for today,1
+153,213,53,14,RE: Dress for success - Dress to impress,0.72
+154,633,53,41,RE: Dress for success - Dress to impress,0.72
+155,828,53,52,Resolution of incident,0.72
+156,474,53,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+157,526,53,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+158,71,53,5,RE: Dress for success - Dress to impress,0.72
+159,21,53,2,RE: Traffic advisory for today,1
+160,146,53,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+161,634,53,41,Planning for staff picnic,0.77
+162,233,53,15,RE: Document stuck,0.82
+163,272,53,17,Money for coffee fund,0.74
+164,344,53,23,RE: Traffic advisory for today,1
+165,388,53,25,RE: Resolution of incident,0.81
+166,50,53,4,RE: Traffic advisory for today,1
+167,778,53,49,RE: Resolution of incident,0.81
+168,333,53,22,RE: Need a ride to lunch later,0.73
+169,376,53,24,RE: Resolution of incident,0.81
+170,853,53,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+171,512,53,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.7
+172,345,53,23,RE: List of repairs needed,0.7
+173,411,53,27,RE: Planning for staff picnic,0.88
+174,273,53,17,RE: Planning for staff picnic,0.88
+175,284,53,18,RE: Planning for staff picnic,0.88
+176,74,53,5,RE: Need a ride to lunch later,0.73
+177,3,53,1,RE: Planning for staff picnic,0.88
+178,744,53,46,RE: Can someone cover for me next week?,0.72
+179,285,53,18,RE: Money for coffee fund,0.86
+180,274,53,17,RE: Money for coffee fund,0.86
+181,51,53,4,RE: List of repairs needed,0.7
+182,248,53,16,RE: Caution downtown,0.76
+183,817,53,51,RE: Caution downtown,0.76
+450,474,54,30,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+451,526,54,34,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+452,137,54,9,Downhole prediction 2522-00 - check your parameters,0.72
+453,146,54,10,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+454,540,54,35,RE: Downhole prediction 2522-00,1
+455,442,54,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+456,589,54,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+457,475,54,30,RE: Well 1033-01 stabilization progress report,0.73
+458,476,54,30,RE: Downhole prediction 2522-00 - check your parameters,0.86
+459,443,54,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+460,852,54,54,RE: Downhole prediction 2522-00 - check your parameters,0.86
+461,853,54,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+462,512,54,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.78
+463,138,54,9,RE: Downhole prediction 2522-00 - check your parameters,0.86
+464,590,54,39,RE: GT-SeismicProcessorPro Bug Report,0.7
+465,444,54,29,RE: GT-SeismicProcessorPro Bug Report,0.7
+466,677,54,43,RE: GT-SeismicProcessorPro Bug Report,0.7
+760,853,54,54,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.77
+761,512,54,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,0.77
+762,138,54,9,RE: Downhole prediction 2522-00 - check your parameters,1
+827,512,54,33,RE: Wellhead flow rate data - overpressure at well 1783-03?,1
+828,138,54,9,RE: Downhole prediction 2522-00 - check your parameters,0.77
+829,590,54,39,RE: GT-SeismicProcessorPro Bug Report,0.71
+830,444,54,29,RE: GT-SeismicProcessorPro Bug Report,0.71
+831,677,54,43,RE: GT-SeismicProcessorPro Bug Report,0.71
+832,285,54,18,RE: Money for coffee fund,0.76
+833,274,54,17,RE: Money for coffee fund,0.76
+298,397,55,26,RE: Late for meeting,1
+299,538,55,35,RE: Files,0.76
+300,180,55,12,RE: Traffic advisory for today,0.82
+301,213,55,14,RE: Dress for success - Dress to impress,0.78
+302,633,55,41,RE: Dress for success - Dress to impress,0.78
+303,71,55,5,RE: Dress for success - Dress to impress,0.78
+304,21,55,2,RE: Traffic advisory for today,0.82
+305,215,55,14,RE: No hurry,0.72
+306,387,55,25,RE: No hurry,0.72
+307,233,55,15,RE: Document stuck,0.76
+308,344,55,23,RE: Traffic advisory for today,0.82
+309,388,55,25,RE: Resolution of incident,0.75
+310,50,55,4,RE: Traffic advisory for today,0.82
+311,778,55,49,RE: Resolution of incident,0.75
+312,333,55,22,RE: Need a ride to lunch later,0.77
+313,376,55,24,RE: Resolution of incident,0.75
+314,411,55,27,RE: Planning for staff picnic,0.8
+315,273,55,17,RE: Planning for staff picnic,0.8
+316,284,55,18,RE: Planning for staff picnic,0.8
+317,74,55,5,RE: Need a ride to lunch later,0.77
+318,3,55,1,RE: Planning for staff picnic,0.8
+319,744,55,46,RE: Can someone cover for me next week?,0.77
+320,285,55,18,RE: Money for coffee fund,0.77
+321,274,55,17,RE: Money for coffee fund,0.77
+322,248,55,16,RE: Caution downtown,0.73
+323,817,55,51,RE: Caution downtown,0.73
