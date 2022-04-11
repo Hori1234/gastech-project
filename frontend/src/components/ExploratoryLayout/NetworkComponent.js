@@ -63,72 +63,26 @@ var htmlString = ` <head>
 		</style>
 	</head>
 	<body>
-		<div
-			class="controls"
-			style="
-				
-				top: 10px;
-				left: 10px;
-				width: 200px;
-				height: 100%;
-				border: 3px solid black;
-				border-radius: 10px;
-			"
-		>
-			<div class="force" style="border-radius: 10px">
-				<p>
-					<label
-						><input
-							type="checkbox"
-							checked
-							onchange="forceProperties.charge.enabled = this.checked; updateAll();"
-						/>
-						charge</label
-					>
-					Attracts (+) or repels (-) nodes to/from each other.
-				</p>
-				<label
-					title="Negative strength repels nodes. Positive strength attracts nodes."
-				>
-					strength
-					<output id="charge_StrengthSliderOutput">-30</output>
-					<input
-						type="range"
-						min="-200"
-						max="50"
-						value="-130"
-						step=".1"
-						oninput="d3.select('#charge_StrengthSliderOutput').text(value); forceProperties.charge.strength=value; updateAll();"
-					/>
-				</label>
-			</div>
-
-			<div class="force">
-				<p>
-					<label
-						><input
-							type="checkbox"
-							checked
-							onchange="forceProperties.link.enabled = this.checked; updateAll();"
-						/>
-						link</label
-					>
-					Sets link length
-				</p>
-				<label title="The force will push/pull nodes to make links this long">
-					distance
-					<output id="link_DistanceSliderOutput">100</output>
-					<input
-						type="range"
-						min="0"
-						max="500"
-						value="100"
-						step="1"
-						oninput="d3.select('#link_DistanceSliderOutput').text(value); forceProperties.link.distance=value; updateAll();"
-					/>
-				</label>
-			</div>
-		</div>
+		<div class="controls" style=" top:10px; left: 10px; width:200px;
+                    height:850px; border:3px solid black; border-radius: 10px;">
+            <div class="perplexity" style="border-radius: 10px;">
+                <p> <b>Controls for t-SNE</b> </p>
+                    <label>
+                        perplexity
+                        <output id="tsne_PerplexitySliderOutput">10</output>
+                        <input type="range" min="2" max="100" value="10" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value); tSNEProperties.perplexity=value; updateAll();">
+                    </label>
+                    <label>
+                        step
+                        <output id="tsne_StepSliderOutputv">1000</output>
+                        <input type="range" min="100" max="10000" value="3000" step="500" oninput="d3.select('#tsne_StepSliderOutput').text(value); tSNEProperties.step=value; updateAll();">
+                    </label>
+                    <label>
+                        epsilon
+                        <output id="tsne_EpsilonSliderOutputv">5</output>
+                        <input type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value); tSNEProperties.epsilon=value; updateAll();">
+                    </label>
+            </div>
 	</body> `
 
 
@@ -164,17 +118,22 @@ export default class NetworkComponent extends Component {
       script3.async = false;
       this.div.appendChild(script3);
 
-      script2.src = "/static/libs/code_network.js";
-      script2.async = false;
-      this.div.appendChild(script2);
+    //   script2.src = "/static/libs/code_network.js";
+    //   script2.async = false;
+    //   this.div.appendChild(script2);
 
       script4.src = "/static/libs/tsne.js";
       script4.async = false;
-      this.div.appendChild(script4);
+	   this.div.appendChild(script4);
 
-      script5.src = "/static/libs/code_tsne.js";
-      script5.async = false;
-      this.div.appendChild(script5);
+	   script2.src = "/static/libs/code.js";
+      script2.async = false;
+      this.div.appendChild(script2);
+	   
+
+    //   script5.src = "/static/libs/code_tsne.js";
+    //   script5.async = false;
+    //   this.div.appendChild(script5);
 
    }
    
@@ -184,37 +143,66 @@ export default class NetworkComponent extends Component {
       return (
          <Layout style={{ width: "100%", display: "flex", justifyContent: "flex-start", alignItemsArr: "center", flexDirection: "row" }}>
             <Layout style={{
-              display:'flex', backgroundColor: 'white',width: "20%"
+              display:'flex', backgroundColor: 'white',width: "15%"
             }}>
                <div style={{ width: 10}} dangerouslySetInnerHTML={ {__html: htmlString} } />
-            </Layout>
-            <Layout  style={{ display:"flex",width: "40%",border: '2px solid black'}}>
-               <div id="network"
-                  style={{ display:"flex",
-                  height: "100%", backgroundColor: "white"
-                  }}
-                  ref={el => (this.div = el)}
-               >
-                  
-                  <svg style={{ width: "100%",
-                  height: "100%" }}>
+			  </Layout>
+			<Layout style={{ width: "35%", display: "flex", justifyContent: "flex-start", alignItemsArr: "center", flexDirection: "column" }}>
+				  
+				<Layout  style={{ display:"flex",width: "100%",height: "70%", border: '2px solid black'}}>
+					<div id="DimensionalityReduction"
+						style={{
+							display: "flex", width: "100%",height: "100%", backgroundColor: "white"
+							}}>
+						<svg
+								style={{
+									width: "100%",height: "100%" }}>
 
-                  </svg>
-            
-               </div>
+						</svg>
+						<div id="DimensionalityReductionLegend" style={{ marginTop:15, marginLeft: 5, width:"100",
+							height:"270"}}> 
+							<svg style={{width:"100", height:"270"}}>
+
+							</svg>
+						</div>
+               		</div>
+					  
+				</Layout>
+				  
+				 <Layout style={{ display:"flex",width: "100%",height: "30%",border: '2px solid black', backgroundColor: 'green'}}>
+					<div id="EmailList" style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
+						<svg style={{ width: "100%",
+						height: "100%" }}>
+
+						</svg>
+					</div>
+				</Layout>
+				  
+			</Layout>
+			
+			<Layout style={{ display: "flex", width: "10%", border: '2px solid black' }} >
+				<div id="SendersName" style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
+					<svg style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
+
+					</svg>
+				</div>
+               
             </Layout>
                
             <Layout style={{ display:"flex",width: "40%",border: '2px solid black'}} >
-               <div id="DimensionalityReduction"
-                  style={{
-                     display: "flex", width: "100%",height: "100%", backgroundColor: "white"
-                     }}>
-                  <svg
-                     style={{
-                        width: "100%",height: "100%" }}>
+               <div id="network"
+						style={{ display:"flex",
+						height: "100%", backgroundColor: "white"
+						}}
+						ref={el => (this.div = el)}
+					>
+						
+						<svg style={{ width: "100%",
+						height: "100%" }}>
 
-                  </svg>
-               </div>
+						</svg>
+					
+					</div>
                
             </Layout>
             

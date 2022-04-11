@@ -86,12 +86,8 @@ export default class TSNEComponent extends Component {
     }
   }
 
-  // handleChange = event => {
-  //   this.setState({
-  //     data: event.target.files[0]
-  //   });
-  // };
 
+  //Importers
   importCSV = (path) => {
     Papa.parse(path, {
       header: true,
@@ -118,6 +114,8 @@ export default class TSNEComponent extends Component {
     
   }
 
+
+  //Data Preprocessing
   indexOf = (lbls, value) => {
     for (let index = 0; index < lbls.length; index++) {
       if (lbls[index] == value) {
@@ -206,10 +204,11 @@ export default class TSNEComponent extends Component {
     
   }
 
+
+  //Handlers 
   handleChangePerplexity = value => {
     this.setState({ perplexity: value });
   };
-
   handleChangeEpsilon = value => {
     this.setState({ epsilon: value });
   };
@@ -220,6 +219,7 @@ export default class TSNEComponent extends Component {
   }
   handleSvgRefresh = () => {
     d3.select("#similarity").selectAll("svg").remove();
+    d3.select("#similarity").selectAll("div").remove();
     d3.select("#similarity").append("svg")
       .attr("width", 600)
       .attr("height", 840)
@@ -245,6 +245,8 @@ export default class TSNEComponent extends Component {
     })
   }
 
+
+  //Builders
   TSNEBuild = (data, colors) => {
     //   var colors = [
     //   "#1b70fc", "#faff16", "#d50527", "#158940", "#f898fd", "#24c9d7",
@@ -303,7 +305,8 @@ export default class TSNEComponent extends Component {
       var yScale = d3.scaleLinear().domain([d3.min(Y, function(d) { return d[1] }), d3.max(Y, function(d) { return d[1] })]).range([0+y_offset, height-y_offset]);
       
       var g_tsne = svg_tsne.append("g")
-        .attr("class", "everything");
+        .attr("class", "everything")
+        .style('pointer-events', 'all');
       
       // Add X axis
       const x = d3.scaleLinear()
@@ -325,20 +328,7 @@ export default class TSNEComponent extends Component {
         .call(d3.axisLeft(y))
         .attr("opacity", "1")
 
-      g_tsne.selectAll("dot")
-        .data(Y)
-        .enter()
-        .append("circle")
-        .transition()
-        .delay(function(d,i){return(i*3)})
-        .duration(2000)
-        .attr("r", 6)
-        .attr("cx", function(d) { return xScale(d[0]) })
-        .attr("cy", function(d) { return yScale(d[1]) })
-        .style("fill", function(d,i){
-          let idx = lbls[i%(lbls.length)];
-          return colors[idx]
-        })
+      
       
       // Add title to graph
       svg_tsne.append("text")
@@ -358,6 +348,60 @@ export default class TSNEComponent extends Component {
               .style("max-width", 400)
               .text("TSNE to represent the cluster of people that sent the same email with the similar Subject headers.");
 
+      // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
+      // Its opacity is set to 0: we don't see it by default.
+      var tooltip = d3.select("#similarity")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+
+
+      // A function that change this tooltip when the user hover a point.
+      // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+      const mouseover = function (event, d) {
+        tooltip
+          .style("opacity", 1)
+      };
+
+      const mousemove = function (event, d) {
+        tooltip
+          .html(`The exact value of<br>the Ground Living area is: ${4}`)
+          .style("left", (event.x) / 2 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+          .style("top", (event.y) / 2 + "px")
+      };
+
+    // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
+      const mouseleave = function (event, d) {
+        tooltip
+          .transition()
+          .duration(200)
+          .style("opacity", 0)
+      };
+
+      g_tsne.on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave);
+
+      g_tsne.selectAll("dot")
+        .data(Y)
+        .enter()
+        .append("circle")
+          .transition()
+          .delay(function (d, i) { return (i * 3) })
+          .duration(2000)
+          .attr("r", 6)
+          .attr("cx", function (d) { return xScale(d[0]) })
+          .attr("cy", function (d) { return yScale(d[1]) })
+          .style("fill", function (d, i) {
+            let idx = lbls[i % (lbls.length)];
+            return colors[idx]
+          })
+        
     });
   }
   

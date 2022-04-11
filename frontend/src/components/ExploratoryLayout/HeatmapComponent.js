@@ -25,6 +25,7 @@ export default class HeatmapComponent extends Component {
 
   handleSvgRefresh = () => {
     d3.select("#heatmap").selectAll("svg").remove();
+    d3.select("#heatmap").selectAll("div").remove();
   }
 
   HeatmapBuild = () => {
@@ -87,28 +88,6 @@ export default class HeatmapComponent extends Component {
       .style("border-height",15)
       .style("border-radius", "2px")
       .style("padding", "2px")
-
-    // Three function that change the tooltip when user hover / move / leave a cell
-    const mouseover = function(event,d) {
-      tooltip
-        .style("opacity", 1)
-      d3.select(this)
-        .style("stroke", "black")
-        .style("opacity", 1)
-    }
-    const mousemove = function(event,d) {
-      tooltip
-        .html("The exact value of<br>this cell is: " + d.Similarity)
-        .style("left", "300px")
-        .style("top", "300px")
-    }
-    const mouseleave = function(event,d) {
-      tooltip
-        .style("opacity", 0)
-      d3.select(this)
-        .style("stroke", "none")
-        .style("opacity", 0.8)
-    }
 
     // add the squares
     svg.selectAll()
@@ -173,9 +152,6 @@ export default class HeatmapComponent extends Component {
                   }}
                   ref={this.heatmapvis}
                >
-                  
-                  
-            
       </div>
     )
   }
