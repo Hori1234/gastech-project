@@ -34,11 +34,11 @@ export default function NavigationLayout() {
       case "/account":
         return "1";
       case "/expl":
-        return "2";
-      case "/hierarch":
         return "3";
-      case "/stats":
+      case "/hierarch":
         return "4";
+      case "/stats":
+        return "2";
       default:
         return null;
     }
@@ -103,14 +103,14 @@ export default function NavigationLayout() {
                     <Link to="/account">Account Management</Link>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/expl">Finding Outliers</Link>
+                    <Link to="/stats">Information view</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/hierarch">Hierarchical Data</Link>
+                    <Link to="/expl">Dauly data view</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
-                    <Link to="/stats">Statistics</Link>
-                  </Menu.Item>
+                    <Link to="/hierarch">Overall data view</Link>
+                  </Menu.Item> 
                   <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>
@@ -126,16 +126,16 @@ export default function NavigationLayout() {
                 >
                   <Menu.Item key="0">
                     <Link to="/">Home</Link>
-                  </Menu.Item>
+                    </Menu.Item>
                   <Menu.Item key="2">
-                    <Link to="/expl">Finding Outliers</Link>
+                    <Link to="/stats">Information view</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/hierarch">Hierarchical Data</Link>
+                    <Link to="/expl">Dauly data view</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
-                    <Link to="/stats">Statistics</Link>
-                  </Menu.Item>
+                    <Link to="/hierarch">Overall data view</Link>
+                  </Menu.Item> 
                   <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>

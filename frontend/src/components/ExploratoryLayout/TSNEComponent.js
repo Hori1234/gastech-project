@@ -412,7 +412,7 @@ export default class TSNEComponent extends Component {
             <Layout style={{
               display:'flex', backgroundColor: 'white',width: "10%"
             }}>
-               
+               <Paragraph style={{marginTop: 20}}>Choose the date form a specific day</Paragraph>
                 <Select
                   showSearch
                   style={{ width: "90%", marginTop: 20 }}
@@ -426,16 +426,16 @@ export default class TSNEComponent extends Component {
                   }
                   onChange={this.handleSelect}
                 >
-                  <Option value="1">Employee data from 6th</Option>
-                  <Option value="2">Employee data from 7th</Option>
-                  <Option value="3">Employee data from 8th</Option>
-                  <Option value="4">Employee data from 9th</Option>
-                  <Option value="5">Employee data from 10th</Option>
-                  <Option value="6">Employee data from 13th</Option>
-                  <Option value="7">Employee data from 14th</Option>
-                  <Option value="8">Employee data from 15th</Option>
-                  <Option value="9">Employee data from 16th</Option>
-                  <Option value="10">Employee data from 17th</Option>
+                  <Option value="1">6th</Option>
+                  <Option value="2">7th</Option>
+                  <Option value="3">8th</Option>
+                  <Option value="4">9th</Option>
+                  <Option value="5">10th</Option>
+                  <Option value="6">13th</Option>
+                  <Option value="7">14th</Option>
+                  <Option value="8">15th</Option>
+                  <Option value="9">16th</Option>
+                  <Option value="10">17th</Option>
               </Select>
               <Paragraph style={{marginTop: 20}}>Set the value of Perplexity</Paragraph>
               <Slider style={{ width: "80%" }} onChange={this.handleChangePerplexity} value={this.state.perplexity} />
@@ -444,7 +444,7 @@ export default class TSNEComponent extends Component {
               <Paragraph style={{marginTop: 20}}>Set the value of Step</Paragraph  >
               <InputNumber style={{ width: "90%" }} min={1} max={10000} defaultValue={6000} onChange={this.handleOnChangeStep} /> 
               <Button style={{ marginTop: 20, width: "90%" }} onClick={() => this.handleOnClick()}>Refresh SVg</Button>
-              <Button style={{marginTop: 20, width: "90%"}} onClick={() => this.handleOnClickLoadEverything()}>Load everything</Button>
+              {/* <Button style={{marginTop: 20, width: "90%"}} onClick={() => this.handleOnClickLoadEverything()}>Load everything</Button> */}
             </Layout>
             <Layout  style={{width: 700,border: '2px solid black'}}>
                <HeatmapComponent datapath={this.state.data_name} changedata={this.state.change_data}></HeatmapComponent>
@@ -454,11 +454,11 @@ export default class TSNEComponent extends Component {
                 <div
                   id="similarity"
                   style={{
-                     display: "flex", width: 595,height: 837, backgroundColor: "white"}}
+                     display: "flex", width: 595,height: 937, backgroundColor: "white"}}
                   ref={this.tsnevis}>
                   <svg
                      style={{
-                        width: 400,height: 830 }}>
+                        width: 400,height: 930 }}>
 
                   </svg>
                </div>

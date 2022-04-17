@@ -5,84 +5,112 @@ import "antd/dist/antd.css";
 
 var htmlString = ` <head>
 		<style>
-			/* HTML styles */
-			
-			.controls {
-				flex-basis: 200px;
-				padding: 0 5px;
-			}
-			.controls .force {
-				background-color: #eee;
-				border-radius: 3px;
-				padding: 5px;
-				margin: 5px 0;
-			}
-			.controls .force p label {
-				margin-right: 0.5em;
-				font-size: 120%;
-				font-weight: bold;
-			}
-			.controls .force p {
-				margin-top: 0;
-			}
-			.controls .force label {
-				display: inline-block;
-			}
-			.controls input[type="checkbox"] {
-				transform: scale(1.2, 1.2);
-			}
-			.controls input[type="range"] {
-				margin: 0 5% 0.5em 5%;
-				width: 90%;
-			}
-			/* alpha viewer */
-			.controls .alpha p {
-				margin-bottom: 0.25em;
-			}
-			.controls .alpha .alpha_bar {
-				height: 0.5em;
-				border: 1px #777 solid;
-				border-radius: 2px;
-				padding: 1px;
-				display: flex;
-			}
-			.controls .alpha .alpha_bar #alpha_value {
-				background-color: #555;
-				border-radius: 1px;
-				flex-basis: 100%;
-			}
-			.controls .alpha .alpha_bar:hover {
-				border-width: 2px;
-				margin: -1px;
-			}
-			.controls .alpha .alpha_bar:active #alpha_value {
-				background-color: #222;
-			}
+            /* HTML styles */
+            html{ width: 100%; }
+            
+            .controls .tSNE {
+            background-color:#B0E0E6;
+            border-radius: 3px;
+            padding: 5px;
+            margin: 5px 0;
+            }
+        
+            /* SVG styles */
+            svg {
+                flex-basis: 100%;
+                min-width: 200px;
+            }
+            .links line {
+                stroke: #aaa;
+            }
+            .nodes circle {
+                pointer-events: all;
+            }
 
-			
-		</style>
+            .selection {
+                fill: #ADD8E6;
+                stroke: #ADD8E6;
+                fill-opacity: 0.3;
+                stroke-opacity: 0.7;
+                stroke-width: 2;
+                stroke-dasharray: 5, 5;
+            }
+
+            div#container_email {
+                /*background-color: black;*/
+                opacity: 1.0;
+                height: 2500px;
+                width: 400px;
+                /* border:2px solid #000; */
+                overflow: scroll;
+            }
+
+            div#container_sender {
+                /*background-color: black;*/
+                opacity: 1.0;
+                height: 1500px;
+                width: 900px;
+                /* border:2px solid #000; */
+                overflow: scroll;
+            }
+
+            div#container_date {
+                /*background-color: black;*/
+                opacity: 1.0;
+                height: 2900px;
+                width: 200px;
+                /* border:2px solid #000; */
+                overflow: scroll;
+            }
+        
+        </style>
+
 	</head>
 	<body>
-		<div class="controls" style=" top:10px; left: 10px; width:200px;
-                    height:850px; border:3px solid black; border-radius: 10px;">
-            <div class="perplexity" style="border-radius: 10px;">
+		<div class="controls" style=" top:10px; left: 10px; width:210px;
+                    height:890px; border:2px solid black; border-radius: 10px;">
+            <div class="tSNE" style="border-radius: 10px;">
                 <p> <b>Controls for t-SNE</b> </p>
                     <label>
                         perplexity
                         <output id="tsne_PerplexitySliderOutput">10</output>
-                        <input type="range" min="2" max="100" value="10" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value); tSNEProperties.perplexity=value; updateAll();">
+                        <!-- <input type="range" min="2" max="100" value="30" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value); tSNEProperties.perplexity=value; updateAll();"> -->
+                        <input autocomplete="off" type="range" min="2" max="100" value="30" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value);">
                     </label>
                     <label>
                         step
-                        <output id="tsne_StepSliderOutputv">1000</output>
-                        <input type="range" min="100" max="10000" value="3000" step="500" oninput="d3.select('#tsne_StepSliderOutput').text(value); tSNEProperties.step=value; updateAll();">
+                        <output id="tsne_StepSliderOutput">1000</output>
+                        <!-- <input type="range" min="100" max="10000" value="5000" step="500" oninput="d3.select('#tsne_StepSliderOutput').text(value); tSNEProperties.step=value; updateAll();"> -->
+                        <input autocomplete="off" type="range" min="100" max="10000" value="5000" step="50" oninput="d3.select('#tsne_StepSliderOutput').text(value);">
                     </label>
                     <label>
                         epsilon
-                        <output id="tsne_EpsilonSliderOutputv">5</output>
-                        <input type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value); tSNEProperties.epsilon=value; updateAll();">
+                        <output id="tsne_EpsilonSliderOutput">5</output>
+                        <!-- <input type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value); tSNEProperties.epsilon=value; updateAll();"> -->
+                        <input autocomplete="off" type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value);">
                     </label>
             </div>
+			 <!-- button for plotting the tSNE plot -->
+            <div id="option">
+                <input name="plotButton" 
+                       type="button" 
+                       value="Plot tSNE" 
+                       onclick="plotData()" />
+            </div>
+
+		<!-- DOM for the tSNE legend (list of date) -->
+        <div id="DimensionalityReductionLegend" style=" top: 20px; left: 15px; width:200px;
+                    height:290px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
+            <p> <b>Date</b> </p>
+            <svg width="300px" height="30000px"></svg>
+        </div>
+
+		<!-- DOM for displaying the list of senders' name -->
+        <div id="senders" style="top:550px; left: 15px; width:200px;
+                    height:385px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
+            <p> <b>Senders</b> </p>
+            <svg width="500px" height="30000px"></svg>
+        </div>
 	</body> `
 
 
@@ -126,7 +154,7 @@ export default class NetworkComponent extends Component {
       script4.async = false;
 	   this.div.appendChild(script4);
 
-	   script2.src = "/static/libs/code.js";
+	script2.src = "/static/libs/code.js";
       script2.async = false;
       this.div.appendChild(script2);
 	   
@@ -159,12 +187,6 @@ export default class NetworkComponent extends Component {
 									width: "100%",height: "100%" }}>
 
 						</svg>
-						<div id="DimensionalityReductionLegend" style={{ marginTop:15, marginLeft: 5, width:"100",
-							height:"270"}}> 
-							<svg style={{width:"100", height:"270"}}>
-
-							</svg>
-						</div>
                		</div>
 					  
 				</Layout>
@@ -182,7 +204,7 @@ export default class NetworkComponent extends Component {
 			
 			<Layout style={{ display: "flex", width: "10%", border: '2px solid black' }} >
 				<div id="SendersName" style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
-					<svg style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
+					<svg style={{display: "flex", width: "50%",height: "100%", backgroundColor: "white", translate: (-50,0)}}>
 
 					</svg>
 				</div>

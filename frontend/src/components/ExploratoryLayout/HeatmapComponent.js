@@ -147,7 +147,7 @@ export default class HeatmapComponent extends Component {
   render() {
     return (
       <div id="heatmap"
-                  style={{ height:837,
+                  style={{ height:930,
                    backgroundColor: "white"
                   }}
                   ref={this.heatmapvis}

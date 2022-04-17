@@ -89,25 +89,13 @@ export default class Home extends Component {
                 marginRight: 20,
               }}
             >
-              {(context.state.user.role === "planner" ||
-                context.state.user.role === "administrator") && (
-                <>
-                  <LogoLink
-                    image={require("../Images/upload-file.svg")}
-                    title={"Upload Documents"}
-                    description={
-                      "Uploadarea articolelor in format .pdf -- INCA IN LUCRU"
-                    }
-                    to={"/upload"}
-                  />
-                </>
-              )}
+              
               {context.state.user.role === "administrator" && (
                 <LogoLink
                   image={require("../Images/1635626-200.png")}
                   title={"Account Management"}
                   description={
-                    "Modificarea/Adaugarea/Stergerea conturilor echipei OTMD"
+                    "Modify/add/delete of the accounts"
                   }
                   to={"/account"}
                 />
