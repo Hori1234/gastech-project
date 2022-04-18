@@ -72,19 +72,20 @@ var htmlString = ` <head>
             <div class="tSNE" style="border-radius: 10px;">
                 <p> <b>Controls for t-SNE</b> </p>
                     <label>
-                        perplexity
+                        <p> perplexity <p/>
                         <output id="tsne_PerplexitySliderOutput">10</output>
                         <!-- <input type="range" min="2" max="100" value="30" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value); tSNEProperties.perplexity=value; updateAll();"> -->
                         <input autocomplete="off" type="range" min="2" max="100" value="30" step="1" oninput="d3.select('#tsne_PerplexitySliderOutput').text(value);">
                     </label>
                     <label>
-                        step
+                        
+                        <p> step </>
                         <output id="tsne_StepSliderOutput">1000</output>
                         <!-- <input type="range" min="100" max="10000" value="5000" step="500" oninput="d3.select('#tsne_StepSliderOutput').text(value); tSNEProperties.step=value; updateAll();"> -->
                         <input autocomplete="off" type="range" min="100" max="10000" value="5000" step="50" oninput="d3.select('#tsne_StepSliderOutput').text(value);">
                     </label>
                     <label>
-                        epsilon
+                        <p> epsilon <p/>
                         <output id="tsne_EpsilonSliderOutput">5</output>
                         <!-- <input type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value); tSNEProperties.epsilon=value; updateAll();"> -->
                         <input autocomplete="off" type="range" min="1" max="20" value="5" step="1" oninput="d3.select('#tsne_EpsilonSliderOutput').text(value);">
@@ -100,14 +101,14 @@ var htmlString = ` <head>
 
 		<!-- DOM for the tSNE legend (list of date) -->
         <div id="DimensionalityReductionLegend" style=" top: 20px; left: 15px; width:200px;
-                    height:290px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
+                    height:200px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
             <p> <b>Date</b> </p>
             <svg width="300px" height="30000px"></svg>
         </div>
 
 		<!-- DOM for displaying the list of senders' name -->
         <div id="senders" style="top:550px; left: 15px; width:200px;
-                    height:385px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
+                    height:400px; background-color:#B0E0E6; border-radius: 10px;"> <!-- background-color:#B0E0E6; -->
             <p> <b>Senders</b> </p>
             <svg width="500px" height="30000px"></svg>
         </div>
@@ -193,6 +194,7 @@ export default class NetworkComponent extends Component {
 				  
 				 <Layout style={{ display:"flex",width: "100%",height: "30%",border: '2px solid black', backgroundColor: 'green'}}>
 					<div id="EmailList" style={{display: "flex", width: "100%",height: "100%", backgroundColor: "white"}}>
+                        <p> Email subjects </p>
 						<svg style={{ width: "100%",
 						height: "100%" }}>
 

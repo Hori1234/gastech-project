@@ -227,7 +227,20 @@ d3.queue()
 
     var tsne = new tsnejs.tSNE(opt); // create a tSNE instance
 
-  //linksFromTo.length = 400;       // modify this value select subset of the dataset for testing purposes
+  //linksFromTo.length = 40;       // modify this value select subset of the dataset for testing purposes
+
+  nodesEmployee.forEach(rowList => {
+    for (let key in rowList) {
+        var firstName, lastName;
+        if (key == 'LastName') {
+            lastName = rowList[key];
+        }
+        if (key == 'FirstName') {
+            firstName = rowList[key];
+        }
+        rowList.Name = firstName + " " +lastName;
+    }
+  })
 
   // get the unique set of the senders' email in the dataset
   var uniqueFrom = [];
@@ -635,7 +648,7 @@ d3.queue()
     // remove all the existing senders' and receivers' name before reploting the new names
     svg_names.selectAll("*").remove();
 
-    svg_names.attr("transform", "translate(" + 0 + "," + 0 + ")");     // transforms the axis to proper position
+    svg_names.attr("transform", "translate(" + 50 + "," + 0 + ")");     // transforms the axis to proper position
 
     // create an array of the senders' and receivers' name in the selected circles in tSNE
     var names_arr = [];
@@ -690,7 +703,10 @@ d3.queue()
             if (key == "From") {
                 var email = rowList[key];
                 var nameFrom = email.substring(0, email.lastIndexOf("@")).replace(/\./g, " ");
-                senders.push(nameFrom);
+                var employmentTitleIndex = nodesEmployee.findIndex( ({ Name }) => Name === nameFrom );
+                var employmentTitle = nodesEmployee[employmentTitleIndex].CurrentEmploymentTitle;
+                var nameEmploymentTitle = nameFrom + " (" + employmentTitle + ")";
+                senders.push(nameEmploymentTitle);
             }
         }
     })
