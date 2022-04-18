@@ -99,7 +99,7 @@ export default class statisticslayout extends Component {
           style={{backgroundColor: "white", width: "100%", height:"5%"}}
         >
           <Paragraph> Dragging the slider you select the articles in given order.</Paragraph>
-          <Slider defaultValue={2} onChange={this.onChange} onAfterChange={this.onAfterChange} />
+          <Slider min={1} max={844} defaultValue={2} onChange={this.onChange} onAfterChange={this.onAfterChange} />
         </Layout>
         <Layout
           style={{backgroundColor: "white", width: "100%", height:"35%"}}

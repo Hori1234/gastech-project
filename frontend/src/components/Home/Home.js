@@ -42,25 +42,25 @@ export default class Home extends Component {
                 <>
                   <LogoLink
                     image={require("../Images/Data Visualisation.webp")}
-                    title={"Statistics"}
+                    title={"Information panel"}
                     description={
-                      "Page with the afferent statistics regarding our data challenge."
+                      "This view contains all the redable information related to this data challenge."
                     }
                     to={"/stats"}
                   />
                   <LogoLink
                     image={require("../Images/view-planning.svg")}
-                    title={"Finding Outliers"}
+                    title={"Daily Overview"}
                     description={
-                      "Using this tool you can find the outliers present in the dataset in a exploratory fahsion."
+                      "This page contains visualizaitons based on the daily connections and similarities between the employees."
                     }
                     to={"/expl"}
                   />
                   <LogoLink
                     image={require("../Images/Data Analytics.webp")}
-                    title={"Hierarchical Data"}
+                    title={"General Overview"}
                     description={
-                      "Using this tool you can find the hierarchical relations between the employees"
+                      "This page contains visualizaitons based on the general connections between the employees."
                     }
                     to={"/hierarch"}
                   />
