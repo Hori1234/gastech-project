@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Divider, Button, Layout, Typography, message } from "antd";
+import {  Layout } from "antd";
 
 import "antd/dist/antd.css";
 

@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import PrivateRoute from "../PrivateRoute";
 import { Spin } from "antd";
-const UploadButton = lazy(() => import("../UploadButton/UploadButton"));
 const AccountManagementLayout = lazy(() =>
   import("../AccountManagerLayout/AccountManagementLayout")
 );
@@ -48,12 +47,6 @@ export default function PageRouter() {
       }
     >
       <Switch>
-        <PrivateRoute
-          path="/upload"
-          requiredRoles={["planner", "administrator"]}
-        >
-          <UploadButton />
-        </PrivateRoute>
         <PrivateRoute path="/account" requiredRoles={["administrator"]}>
           <AccountManagementLayout />
         </PrivateRoute>

@@ -106,7 +106,7 @@ export default function NavigationLayout() {
                     <Link to="/stats">Information view</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/expl">Dauly data view</Link>
+                    <Link to="/expl">Daily data view</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
                     <Link to="/hierarch">Overall data view</Link>
@@ -131,33 +131,11 @@ export default function NavigationLayout() {
                     <Link to="/stats">Information view</Link>
                   </Menu.Item>
                   <Menu.Item key="3">
-                    <Link to="/expl">Dauly data view</Link>
+                    <Link to="/expl">Daily data view</Link>
                   </Menu.Item>
                   <Menu.Item key="4">
                     <Link to="/hierarch">Overall data view</Link>
                   </Menu.Item> 
-                  <Menu.Item key="5" onClick={auth.logout}>
-                    <Link to="/">Logout</Link>
-                  </Menu.Item>
-                </SubMenu>
-              )}
-
-              {auth.state.user.role === "view-only" && (
-                <SubMenu
-                  key="sub1"
-                  defaultSelectedKeys={["3"]}
-                  icon={<UserOutlined />}
-                  title={auth.state.user.username}
-                >
-                  <Menu.Item key="0">
-                    <Link to="/">Home</Link>
-                  </Menu.Item>
-                  {/* <Menu.Item key="4">
-                      <Link to="/view">View Planning</Link>
-                    </Menu.Item>
-                    <Menu.Item key="6">
-                      <Link to="/monthly">Monthly Data Analytics</Link>
-                    </Menu.Item> */}
                   <Menu.Item key="5" onClick={auth.logout}>
                     <Link to="/">Logout</Link>
                   </Menu.Item>

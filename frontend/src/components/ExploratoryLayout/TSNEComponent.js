@@ -1,5 +1,5 @@
 import HeatmapComponent from './HeatmapComponent';
-import { Button,InputNumber ,Typography, Select, Slider,Input, Layout } from 'antd';
+import { Button,InputNumber ,Typography, Select, Slider, Layout } from 'antd';
 import React, { Component } from 'react'
 import * as tsnejs from "./tsne"
 import * as d3 from "d3";

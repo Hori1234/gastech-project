@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { Divider, Button, Layout, Typography, message } from "antd";
-import { UserAddOutlined } from "@ant-design/icons";
+import {Layout } from "antd";
 import "antd/dist/antd.css";
-import NetworkComponent from './NetworkComponent';
-import HeatmapComponent from './HeatmapComponent';
 import TSNEComponent from './TSNEComponent';
 
 export default class exploratorylayout extends Component {
