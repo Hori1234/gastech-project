@@ -55,54 +55,6 @@ const EditableTableOrder = (props) => {
    */
   const edit = (record) => {
     form.setFieldsValue({
-      "Container": "",
-      "Unit type": "",
-      "Booking": "",
-      "Ship. comp.": "",
-      "Terminal": "",
-      "Truck": "",
-      "Pickup": "",
-      "order_number": "",
-      "Status": "",
-      "inl_terminal": "",
-      "Gate": "",
-      "Time": "",
-      "Max. departure": "",
-      "Time (1)": "",
-      "latest_dep_time": "",
-      "Truck Used": "",
-      "truck_type": "",
-      "hierarchy": "",
-      "City": "",
-      "L/D": "",
-      "Date": "",
-      "Time (2)": "",
-      "delivery_deadline": "",
-      "driving_time": "",
-      "process_time": "",
-      "service_time": "",
-      "Reference": "",
-      "Truck (1)": "",
-      "Gate (1)": "",
-      "Time (3)": "",
-      "Inl. ter. (1)": "",
-      "Gross (kgs)": "",
-      "Temperature °C": "",
-      "Seal": "",
-      "Truck (2)": "",
-      "Voyage/inland carrier": "",
-      "Terminal (1)": "",
-      "Closing": "",
-      "POD": "",
-      "Invoice reference": "",
-      "Tariff type": "",
-      "G": "",
-      "F": "",
-      "Positie": "",
-      "Delay": "",
-      "Weight": "",
-      "departure_time": "",
-      "truck_id": "",
       ...record,
     });
     setEditingKey(record.key);
@@ -167,12 +119,12 @@ const EditableTableOrder = (props) => {
           },
         }}
         bordered={true}
-        rowSelection={props.rowSelection}
         dataSource={props.dataSource}
         columns={mergedColumns}
         scroll={{ x: "max-content", y: "50vh" }}
         pagination={{
-          pageSizeOptions:['10','100','200','300'],
+          defaultPageSize: 6,
+          pageSizeOptions:['6','10','50','100'],
           onChange: cancel,
         }}
       />
