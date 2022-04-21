@@ -74,8 +74,8 @@ export default class HeatmapComponent extends Component {
 
     // Build color scale
     const myColor = d3.scaleSequential()
-      .interpolator(d3.interpolateInferno)
-      .domain([1,0.5])
+      .interpolator(d3.interpolateRgb("yellow","red"))
+      .domain([0.7,1])
 
     // create a tooltip
     const tooltip = d3.select("#heatmap")

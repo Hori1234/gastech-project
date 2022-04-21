@@ -308,45 +308,45 @@ export default class TSNEComponent extends Component {
         .attr("class", "everything")
         .style('pointer-events', 'all');
       
-      // Add X axis
-      const x = d3.scaleLinear()
-        .domain([0, 1])
-        .range([ 0,  width - 40%width]);
-      svg_tsne.append("g")
-        .attr("class", "myXaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
-        .attr("transform", `translate(${30%height}, ${height - 20%height})`)
-        .call(d3.axisBottom(x))
-        .attr("opacity", "1")
+      // // Add X axis
+      // const x = d3.scaleLinear()
+      //   .domain([0, 1])
+      //   .range([ 0,  width - 40%width]);
+      // svg_tsne.append("g")
+      //   .attr("class", "myXaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
+      //   .attr("transform", `translate(${30%height}, ${height - 20%height})`)
+      //   .call(d3.axisBottom(x))
+      //   .attr("opacity", "1")
 
-      // Add Y axis
-      const y = d3.scaleLinear()
-        .domain([1, 0])
-        .range([ -height + 30%height, 0]);
-      svg_tsne.append("g")
-        .attr("class", "myYaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
-        .attr("transform", `translate(${30%height},${height - 20%height })`)
-        .call(d3.axisLeft(y))
-        .attr("opacity", "1")
+      // // Add Y axis
+      // const y = d3.scaleLinear()
+      //   .domain([1, 0])
+      //   .range([ -height + 30%height, 0]);
+      // svg_tsne.append("g")
+      //   .attr("class", "myYaxis")   // Note that here we give a class to the X axis, to be able to call it later and modify it
+      //   .attr("transform", `translate(${30%height},${height - 20%height })`)
+      //   .call(d3.axisLeft(y))
+      //   .attr("opacity", "1")
 
       
       
-      // Add title to graph
-      svg_tsne.append("text")
-              .attr("x", 0)
-              .attr("y", -50)
-              .attr("text-anchor", "left")
-              .style("font-size", "22px")
-              .text("Cluster of the employees");
+      // // Add title to graph
+      // svg_tsne.append("text")
+      //         .attr("x", 0)
+      //         .attr("y", -50)
+      //         .attr("text-anchor", "left")
+      //         .style("font-size", "22px")
+      //         .text("Cluster of the employees");
 
-      // Add subtitle to graph
-      svg_tsne.append("text")
-              .attr("x", 0)
-              .attr("y", -20)
-              .attr("text-anchor", "left")
-              .style("font-size", "14px")
-              .style("fill", "grey")
-              .style("max-width", 400)
-              .text("TSNE to represent the cluster of people that sent the same email with the similar Subject headers.");
+      // // Add subtitle to graph
+      // svg_tsne.append("text")
+      //         .attr("x", 0)
+      //         .attr("y", -20)
+      //         .attr("text-anchor", "left")
+      //         .style("font-size", "14px")
+      //         .style("fill", "grey")
+      //         .style("max-width", 400)
+      //         .text("TSNE to represent the cluster of people that sent the same email with the similar Subject headers.");
 
       // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
       // Its opacity is set to 0: we don't see it by default.
